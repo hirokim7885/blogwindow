@@ -1,0 +1,34 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+    attributes:
+      user:
+        id: ID
+        family_name: 名字
+        given_name: 名前
+        family_name_kana: みょうじ
+        given_name_kana: なまえ
+        email: メールアドレス
+        password: パスワード
+        reset_password_sent_at: パスワード再発送日時
+        career: 経歴
+        zipcode: 郵便番号
+        address: 住所
+        telephone: 電話番号
+        created_at: 作成日時
+        updated_at: 更新日時
+      blog:
+        title: タイトル
+        good_counts: いいね！
+      review:
+        name: 名前
+        comment: コメント
+  enums:
+    user:
+      admin:
+        false: 一般ユーザー
+        true: 管理者ユーザー
+      suspended:
+        false: 通常ユーザー
+        true: 使用停止ユーザー
