@@ -13,21 +13,21 @@
 ActiveRecord::Schema.define(version: 2021_08_23_054243) do
 
   create_table "blogs", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "review_id"
     t.string "title"
     t.integer "good_counts"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["review_id"], name: "index_blogs_on_review_id"
+    t.index ["user_id"], name: "index_blogs_on_user_id"
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "blog_id"
     t.string "name"
     t.string "comment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["blog_id"], name: "index_reviews_on_blog_id"
-    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -40,10 +40,10 @@ ActiveRecord::Schema.define(version: 2021_08_23_054243) do
     t.string "given_name", null: false
     t.string "family_name_kana", null: false
     t.string "given_name_kana", null: false
-    t.text "career", null: false
-    t.string "zipcode", null: false
-    t.string "address", null: false
-    t.string "telephone", null: false
+    t.text "career"
+    t.string "zipcode"
+    t.string "address"
+    t.string "telephone"
     t.integer "admin", default: 0
     t.integer "suspended", default: 0
     t.datetime "created_at", precision: 6, null: false

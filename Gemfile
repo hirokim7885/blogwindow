@@ -10,6 +10,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'puma', '~> 5.0'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 gem 'rails-i18n'
+gem 'seed-fu', '~> 2.3'
 gem 'sqlite3', '~> 1.4'
 gem 'sass-rails', '>= 6'
 

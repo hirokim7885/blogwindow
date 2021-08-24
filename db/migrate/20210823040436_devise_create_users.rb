@@ -36,10 +36,10 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.1]
       t.string :given_name, null: false
       t.string :family_name_kana, null: false
       t.string :given_name_kana, null: false
-      t.text :career, null: false
-      t.string :zipcode, null: false
-      t.string :address, null: false
-      t.string :telephone, null: false
+      t.text :career
+      t.string :zipcode
+      t.string :address
+      t.string :telephone
       t.integer :admin, default: 0
       t.integer :suspended, default: 0
 
@@ -47,7 +47,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.1]
     end
 
     add_index :users, [:family_name_kana, :given_name_kana]
-    add_index :users, :email,                unique: true
+    add_index :users, :email, unique: true
     add_index :users, :reset_password_token, unique: true
     # add_index :users, :confirmation_token,   unique: true
     # add_index :users, :unlock_token,         unique: true
