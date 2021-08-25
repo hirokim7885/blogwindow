@@ -1,2 +1,0 @@
-module Blogs::UserBlogHelper
-end

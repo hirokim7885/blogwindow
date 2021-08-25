@@ -4,16 +4,16 @@
 </div>
   <h2 class="container"><%= @user.family_name.to_s.humanize %>さんのブログ</h2>
     <div class="menu_container">
-        <p><%= link_to 'プロフィール', users_user_profile_path(current_user.id) %></p>
-        <p><%= link_to '記事の追加', new_blogs_user_blog_path %></p>
+        <p><%= link_to 'プロフィール', users_my_profile_path(current_user.id) %></p>
+        <p><%= link_to '記事の追加', new_blogs_my_content_path %></p>
     </div>
     <div class="blog_container">
           <ul>
           <% @blogs.each do |blog| %>
           <li>
-            <%= link_to blog.title, blogs_user_blog_path(blog.id) %>
-            <%= link_to blog.updated_at, blogs_user_blog_path(blog.id) %>
-            <%= link_to '削除', blogs_user_blog_path(blog.id), method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } %>
+            <%= link_to blog.title, blogs_my_content_path(blog.id) %>
+            <%= link_to blog.updated_at, blogs_my_content_path(blog.id) %>
+            <%= link_to '削除', blogs_my_content_path(blog.id), method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } %>
           </li>
           <% end %>
           </ul>
