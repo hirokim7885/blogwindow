@@ -1,26 +1,34 @@
-<h2>ご利用者さまページ</h2>
+<div id="wrapper">
+  <%= render "users/shared/header" %>    
+  <div id="container">
 
-<%= form_with model: @user, url: user_session_path do |f| %>
-  <div class="field">
-    <%= f.label "メールアドレス" %><br />
-    <%= f.email_field :email, placeholder: "メールアドレス", autofocus: true, autocomplete: "email" %>
+  <div id="title">
+    <h2>ご利用者さまのページ</h2>
   </div>
 
-  <div class="field">
-    <%= f.label "パスワード" %><br />
-    <%= f.password_field :password, placeholder: "パスワード", autofocus: true, autocomplete: "current-password" %>
-  </div>
+    <div id="form">
+    <%= form_with model: @user, url: user_session_path do |f| %>
+      <div class="field">
+        <%= f.label "メールアドレス" %><br />
+        <%= f.email_field :email, placeholder: "メールアドレス", autofocus: true, autocomplete: "email" %>
+      </div>
 
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+      <div class="field">
+        <%= f.label "パスワード" %><br />
+        <%= f.password_field :password, placeholder: "パスワード", autofocus: true, autocomplete: "current-password" %>
+      </div>
+      
+      <div class="actions">
+        <%= f.submit "ログイン" %>
+      </div>
+    <% end %>
     </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "ログイン" %>
+  
   </div>
-<% end %>
+  <%= render "users/shared/links" %>
 
-<%= render "users/shared/links" %>
+  <%= render "users/shared/footer" %>
+
+</div>
+
+
