@@ -12,7 +12,7 @@ div#container {
   margin-bottom: 30px;
   // background-color: $brown;
   // border: 1px solid orangered;
-  color: $green;
+  color: $dark-green;
   border-radius: 10px;
   // box-shadow: 3px 3px 3px gray;
 }
@@ -55,7 +55,7 @@ input {
   width: 200px;
   height: 50px;
   margin-top: 30px;
-  background-color: $red;
+  background-color: $light-red;
   border-radius: 5px;
   color: $white;
   font-size: $normal;
@@ -74,7 +74,7 @@ div#wrapper
   // border: 1px solid dodgerblue;
   border-radius: 5px;
   font-size: $normal;
-  font-weight: bold;
+  font-weight: normal;
   color: gray;
   // box-shadow: 2px 2px 2px gray;
 }
@@ -91,12 +91,12 @@ div#wrapper
   // border: 1px solid darkorange;
   border-radius: 5px;
   font-size: $normal;
-  font-weight: bold;
+  font-weight: normal;
   color: gray;
   // box-shadow: 2px 2px 2px gray;
 }
 
 div#sign_up a, div#password a {
   // text-decoration: none;
-  color: $green;
+  color: $dark-green;
 }
