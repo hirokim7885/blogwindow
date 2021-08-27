@@ -9,31 +9,38 @@ div#main_container {
 
 div#header_local {
   position: relative;
-  display: flex;
   width: 80%;
-  height: 40px;
-  margin-top: 10px;
-  text-align: left;
+  height: 45px;
+  margin: 2.5px auto 0;
   background-color: $red;
-  border-radius: 0 5px 5px 0;
+  border-radius: 5px 5px 20px 20px;
   box-shadow: 1px 1px 1px 1px gray;
+}
+
+div#header_local
+  div#header_local_image {
+  box-sizing: border-box;
+  width: 100%;
+  padding-right: 30px;
+  padding-top: 3px;
+  margin: 0; 
+  height: inherit;
 }
 
 div#header_local p {
   box-sizing: border-box;
-  width: 800px;
-  padding: 20px;
+  width: inherit;
+  padding: 0;
   margin: 0 auto;
   text-align: right;
   text-decoration: none;
   color: $white;
+  font-size: 8px;
 }
 
-div#header_local a {
-  text-decoration: none;
-  color: $white;
-  font-size: $normal;
-  font-weight: bold;
+div#header_local_image .image_logout {
+  height: 20px;
+  margin-right: 15px;
 }
 
 div#header_blog {
@@ -41,10 +48,9 @@ div#header_blog {
   display: flex;
   width: 80%;
   height: 40px;
-  margin-top: 7px;
-  text-align: right;
+  margin-top: 20px;
   background-color: $green;
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 5px 20px 0;
   box-shadow: 1px 1px 1px 1px gray;
 }
 
@@ -52,7 +58,7 @@ div#header_blog p {
   box-sizing: border-box;
   width: 400px;
   height: 100%;
-  padding: 20px;
+  padding: 0;
   margin: 0 auto;
   text-align: right;
   color: $white;
@@ -62,8 +68,14 @@ div#header_blog p {
 div#header_blog a {
   text-decoration: none;
   color: $white;
-  font-size: $normal;
+  font-size: $small;
   font-weight: bold;
+}
+
+div#header_blog .images_account {
+  height: 35px;
+  margin-top: 5px;
+  margin-right: 50px;
 }
 
 div#sub_container {
@@ -84,9 +96,17 @@ div#sub_container
     padding-top: 15px;
     text-align: center;
     background-color: $white;
+    border: 1px solid $orange;
     border-radius: 5px 5px 5px 5px;
     box-shadow: 1px 1px 1px 1px gray;
 }
+
+div#sub_container
+  div#profile a {
+    align-items: end;
+    text-decoration: none;
+    color: $green;
+  }
 
 div#sub_container
   div#blog_container {
@@ -95,17 +115,89 @@ div#sub_container
     height: 100%;
     min-height: 500px;
     margin: 30px auto;
-    padding-top: 15px;
     text-align: center;
     background-color: $white;
-    border: 2px solid $white;
+    border: 1px solid $orange;
     border-radius: 5px 5px 5px 5px;
     box-shadow: 1px 1px 1px 1px gray;
 }
 
-div#sub_container
-  div#menu_container a {
-  text-decoration: none;
-  color: $white;
+div#blog_container
+  div#blog_container_title p {
+  box-sizing: border-box;
+  width: 450px;
+  height: 50px;
+  padding-top: 15px;
+  margin: 15px auto 0;
+  text-align: center;
+  // border-bottom: 1px solid $light-orange;
+  color: gray;
   font-size: $large;
+}
+
+div#blog_container
+  div#blog_new p {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding-right: 30px;
+    margin: 0;
+    text-align: right;  
+}
+
+div#blog_container
+  div#blog_new a {
+    color: $green;
+    font-size: $large;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+div#blog_container
+  div#blogs li {
+    box-sizing: border-box;
+    width: 450px;
+    height: 100px;
+    padding: 20px 10px 10px 50px;
+    margin: 0 auto;
+    // background-color: $light-green;
+    border-top: 1px solid $light-orange;
+    text-align: left;
+    font-weight: bold;
+  }
+
+div#blog_container
+  div#blogs a {
+    text-decoration: none;
+    color: $green;
+  }
+
+div#blogs
+  div#time a {
+    font-size: $small;
+    font-weight: normal;
+    color: gray;
+  }
+
+div#blogs
+  div#delete {
+    box-sizing: border-box;
+    padding-right: 20px;
+    margin: 0;
+    text-align: right;
+  }
+
+div#blogs
+  div#delete a {
+    font-size: $small;
+    font-weight: normal;
+    color: $green;
+  }
+
+ul {
+  padding: 0;
+}
+
+li {
+    list-style: none;
 }

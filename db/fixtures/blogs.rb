@@ -1,5 +1,5 @@
 Blog.seed do |s|
-  s.id = 5
+  s.id = 7
   s.user_id = 1
-  s.title = "茄子のおいしい季節です。"
+  s.title = "そろそろ秋冬野菜の準備、はじめます。"
 end

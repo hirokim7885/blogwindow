@@ -10,11 +10,11 @@ div#container {
   height: 400px;
   margin: 80px auto;
   margin-bottom: 30px;
-  background-color: $red;
+  // background-color: $brown;
   // border: 1px solid orangered;
-  color: snow;
+  color: $green;
   border-radius: 10px;
-  box-shadow: 3px 3px 3px gray;
+  // box-shadow: 3px 3px 3px gray;
 }
 
 div#container
@@ -55,9 +55,9 @@ input {
   width: 200px;
   height: 50px;
   margin-top: 30px;
-  background-color: $white;
+  background-color: $red;
   border-radius: 5px;
-  color: black;
+  color: $white;
   font-size: $normal;
   font-weight: bold;
 }
@@ -66,35 +66,37 @@ div#wrapper
   div#sign_up p {
   box-sizing: border-box;
   width: 350px;
-  height: 70px;
+  height: 50px;
   margin: 0 auto;
   padding: 10px 30px;
   text-align: left;
-  background-color: deepskyblue;
-  border: 1px solid dodgerblue;
+  // background-color: deepskyblue;
+  // border: 1px solid dodgerblue;
   border-radius: 5px;
   font-size: $normal;
   font-weight: bold;
-  box-shadow: 2px 2px 2px gray;
+  color: gray;
+  // box-shadow: 2px 2px 2px gray;
 }
 
 div#wrapper
   div#password p {
   box-sizing: border-box;
   width: 350px;
-  height: 70px;
+  height: 50px;
   margin: 20px auto 50px;
   padding: 10px 30px;
   text-align: left;
-  background-color: orange;
-  border: 1px solid darkorange;
+  // background-color: orange;
+  // border: 1px solid darkorange;
   border-radius: 5px;
   font-size: $normal;
   font-weight: bold;
-  box-shadow: 2px 2px 2px gray;
+  color: gray;
+  // box-shadow: 2px 2px 2px gray;
 }
 
 div#sign_up a, div#password a {
-  text-decoration: none;
-  color: whitesmoke;
+  // text-decoration: none;
+  color: $green;
 }
