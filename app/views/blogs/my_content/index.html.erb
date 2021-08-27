@@ -1,13 +1,21 @@
-<div class="header">
-  <p><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></p>
-  <p><%= link_to 'アカウント', user_path(current_user.id) %></p>
-</div>
-  <h2 class="container"><%= @user.family_name.to_s.humanize %>さんのブログ</h2>
-    <div class="menu_container">
-        <p><%= link_to 'プロフィール', users_my_profile_path(current_user.id) %></p>
+<div id="wrapper">
+<%= render "blogs/shared/header" %>
+  <div id="main_container">
+  
+  <div id="header_local">
+    <p><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></p>
+  </div>
+  <div id="header_blog">
+    <p><%= @user.family_name.to_s.humanize %>さんのブログ</p>
+    <p><%= link_to 'アカウント', user_path(current_user.id) %></p>
+  </div>
+    <div id="sub_container" >
+      <div id="profile">
+        <p><%= link_to "プロフィール", users_my_profile_path(current_user.id) %></p>
+      </div>
+      <div id="blog_container">
+        <p>これまで書いた記事</p>
         <p><%= link_to '記事の追加', new_blogs_my_content_path %></p>
-    </div>
-    <div class="blog_container">
           <ul>
           <% @blogs.each do |blog| %>
           <li>
@@ -17,4 +25,9 @@
           </li>
           <% end %>
           </ul>
+      </div>
     </div>
+  
+  </div>
+<%= render "blogs/shared/footer" %>
+</div>

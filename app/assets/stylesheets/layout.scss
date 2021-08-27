@@ -1,0 +1,41 @@
+@import "colors";
+@import "dimensions";
+
+html, body {
+  font-family: "ヒライギノ角ゴ　Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meirio Osaka, "MS Pゴシック", "MS PGothic", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+div#wrapper {
+  position: relative;
+  box-sizing: border-box;
+  min-height: 100%;
+  margin: 0 auto;
+  background-color: $yellow;
+}
+
+header h2 {
+  box-sizing: border-box;
+  width: 80%;
+  height: 100px;
+  margin: 0 auto;
+  padding-top: 30px;
+  background-color: $green;
+  color: $white;
+  text-align: left;
+  border-radius: 0 0 10px 10px;
+}
+
+footer p {
+  width: 80%;
+  height: 40px;
+  margin: 0 auto;
+  padding-top: 20px;
+  background-color: $green;
+  color: $white;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+  font-size: $normal;
+}

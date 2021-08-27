@@ -1,3 +1,5 @@
+@import "colors";
+@import "dimensions";
 
 div#container {
   box-sizing: border-box;
@@ -8,7 +10,8 @@ div#container {
   height: 400px;
   margin: 80px auto;
   margin-bottom: 30px;
-  background-color: tomato;
+  background-color: $red;
+  // border: 1px solid orangered;
   color: snow;
   border-radius: 10px;
   box-shadow: 3px 3px 3px gray;
@@ -36,7 +39,7 @@ div#container
 }
 
 label {
-  font-size: 12px;
+  font-size: $small;
 }
 
 input#user_email, input#user_password {
@@ -52,10 +55,10 @@ input {
   width: 200px;
   height: 50px;
   margin-top: 30px;
-  background-color: snow;
+  background-color: $white;
   border-radius: 5px;
   color: black;
-  font-size: 15px;
+  font-size: $normal;
   font-weight: bold;
 }
 
@@ -65,13 +68,12 @@ div#wrapper
   width: 350px;
   height: 70px;
   margin: 0 auto;
-  padding: 10px 20px;
+  padding: 10px 30px;
   text-align: left;
-  border: 1px solid gold;
-  background-color: gold;
+  background-color: deepskyblue;
+  border: 1px solid dodgerblue;
   border-radius: 5px;
-  color: snow;
-  font-size: 15px;
+  font-size: $normal;
   font-weight: bold;
   box-shadow: 2px 2px 2px gray;
 }
@@ -82,13 +84,17 @@ div#wrapper
   width: 350px;
   height: 70px;
   margin: 20px auto 50px;
-  padding: 10px 20px;
+  padding: 10px 30px;
   text-align: left;
-  border: 1px solid yellow;
-  background-color: yellow;
+  background-color: orange;
+  border: 1px solid darkorange;
   border-radius: 5px;
-  color: snow;
-  font-size: 15px;
+  font-size: $normal;
   font-weight: bold;
   box-shadow: 2px 2px 2px gray;
+}
+
+div#sign_up a, div#password a {
+  text-decoration: none;
+  color: whitesmoke;
 }
