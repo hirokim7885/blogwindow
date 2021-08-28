@@ -4,5 +4,6 @@ class Blog < ApplicationRecord
 
   belongs_to :user
   belongs_to :review
+  has_many_attached :images
 
 end

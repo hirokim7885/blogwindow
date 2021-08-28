@@ -12,5 +12,6 @@ class User < ApplicationRecord
 
   has_many :blogs, dependent: :destroy
   has_many :reviews, through: :blogs, dependent: :destroy
+  has_one_attached :portrait
 
 end
