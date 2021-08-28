@@ -14,6 +14,7 @@ class Blogs::MyContentController < AuthController
       redirect_to blogs_my_content_path
     else
       render :new
+    end
   end
 
   private

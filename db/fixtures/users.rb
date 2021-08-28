@@ -1,11 +1,11 @@
 User.seed do |s|
-  s.id = 2
-  s.email = "futaro@sample210825"
-  s.password = "sample210825"
-  s.family_name = "山田"
-  s.given_name = "風太郎"
-  s.family_name_kana = "やまだ"
-  s.given_name_kana = "ふうたろう"
+  s.id = 3
+  s.email = "jiro@sample210828"
+  s.password = "sample210828"
+  s.family_name = "佐藤"
+  s.given_name = "二郎"
+  s.family_name_kana = "さとう"
+  s.given_name_kana = "じろう"
   s.admin = 0
-  s.suspended = 0
+  s.suspended = 1
 end
