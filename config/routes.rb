@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   namespace :users do
     resources :admin
     resources :profile, only: [:show]
-    resources :my_profile, only: [:show, :edit, :update, :delete]
+    resources :my_profile, only: [:show, :edit, :update, :destroy]
   end
 
   namespace :blogs do
@@ -19,7 +19,7 @@ Rails.application.routes.draw do
     resources :admin_content, only: [:index]
   end
 
-  resources :users, only: [:show, :edit, :update, :delete]
+  resources :users, only: [:show, :edit, :update, :destroy]
   resources :reviews, only: [:index, :new, :create]
 
   root to: "blogs/my_content#index"

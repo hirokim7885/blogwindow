@@ -1,5 +1,5 @@
 Blog.seed do |s|
-  s.id = 8
-  s.user_id = 2
-  s.title = "野菜セットのネット販売、はじめました。"
+  s.id = 3
+  s.user_id = 1
+  s.title = "大雨の影響です。野菜の値段が高いです。"
 end

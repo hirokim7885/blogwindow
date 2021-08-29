@@ -12,12 +12,12 @@
       <p><%= @user.family_name.to_s.humanize %>さんのブログ</p>
     </div>
     <div id="account">
-      <p><%= link_to image_tag("account_circle_white_24dp.png", class:"image_account"), user_path(current_user.id) %></p>
+      <p><%= link_to image_tag("account_circle_white_24dp.png", class:"image_account"), user_path(@user) %></p>
     </div>
   </div>
     <div id="sub_container" >
       <div id="profile">
-        <p><%= link_to "プロフィールの編集", users_my_profile_path(current_user.id) %></p>
+        <p><%= link_to "プロフィール", users_my_profile_path(@user) %></p>
       </div>
       <div id="blog_container">
         <div id="blog_container_title">

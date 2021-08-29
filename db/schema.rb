@@ -42,20 +42,20 @@ ActiveRecord::Schema.define(version: 2021_08_27_142622) do
 
   create_table "blogs", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "review_id"
     t.string "title"
     t.integer "good_counts"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["review_id"], name: "index_blogs_on_review_id"
     t.index ["user_id"], name: "index_blogs_on_user_id"
   end
 
   create_table "reviews", force: :cascade do |t|
+    t.integer "blog_id"
     t.string "name"
     t.string "comment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["blog_id"], name: "index_reviews_on_blog_id"
   end
 
   create_table "users", force: :cascade do |t|

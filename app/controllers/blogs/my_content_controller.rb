@@ -6,7 +6,8 @@ class Blogs::MyContentController < AuthController
   end
 
   def new
-    @blog = current_user.blogs.new
+    @user = current_user
+    @blog = current_user.blogs.build
   end
     
   def create
