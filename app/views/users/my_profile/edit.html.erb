@@ -1,4 +1,4 @@
-<p><%= link_to image_tag("logout_white_24dp.png", class:"image_logout"), destroy_user_session_path, method: :delete %></p>
+<p><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></p>
 
 <p><%= @user.family_name %>さんのプロフィール</P>
 <%= form_with model: @user, url: users_my_profile_path(@user) do |f| %>
@@ -22,7 +22,7 @@
   </P>
   <p>
     <%= f.submit %>
-  </P>
+  </p>
 <% end %>
 
 <p><%= link_to "前に戻る", users_my_profile_path(@user) %></p>

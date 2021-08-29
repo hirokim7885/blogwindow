@@ -1,0 +1,20 @@
+<p><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></p>
+
+<p><%= @user.family_name %>さんのブログ</p>
+<p><%= @blog.updated_at %>の記事</p>
+
+<p>タイトル：
+  <%= @blog.title %>
+</p>
+<p>内容：
+  <%= @blog.content %>
+</p>
+
+<p>
+  <%= link_to '編集', edit_blogs_my_content_path(@blog) %>
+</p>
+<p>
+  <%= link_to '削除', blogs_my_content_path(@blog), method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } %>
+</p>
+
+<p><%= link_to "TOPに戻る", blogs_my_content_index_path %></p>

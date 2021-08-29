@@ -1,0 +1,23 @@
+<p><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></p>
+
+<p><%= @user.family_name %>さんのブログ</p>
+<p><%= @blog.updated_at %>の記事</p>
+
+<%= form_with model: @blog, url: blogs_my_content_path(@blog) do |f| %>
+  <p>タイトル：
+    <%= f.text_field :title, placeholder: 'タイトル' %>
+  </p>
+  <p>内容：
+    <%= f.rich_text_area :content, placeholder: '内容' %>
+  </p>
+  <p>
+  <%= f.submit %>
+  </p>
+<% end %>
+  <p>
+    <%= link_to '削除', blogs_my_content_path(@blog), method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } %>
+  </p>
+
+<p><%= link_to '前に戻る', blogs_my_content_path(@blog) %></p>
+
+

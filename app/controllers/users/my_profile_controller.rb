@@ -8,9 +8,10 @@ def edit
   @user = current_user
 end
 
-def updated
+def update
+  @user = current_user
   if @user.update(user_params)
-    redirect_to user_my_profile_path(@user)
+    redirect_to users_my_profile_path(@user)
   else
     render :edit, status: :unprocessable_entity
   end

@@ -15,6 +15,8 @@ gem 'rails-i18n'
 gem 'seed-fu', '~> 2.3'
 gem 'sqlite3', '~> 1.4'
 gem 'sass-rails', '>= 6'
+gem 'webpacker', '~> 5.0'
+
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

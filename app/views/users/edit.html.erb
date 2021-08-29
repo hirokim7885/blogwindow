@@ -1,0 +1,36 @@
+<p><%= @user.family_name %>さんのアカウント</p>
+
+  <%= form_with model: @user, url: user_path(@user) do |f| %>
+    <p>氏名：
+      <%= f.text_field :family_name, placeholder: '名字' %>
+    </p>
+    <p>
+      <%= f.text_field :given_name, placeholder: '名前' %>
+    </p>
+    <p>ふりがな：
+      <%= f.text_field :family_name_kana, placeholder: 'みょうじ' %>
+    </p>
+    <p>
+      <%= f.text_field :given_name_kana, placeholder: 'なまえ' %>
+    </p>
+    <p>メールアドレス：
+      <%= f.email_field :email, placeholder: 'メールアドレス' %>
+    </p>
+    <p>パスワード：
+      <%= f.password_field :password, placeholder: 'パスワード' %>
+    </p>
+    <p>郵便番号：
+    <%= f.text_field :zipcode, placeholder: '郵便番号' %>
+    </p>
+    <p>住所：
+    <%= f.text_field :address, placeholder: '住所' %>
+    </p>
+    <p>電話番号：
+    <%= f.telephone_field :telephone, placeholder: '電話番号' %>
+    </p>
+  <p>
+    <%= f.submit %>
+  </p>
+  <% end %>
+
+<p><%= link_to '前に戻る', user_path(@user) %></p>

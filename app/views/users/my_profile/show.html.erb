@@ -1,4 +1,4 @@
-<p><%= link_to image_tag("logout_white_24dp.png", class:"image_logout"), destroy_user_session_path, method: :delete %></p>
+<p><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></p>
 
 <p><%= @user.family_name %>さんのプロフィール</p>
   <h1>写真／似顔絵：<%= @user.portrait %></h1>

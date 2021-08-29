@@ -1,0 +1,42 @@
+<p>新しいアカウント</p>
+
+<%= form_with model: @user, url: users_admin_index_path do |f| %>
+    <p>氏名：
+      <%= f.text_field :family_name, placeholder: '名字' %>
+    </p>
+      <p>
+        <%= f.text_field :given_name, placeholder: '名前' %>
+      </p>
+    <p>ふりがな：
+      <%= f.text_field :family_name_kana, placeholder: 'みょうじ' %>
+    </p>
+      <p>
+        <%= f.text_field :given_name_kana, placeholder: 'なまえ' %>
+      </p>
+    <p>メールアドレス：
+      <%= f.email_field :email, placeholder: 'メールアドレス' %>
+    </p>
+    <p>パスワード：
+      <%= f.password_field :password, placeholder: 'パスワード' %>
+    </p>
+    <p>郵便番号：
+      <%= f.text_field :zipcode, placeholder: '郵便番号' %>
+    </p>
+    <p>住所：
+      <%= f.text_field :address, placeholder: '住所' %>
+    </p>
+    <p>電話番号：
+      <%= f.telephone_field :telephone, placeholder: '電話番号' %>
+    </p>
+    <p>管理者フラグ：
+      <%= f.select :admin, [['一般ユーザー', 0], ['管理者ユーザー', 1]] %>
+    </p>
+    <p>使用停止フラグ：
+      <%= f.select :suspended, [['使用中', 0], ['使用停止中', 1]] %>
+    </p>'
+  <p>
+    <%= f.submit %>
+  </p>
+  <% end %>
+
+<p><%= link_to '前に戻る', users_admin_index_path %></p>

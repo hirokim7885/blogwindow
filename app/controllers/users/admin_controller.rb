@@ -1,20 +1,48 @@
 class Users::AdminController < AuthController
 
+  def index
+    @users = User.all.order(id: :asc) 
+  end
+
+  def show
+    @user = User.find(params[:id])
+  end
+
   def new
-    @user = current_user.new
+    @user = User.new
   end
 
   def create
-    if @user.save(user_params)
-      redirect_to users_admin_path
+    @user = User.new(user_params)
+    if @user.save
+      redirect_to users_admin_path(@user)
     else
       render :new
     end
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      redirect_to users_admin_path(@user)
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @user = current_user
+    @user.destroy
+    redirect_to root_path
+  end
+
   private
   def user_params
-    params.require(:user).permit(:email, :password, :family_name, :given_name, :family_name_kana, :given_name_kana, :zipcode, :address, :telephone, :suspended, :portrait )
+    params.require(:user).permit(:email, :password, :family_name, :given_name, :family_name_kana, :given_name_kana, :zipcode, :address, :telephone)
   end
 
 end

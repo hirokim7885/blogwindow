@@ -1,0 +1,52 @@
+<div id="wrapper">
+<%= render "blogs/shared/header" %>
+  <div id="main_container">
+  
+  <div id="header_local">
+
+    <p><%= link_to 'ユーザー登録情報', users_admin_index_path %></p>
+
+    <div id="header_local_image">
+      <p><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></p>
+    </div>
+  </div>
+  <div id="header_blog">
+    <div id="name">
+      <p><%= @user.family_name.to_s.humanize %>さんのブログ</p>
+    </div>
+    <div id="account">
+      <p><%= link_to image_tag("account_circle_white_24dp.png", class:"image_account"), user_path(@user) %></p>
+    </div>
+  </div>
+    <div id="sub_container" >
+      <div id="profile">
+        <p><%= link_to "プロフィール", users_my_profile_path(@user) %></p>
+      </div>
+      <div id="blog_container">
+        <div id="blog_container_title">
+          <p>これまで書いたもの</p>
+        </div>
+        <div id="blog_new">
+          <p><%= link_to '＋', new_blogs_my_content_path %></p>
+        </div>
+        <div id="blogs">
+          <ul>
+          <% @blogs.each do |blog| %>
+          <li>
+            <%= link_to blog.title, blogs_my_content_path(blog.id) %><br />
+            <div id="time">
+              <%= link_to blog.updated_at, blogs_my_content_path(blog.id) %>
+            </div>
+            <div id="delete">
+              <%= link_to image_tag("delete_outline_black_24dp.png", class:"image_trash"), blogs_my_content_path(blog.id), method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } %>
+            </div>
+          </li>
+          <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+<%= render "blogs/shared/footer" %>
+</div>

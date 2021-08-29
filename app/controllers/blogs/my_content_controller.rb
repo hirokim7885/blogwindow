@@ -5,6 +5,11 @@ class Blogs::MyContentController < AuthController
     @blogs = current_user.blogs.all.order(updated_at: :desc)
   end
 
+  def show
+    @user = current_user
+    @blog = current_user.blogs.find(params[:id])
+  end
+
   def new
     @user = current_user
     @blog = current_user.blogs.build
@@ -18,9 +23,29 @@ class Blogs::MyContentController < AuthController
     end
   end
 
+  def edit
+    @user = current_user
+    @blog = current_user.blogs.find(params[:id])
+  end
+
+  def update
+    @blog = current_user.blogs.find(params[:id])
+    if @blog.update(blog_params)
+      redirect_to blogs_my_content_path(@blog)
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @blog = current_user.blogs.find(params[:id])
+    @blog.destroy
+    redirect_to blogs_my_content_index_path, notice: 'タスクを削除しました。'
+  end
+
   private
-  def blogs_params
-    params.require(:blog).permit(:title, good_counts, :images [])
+  def blog_params
+    params.require(:blog).permit(:title, :good_counts, :content)
   end
 
 end

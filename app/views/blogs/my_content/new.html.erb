@@ -1,15 +1,20 @@
-<p><%= link_to image_tag("logout_white_24dp.png", class:"image_logout"), destroy_user_session_path, method: :delete %></p>
+<p><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></p>
 
 <p><%= @user.family_name %>さんのブログ</p>
   <p>new blog</p>
   <%= form_with model: @blog, url: blogs_my_content_index_path do |f| %>
-    <p>タイトル：
+    <p>
+      <%= f.label :title %>
       <%= f.text_field :title, placeholder: 'タイトル' %>
+    </p>
+    <p>
+      <%= f.label :content %>
+      <%= f.rich_text_area :content %>
     </p>
 
     <p>
     <%= f.submit %>
-  </P>
+    </P>
 <% end %>
 
 <p><%= link_to "TOPに戻る", blogs_my_content_index_path %></p>
