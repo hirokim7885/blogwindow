@@ -1,0 +1,8 @@
+
+<h2><%= @blog.title %></h2>
+
+<p>最終更新日：<%= @blog.updated_at %></h2>
+<p>投稿日：<%= @blog.updated_at %></h2>
+
+<p><%= link_to "ブログTopに戻る", users_display_path(@blog.user.id) %></p>
+<p><%= link_to 'Homeに戻る', blogs_window_index_path %><p>

@@ -32,7 +32,7 @@
           <li>
             <%= link_to blog.title, blogs_my_content_path(blog.id) %><br />
             <div id="time">
-              <%= link_to blog.updated_at, blogs_my_content_path(blog.id) %>
+              <%= link_to blog.created_at, blogs_my_content_path(blog.id) %>
             </div>
             <div id="delete">
               <%= link_to image_tag("delete_outline_black_24dp.png", class:"image_trash"), blogs_my_content_path(blog.id), method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } %>

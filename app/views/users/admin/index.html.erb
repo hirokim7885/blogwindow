@@ -16,25 +16,25 @@
 
 <ul>
   <% @users.each do |user| %>
-<li>
-  <%= link_to user.id, users_admin_path(user.id) %>
-  <%= link_to user.family_name, users_admin_path(user.id) %>
-  <%= link_to user.given_name, users_admin_path(user.id) %>
-  <%= link_to user.family_name_kana, users_admin_path(user.id) %>
-  <%= link_to user.given_name_kana, users_admin_path(user.id) %>
-  <%= link_to user.email, users_admin_path(user.id) %>
-  <%= link_to 'KEY', users_admin_path(user.id) %>
-  <%= link_to user.zipcode, users_admin_path(user.id) %>
-  <%= link_to user.address, users_admin_path(user.id) %>
-  <%= link_to user.telephone, users_admin_path(user.id) %>
-  <%= link_to user.created_at, users_admin_path(user.id) %>
-  <%= link_to user.updated_at, users_admin_path(user.id) %>
-  <%= link_to user.admin_i18n, users_admin_path(user.id) %>
-  <%= link_to user.suspended_i18n, users_admin_path(user.id) %>
-  <%= link_to '編集', edit_users_admin_path(user.id) %>
-  <%= link_to '削除', users_admin_path(user.id), method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } %>
-</li>
-<% end %>
+  <li>
+    <%= link_to user.id, users_admin_path(user.id) %>
+    <%= link_to user.family_name, users_admin_path(user.id) %>
+    <%= link_to user.given_name, users_admin_path(user.id) %>
+    <%= link_to user.family_name_kana, users_admin_path(user.id) %>
+    <%= link_to user.given_name_kana, users_admin_path(user.id) %>
+    <%= link_to user.email, users_admin_path(user.id) %>
+    <%= link_to 'KEY', users_admin_path(user.id) %>
+    <%= link_to user.zipcode, users_admin_path(user.id) %>
+    <%= link_to user.address, users_admin_path(user.id) %>
+    <%= link_to user.telephone, users_admin_path(user.id) %>
+    <%= link_to user.created_at, users_admin_path(user.id) %>
+    <%= link_to user.updated_at, users_admin_path(user.id) %>
+    <%= link_to user.admin_i18n, users_admin_path(user.id) %>
+    <%= link_to user.suspended_i18n, users_admin_path(user.id) %>
+    <%= link_to '編集', edit_users_admin_path(user.id) %>
+    <%= link_to '削除', users_admin_path(user.id), method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } %>
+  </li>
+  <% end %>
 </ul>
 
 <p><%= link_to '＋追加', new_users_admin_path %></p>

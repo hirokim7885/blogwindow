@@ -9,12 +9,13 @@ Rails.application.routes.draw do
     resources :admin
     resources :profile, only: [:show]
     resources :my_profile, only: [:show, :edit, :update, :destroy]
+    resources :top, only: [:show]
+    resources :display, only: [:show]
   end
 
   namespace :blogs do
     resources :window, only: [:index]
-    resources :top, only: [:show]
-    resources :content, only: [:index, :show]
+    resources :content, only: [:show]
     resources :my_content
     resources :admin_content, only: [:index]
   end

@@ -28,6 +28,11 @@ header h2 {
   border-radius: 0 0 10px 10px;
 }
 
+header a {
+  text-decoration: none;
+  color: $white;
+}
+
 footer p {
   width: 80%;
   height: 40px;

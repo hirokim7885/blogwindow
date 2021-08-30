@@ -31,4 +31,4 @@ ja:
         is: 管理者ユーザー
       suspended:
         not_sus: 使用中
-        sus: 使用停止
+        sus: 使用停止中

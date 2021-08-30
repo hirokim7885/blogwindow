@@ -1,0 +1,15 @@
+
+<p><%= "#{@user.family_name}さんのブログ いろいろ" %></p>
+<p><%= link_to "プロフィール",users_profile_path(@user) %></p>
+
+<ul><% @blogs.each do |blog| %>
+  <li>
+    <%= link_to blog.title, blogs_content_path(blog.id) %>
+    <%= link_to blog.created_at, blogs_content_path(blog.id) %>
+  </li>
+  <% end %>
+</ul>
+
+<p><%= link_to "ブログTOPに戻る", users_top_path(@user) %></p>
+
+

@@ -1,7 +1,8 @@
 class Blogs::WindowController < ApplicationController
 
-def index
-  @blogs = Blog.all.order(id: :asc)
-end
+  def index
+    @users = User.all.order(id: :asc)
+    @blogs = Blog.all.order(created_at: :desc)
+  end
 
 end

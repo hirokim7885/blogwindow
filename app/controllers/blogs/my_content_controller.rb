@@ -2,17 +2,17 @@ class Blogs::MyContentController < AuthController
 
   def index
     @user = current_user
-    @blogs = current_user.blogs.all.order(updated_at: :desc)
+    @blogs = @user.blogs.all.order(updated_at: :desc)
   end
 
   def show
     @user = current_user
-    @blog = current_user.blogs.find(params[:id])
+    @blog = @user.blogs.find(params[:id])
   end
 
   def new
     @user = current_user
-    @blog = current_user.blogs.build
+    @blog = @user.blogs.build
   end
     
   def create
@@ -25,7 +25,7 @@ class Blogs::MyContentController < AuthController
 
   def edit
     @user = current_user
-    @blog = current_user.blogs.find(params[:id])
+    @blog = @user.blogs.find(params[:id])
   end
 
   def update

@@ -1,0 +1,20 @@
+<p><%= link_to 'ログイン', new_user_session_path %></p>
+
+<h1><%= "#{@user.family_name}さんのブログ" %></h1>
+<p><%= link_to 'プロフィール', users_profile_path(@user) %>
+
+<p>最近のブログ</p>
+<ul>
+  <% @blogs.first(10).each do |blog| %>
+  <li>
+    <%= link_to blog.title, blogs_content_path(blog.id) %>
+    <%= link_to blog.created_at, blogs_content_path(blog.id) %>
+  </li>
+  <% end %>
+</ul>
+
+<p><%= link_to "過去のブログを見る", users_display_path(@user) %></p>
+    
+
+
+<p><%= link_to 'Homeに戻る', blogs_window_index_path %><p>
