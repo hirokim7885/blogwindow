@@ -27,8 +27,8 @@ ja:
   enums:
     user:
       admin:
-        is_not: 一般ユーザー
-        is: 管理者ユーザー
+        public_user: 一般ユーザー
+        administrator: 管理者ユーザー
       suspended:
-        not_sus: 使用中
-        sus: 使用停止中
+        under_use: 使用中
+        unser_suspension: 使用停止中

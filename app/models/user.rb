@@ -8,8 +8,8 @@ class User < ApplicationRecord
   # validates :address, presence: true
   # validates :telephone, presence: true
 
-  enum admin: { is_not: 0, is: 1}
-  enum suspended: { not_sus: 0, sus: 1 }
+  enum admin: { public_user: 0, administrator: 1}
+  enum suspended: { under_use: 0, under_suspension: 1 }
 
   has_many :blogs, dependent: :destroy
   has_many :reviews, through: :blogs, dependent: :destroy
