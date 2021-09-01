@@ -35,7 +35,7 @@ class Users::AdminController < AuthController
   end
 
   def destroy
-    @user = current_user
+    @user = User.find(params[:id])
     @user.destroy
     redirect_to root_path
   end

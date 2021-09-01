@@ -31,11 +31,16 @@
     </p>
     <p>使用停止フラグ：
       <%= f.select :suspended, [['使用中', 0], ['使用停止中', 1]] %>
-    </p>'
+    </p>
   <p>
     <%= f.submit %>
   </p>
 <% end %>
-<p><%= link_to '削除', users_admin_path(@user), method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } %></p>
+<p>
+<%= link_to '削除',
+    users_admin_path(@user),
+    method: :delete,
+    data: { confirm: '本当に削除してもよろしいですか？' } %>
+</p>
 
 <p><%= link_to '前に戻る', users_admin_index_path %></p>
