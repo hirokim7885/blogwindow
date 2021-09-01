@@ -31,4 +31,4 @@ ja:
         administrator: 管理者ユーザー
       suspended:
         under_use: 使用中
-        unser_suspension: 使用停止中
+        under_suspension: 使用停止中
