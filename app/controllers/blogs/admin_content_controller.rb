@@ -1,4 +1,4 @@
-class Blogs::AdminContentController < AuthController
+class Blogs::AdminContentController < AuthAdminController
 
   def index
     @user = current_user

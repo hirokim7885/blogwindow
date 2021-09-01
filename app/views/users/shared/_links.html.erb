@@ -2,12 +2,6 @@
   <%= link_to "ログイン", new_session_path(resource_name) %><br />
 <% end %>
 
-<div id="sign_up">
-  <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-    <p>はじめての方は、<%= link_to "こちら", new_registration_path(resource_name) %>からアカウントの新規登録をして下さい。</p>
-  <% end %>
-</div>
-
 <div id="password">
   <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
     <p>パスワードを忘れた方は、<%= link_to "こちら", new_password_path(resource_name) %>から再設定をして下さい。</p>

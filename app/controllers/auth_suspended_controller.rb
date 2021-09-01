@@ -1,6 +1,5 @@
-class AuthController < ApplicationController
+class AuthSuspendedController < AuthController
 
-  before_action :authenticate_user!
   before_action :suspended_user
 
   private
@@ -8,7 +7,7 @@ class AuthController < ApplicationController
     unless current_user.suspended == "under_use"
       session.delete(:user_id)
       flash.alert = "あなたのアカウントは現在停止中です。"
-      redirect_to new_user_session_path
+      # redirect_to new_user_session_path
     end
   end
 
