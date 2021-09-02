@@ -78,10 +78,10 @@ ActiveRecord::Schema.define(version: 2021_08_29_013257) do
     t.string "given_name", null: false
     t.string "family_name_kana", null: false
     t.string "given_name_kana", null: false
-    t.text "career"
-    t.string "zipcode"
-    t.string "address"
-    t.string "telephone"
+    t.text "career", default: ""
+    t.string "zipcode", default: ""
+    t.string "address", default: ""
+    t.string "telephone", default: ""
     t.integer "admin", default: 0
     t.integer "suspended", default: 0
     t.datetime "created_at", precision: 6, null: false

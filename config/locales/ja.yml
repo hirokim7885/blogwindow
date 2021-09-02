@@ -27,7 +27,7 @@ ja:
   enums:
     user:
       admin:
-        public_user: 一般ユーザー
+        user: 一般ユーザー
         administrator: 管理者ユーザー
       suspended:
         under_use: 使用中

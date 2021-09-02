@@ -27,10 +27,10 @@
       <%= f.telephone_field :telephone, placeholder: '電話番号' %>
     </p>
     <p>管理者フラグ：
-      <%= f.select :admin, [['一般ユーザー', 0], ['管理者ユーザー', 1]] %>
+      <%= f.select :admin, [['一般ユーザー', 'user'], ['管理者ユーザー', 'administrator']] %>
     </p>
     <p>使用停止フラグ：
-      <%= f.select :suspended, [['使用中', 0], ['使用停止中', 1]] %>
+      <%= f.select :suspended, [['使用中', 'under_use'], ['使用停止中', 'under_suspension']] %>
     </p>
   <p>
     <%= f.submit %>

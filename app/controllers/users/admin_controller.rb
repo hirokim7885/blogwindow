@@ -42,7 +42,7 @@ class Users::AdminController < AuthController
 
   private
   def user_params
-    params.require(:user).permit(:email, :password, :family_name, :given_name, :family_name_kana, :given_name_kana, :zipcode, :address, :telephone)
+    params.require(:user).permit(:email, :password, :family_name, :given_name, :family_name_kana, :given_name_kana, :zipcode, :address, :telephone, :admin, :suspended)
   end
 
 end

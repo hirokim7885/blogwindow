@@ -1,6 +1,6 @@
 Review.seed do |s|
-  s.id = 2
+  s.id = 4
   s.blog_id = 1
-  s.name = "はなこ"
-  s.comment = "応援してます!"
+  s.name = "みつこ"
+  s.comment = "がんばってくださーい！"
 end

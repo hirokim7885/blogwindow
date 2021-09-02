@@ -36,10 +36,10 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.1]
       t.string :given_name, null: false
       t.string :family_name_kana, null: false
       t.string :given_name_kana, null: false
-      t.text :career
-      t.string :zipcode
-      t.string :address
-      t.string :telephone
+      t.text :career, default: ""
+      t.string :zipcode, default: ""
+      t.string :address, default: ""
+      t.string :telephone, default: ""
       t.integer :admin, default: 0
       t.integer :suspended, default: 0
 
