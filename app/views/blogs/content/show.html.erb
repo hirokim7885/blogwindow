@@ -4,6 +4,7 @@
 <p>最終更新日：<%= @blog.updated_at %></h2>
 <p>投稿日：<%= @blog.updated_at %></h2>
 
+<p>
 <% if @blog.reviews.any? %>
 <ul>
   <% @blog.reviews.each do |review| %>
@@ -14,6 +15,16 @@
   <% end %>
 </ul>
 <% end %>
+</p>
+
+<% if @blog.privious.present? %>
+<%= link_to "<<前の記事", blogs_content_path(@blog.privious) %>
+<% end %>
+<% if @blog.next.present? %>
+<%= link_to "後の記事>>", blogs_content_path(@blog.next) %>
+<% end %>
+
+
 <p><%= link_to "コメントをのせる", new_blogs_content_review_path(@blog) %></p>
 
 <p><%= link_to "ブログTopに戻る", users_display_path(@blog.user.id) %></p>
