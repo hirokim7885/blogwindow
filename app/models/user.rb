@@ -12,7 +12,6 @@ class User < ApplicationRecord
   enum suspended: { under_use: 0, under_suspension: 1 }
 
   has_many :blogs, dependent: :destroy
-  has_many :reviews, through: :blogs, dependent: :destroy
   has_one_attached :portrait
 
 end

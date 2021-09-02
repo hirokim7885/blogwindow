@@ -40,7 +40,7 @@ class Blogs::MyContentController < AuthController
   def destroy
     @blog = current_user.blogs.find(params[:id])
     @blog.destroy
-    redirect_to blogs_my_content_index_path, notice: 'タスクを削除しました。'
+    redirect_to root_path, notice: '記事を削除しました。'
   end
 
   private

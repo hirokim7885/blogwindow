@@ -4,6 +4,5 @@ class Review < ApplicationRecord
   validates :comment, presence: true, length: { maximum: 50 }
 
   has_many :blogs, dependent: :destroy
-  has_many :users, through: :blogs, dependent: :destroy
 
 end
