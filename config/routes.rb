@@ -15,13 +15,14 @@ Rails.application.routes.draw do
 
   namespace :blogs do
     resources :window, only: [:index]
-    resources :content, only: [:show]
+    resources :content, only: [:show] do
+      resources :review, only: [:index, :new, :create]
+    end
     resources :my_content
     resources :admin_content, only: [:index]
   end
 
   resources :users, only: [:show, :edit, :update, :destroy]
-  resources :reviews, only: [:index, :new, :create]
 
   root to: "blogs/admin_content#index"
 

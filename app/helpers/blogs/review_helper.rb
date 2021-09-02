@@ -1,0 +1,2 @@
+module Blogs::ReviewHelper
+end
