@@ -10,3 +10,10 @@
     "webpack-dev-server": "^4.0.0"
   }
 }
+
+import Rails from "@rails/ujs"
+import Turbolinks from "turbolinks"
+
+Rails.start()
+Turbolinks.start()
+
