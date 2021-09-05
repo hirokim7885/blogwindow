@@ -7,7 +7,8 @@ class Blogs::ReviewController < ApplicationController
 
   def create
     @blog = Blog.find(params[:content_id])
-    if @blog.reviews.create(review_params)
+    @review = @blog.reviews.build(review_params)
+    if @review.save!
       redirect_to blogs_content_path(@blog)
     else
       render :new

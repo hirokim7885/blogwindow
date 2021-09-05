@@ -16,8 +16,9 @@ class Blogs::MyContentController < AuthController
   end
     
   def create
-    if @blog.save(blogs_params)
-      redirect_to blogs_my_content_path
+    @blog = current_user.blogs.build(blog_params)
+    if @blog.save
+      redirect_to blogs_my_content_path(@blog)
     else
       render :new
     end
