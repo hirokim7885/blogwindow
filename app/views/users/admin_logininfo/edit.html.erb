@@ -1,0 +1,18 @@
+<p><%= @user.family_name %>さんのログイン情報</p>
+
+  <%= form_with model: @user, url: users_admin_logininfo_path(@user) do |f| %>
+    <p>メールアドレス：
+      <%= f.email_field :email, placeholder: 'メールアドレス' %>
+    </p>
+    <p>パスワード：
+      <%= f.password_field :password, placeholder: 'パスワード' %>
+    </p>
+  <p>
+    <%= f.submit %>
+  </p>
+  <% end %>
+
+<p>「更新する」をクリックすると、セキュリティ上の理由からログアウト致します。<br />
+お手数ですが、変更したログイン情報で再ログインをお願い致します。</p>
+
+<p><%= link_to '前に戻る', users_admin_path(@user) %></p>

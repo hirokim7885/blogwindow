@@ -5,7 +5,6 @@
 <p>氏名</p>
 <p>ふりがな</p>
 <p>メールアドレス</p>
-<p>パスワード</p>
 <p>郵便番号</p>
 <p>住所</p>
 <p>電話番号</p>
@@ -23,7 +22,6 @@
     <%= link_to user.family_name_kana, users_admin_path(user.id) %>
     <%= link_to user.given_name_kana, users_admin_path(user.id) %>
     <%= link_to user.email, users_admin_path(user.id) %>
-    <%= link_to 'KEY', users_admin_path(user.id) %>
     <%= link_to user.zipcode, users_admin_path(user.id) %>
     <%= link_to user.address, users_admin_path(user.id) %>
     <%= link_to user.telephone, users_admin_path(user.id) %>

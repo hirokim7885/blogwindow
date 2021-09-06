@@ -2,7 +2,7 @@ class Blogs::MyContentController < AuthController
 
   def index
     @user = current_user
-    @blogs = @user.blogs.all.order(updated_at: :desc)
+    @blogs = @user.blogs.page(params[:page]).order(created_at: :desc)
   end
 
   def show

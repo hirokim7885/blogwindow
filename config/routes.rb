@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     resources :my_profile, only: [:show, :edit, :update, :destroy]
     resources :top, only: [:show]
     resources :display, only: [:show]
+    resources :logininfo, only: [:edit, :update, :destroy]
+    resources :admin_logininfo, only: [:edit, :update, :destroy]
   end
 
   namespace :blogs do

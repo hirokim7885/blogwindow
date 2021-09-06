@@ -1,6 +1,8 @@
 <h2>パスワードをリセットする</h2>
+<p>「パスワード再設定ページのURL」を、入力頂いたメールアドレスに送信致します。<br />
+以下にメールアドレスを入力し、「送信する」を押して下さい。</p>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+<%= form_for(resource, as: resource_name, url: user_password_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>
 
   <div class="field">

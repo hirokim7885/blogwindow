@@ -11,12 +11,6 @@
       <p>
         <%= f.text_field :given_name_kana, placeholder: 'なまえ' %>
       </p>
-    <p>メールアドレス：
-      <%= f.email_field :email, placeholder: 'メールアドレス' %>
-    </p>
-    <p>パスワード：
-      <%= f.password_field :password, placeholder: 'パスワード' %>
-    </p>
     <p>郵便番号：
       <%= f.text_field :zipcode, placeholder: '郵便番号' %>
     </p>
@@ -43,4 +37,4 @@
     data: { confirm: '本当に削除してもよろしいですか？' } %>
 </p>
 
-<p><%= link_to '前に戻る', users_admin_index_path %></p>
+<p><%= link_to '前に戻る', users_admin_path(@user) %></p>

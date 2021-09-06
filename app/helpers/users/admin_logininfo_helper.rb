@@ -1,0 +1,2 @@
+module Users::AdminLogininfoHelper
+end
