@@ -1,0 +1,17 @@
+<p><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></p>
+
+<h2><%= "#{@user.family_name}さんのブログ" %></h2>
+
+<ul>
+  <% @blogs.each do |blog| %>
+  <li>
+    <%= link_to blog.title, blogs_admin_article_path(blog.id) %>
+    <%= link_to "削除", blogs_admin_article_path(blog.id), method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } %>
+  </li>
+  <% end %>
+</ul>
+
+<p><%= paginate @blogs %></p>
+
+<p><%= link_to "前に戻る", blogs_admin_window_index_path %></p>
+<p><%= link_to "Topに戻る", blogs_admin_content_index_path %></p>

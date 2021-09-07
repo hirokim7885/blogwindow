@@ -4,7 +4,9 @@
   
   <div id="header_local">
 
-    <p><%= link_to 'ユーザー登録情報', users_admin_index_path %></p>
+    <p><%= link_to 'ユーザー登録管理', users_admin_index_path %></p>
+    <p><%= link_to 'レビュー投稿管理', blogs_admin_window_index_path %></p>
+
 
     <div id="header_local_image">
       <p><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></p>

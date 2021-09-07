@@ -1,0 +1,12 @@
+<p><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></p>
+<p>ブログユーザー</p>
+
+<ul>
+  <% @users.each do |user| %>
+  <li>
+    <%= link_to "#{user.family_name}さんのブログ", users_admin_top_path(user.id) %>
+  </li>
+  <% end %>
+</ul>
+
+<p><%= link_to "Topに戻る", blogs_admin_content_index_path %></p>

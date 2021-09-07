@@ -1,0 +1,30 @@
+
+<h2><%= @blog.title %></h2>
+<p><%= @blog.content %></p>
+
+<p>最終更新日：<%= @blog.updated_at %></h2>
+<p>投稿日：<%= @blog.updated_at %></h2>
+
+<p>
+<% if @blog.reviews.any? %>
+<ul>
+  <% @blog.reviews.each do |review| %>
+    <li>
+    <%= "#{review.name}：" %>
+    <%= review.comment %>
+    <%= link_to "削除", blogs_admin_article_support_path(review.id), method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } %>
+    </li>
+  <% end %>
+</ul>
+<% end %>
+</p>
+
+<% if @blog.privious.present? %>
+<%= link_to "<<前の記事", blogs_admin_article_path(@blog.privious) %>
+<% end %>
+<% if @blog.next.present? %>
+<%= link_to "後の記事>>", blogs_admin_article_path(@blog.next) %>
+<% end %>
+
+
+<p><%= link_to "前に戻る", users_admin_top_path(@blog.user.id) %></p>

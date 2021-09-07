@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     resources :display, only: [:show]
     resources :logininfo, only: [:edit, :update, :destroy]
     resources :admin_logininfo, only: [:edit, :update, :destroy]
+    resources :admin_top, only: [:show]
   end
 
   namespace :blogs do
@@ -21,7 +22,11 @@ Rails.application.routes.draw do
       resources :review, only: [:index, :new, :create]
     end
     resources :my_content
+    resources :admin_window, only: [:index]
     resources :admin_content, only: [:index]
+    resources :admin_article, only: [:show, :destroy] do
+      resources :support, only: [:index, :destroy]
+    end
   end
 
   resources :users, only: [:show, :edit, :update, :destroy]
