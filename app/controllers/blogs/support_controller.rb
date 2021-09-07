@@ -1,4 +1,4 @@
-class Blogs::SupportController < AuthAdminController
+class Blogs::SupportController < Admin::BaseController
 
   def index
     @blog = Blog.find(params[:admin_article_id])

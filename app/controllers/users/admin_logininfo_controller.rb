@@ -1,4 +1,4 @@
-class Users::AdminLogininfoController < AuthAdminController
+class Users::AdminLogininfoController < Admin::BaseController
 
   def edit
     @user = User.find(params[:id])

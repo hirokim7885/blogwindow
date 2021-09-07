@@ -1,4 +1,4 @@
-class Users::AdminController < AuthAdminController
+class Users::AdminController < Admin::BaseController
 
   def index
     @users = User.all.order(id: :asc) 

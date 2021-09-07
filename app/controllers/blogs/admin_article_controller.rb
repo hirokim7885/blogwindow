@@ -1,4 +1,4 @@
-class Blogs::AdminArticleController < AuthAdminController
+class Blogs::AdminArticleController < Admin::BaseController
 
   def show
     @blog = Blog.find(params[:id])
