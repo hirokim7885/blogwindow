@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :admin
     resources :profile, only: [:show]
     resources :my_profile, only: [:show, :edit, :update, :destroy]
+    resources :admin_my_profile, only: [:show, :edit, :update, :destroy]
     resources :top, only: [:show]
     resources :display, only: [:show]
     resources :logininfo, only: [:edit, :update, :destroy]
@@ -23,7 +24,7 @@ Rails.application.routes.draw do
     end
     resources :my_content
     resources :admin_window, only: [:index]
-    resources :admin_content, only: [:index]
+    resources :admin_content
     resources :admin_article, only: [:show, :destroy] do
       resources :support, only: [:index, :destroy]
     end
@@ -31,6 +32,6 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show, :edit, :update, :destroy]
 
-  root to: "blogs/admin_content#index"
+  root to: "blogs/my_content#index"
 
 end

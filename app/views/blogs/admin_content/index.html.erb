@@ -17,30 +17,30 @@
       <p><%= @user.family_name.to_s.humanize %>さんのブログ</p>
     </div>
     <div id="account">
-      <p><%= link_to image_tag("account_circle_white_24dp.png", class:"image_account"), user_path(@user) %></p>
+      <p><%= link_to image_tag("account_circle_white_24dp.png", class:"image_account"), users_admin_path(@user) %></p>
     </div>
   </div>
     <div id="sub_container" >
       <div id="profile">
-        <p><%= link_to "プロフィール", users_my_profile_path(@user) %></p>
+        <p><%= link_to "プロフィール", users_admin_my_profile_path(@user) %></p>
       </div>
       <div id="blog_container">
         <div id="blog_container_title">
           <p>これまで書いたもの</p>
         </div>
         <div id="blog_new">
-          <p><%= link_to '＋', new_blogs_my_content_path %></p>
+          <p><%= link_to '＋', new_blogs_admin_content_path %></p>
         </div>
         <div id="blogs">
           <ul>
           <% @blogs.each do |blog| %>
           <li>
-            <%= link_to blog.title, blogs_my_content_path(blog.id) %><br />
+            <%= link_to blog.title, blogs_admin_content_path(blog.id) %><br />
             <div id="time">
-              <%= link_to blog.updated_at, blogs_my_content_path(blog.id) %>
+              <%= link_to blog.updated_at, blogs_admin_content_path(blog.id) %>
             </div>
             <div id="delete">
-              <%= link_to image_tag("delete_outline_black_24dp.png", class:"image_trash"), blogs_my_content_path(blog.id), method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } %>
+              <%= link_to image_tag("delete_outline_black_24dp.png", class:"image_trash"), blogs_admin_content_path(blog.id), method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } %>
             </div>
           </li>
           <% end %>

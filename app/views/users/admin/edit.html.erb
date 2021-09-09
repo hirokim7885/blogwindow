@@ -30,11 +30,5 @@
     <%= f.submit %>
   </p>
 <% end %>
-<p>
-<%= link_to '削除',
-    users_admin_path(@user),
-    method: :delete,
-    data: { confirm: '本当に削除してもよろしいですか？' } %>
-</p>
 
 <p><%= link_to '前に戻る', users_admin_path(@user) %></p>

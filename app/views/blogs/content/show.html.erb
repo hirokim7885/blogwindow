@@ -5,7 +5,7 @@
 <p>最終更新日：<%= @blog.updated_at %></h2>
 <p>投稿日：<%= @blog.updated_at %></h2>
 
-<p><%= "応援コメントが#{@blog.reviews.size}通あります。" %></p>
+<p><%= "応援メッセージが #{@blog.reviews.size} 通あります。" %></p>
 <p>
 <% if @blog.reviews.any? %>
 <ul>

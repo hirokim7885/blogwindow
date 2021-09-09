@@ -1,0 +1,28 @@
+<p><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></p>
+
+<p><%= @user.family_name %>さんのプロフィール</P>
+<%= form_with model: @user, url: users_admin_my_profile_path(@user) do |f| %>
+  <p>写真／似顔絵：
+    <%= f.file_field :portrait, placeholder: '写真／似顔絵' %>
+  </p>
+  <p>名字：
+    <%= f.text_field :family_name, placeholder: '名字' %>
+  </p>
+  <p>名前：
+    <%= f.text_field :given_name, placeholder: '名前' %>
+  </p>
+  <p>みょうじ：
+    <%= f.text_field :family_name_kana, placeholder: 'みょうじ' %>
+  </p>
+  <p>なまえ：
+    <%= f.text_field :given_name_kana, placeholder: 'なまえ' %>
+  </p>
+  <p>経歴：
+    <%= f.text_area :career, placeholder: '経歴' %>
+  </P>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+<p><%= link_to "前に戻る", users_admin_my_profile_path(@user) %></p>

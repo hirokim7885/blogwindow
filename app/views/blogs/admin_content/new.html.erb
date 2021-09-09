@@ -1,0 +1,20 @@
+<p><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></p>
+
+<p><%= @user.family_name %>さんのブログ</p>
+  <p>new blog</p>
+  <%= form_with model: @blog, url: blogs_admin_content_index_path do |f| %>
+    <p>
+      <%= f.label :title %>
+      <%= f.text_field :title, placeholder: 'タイトル' %>
+    </p>
+    <p>
+      <%= f.label :content %>
+      <%= f.rich_text_area :content %>
+    </p>
+
+    <p>
+    <%= f.submit %>
+    </p>
+  <% end %>
+
+<p><%= link_to "Topに戻る", blogs_admin_content_index_path %></p>

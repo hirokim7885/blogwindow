@@ -1,6 +1,6 @@
 <p><%= @user.family_name %>さんのログイン情報</p>
 
-  <%= form_with model: @user, url: user_logininfo_path(@user) do |f| %>
+  <%= form_with model: @user, url: users_logininfo_path(@user) do |f| %>
     <p>メールアドレス：
       <%= f.email_field :email, placeholder: 'メールアドレス' %>
     </p>

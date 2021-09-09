@@ -1,0 +1,13 @@
+<p><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></p>
+
+<p><%= @user.family_name %>さんのプロフィール</p>
+  <h1>写真／似顔絵：<%= @user.portrait %></h1>
+  <p>名字：<%= @user.family_name %></p>
+  <p>名前：<%= @user.given_name %></p>
+  <p>みょうじ：<%= @user.family_name_kana %></p>
+  <p>なまえ：<%= @user.given_name_kana %></p>
+  <p>経歴：<%= @user.career %></p>
+<p><%= link_to "編集する", edit_users_admin_my_profile_path(@user) %></p>
+<p><%= link_to "TOPに戻る", blogs_admin_content_index_path %></p>
+
+
