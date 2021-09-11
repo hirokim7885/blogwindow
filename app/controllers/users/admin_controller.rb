@@ -15,9 +15,21 @@ class Users::AdminController < Admin::BaseController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to users_admin_path(@user)
-    else
-      render :new
+      # redirect_to users_admin_path(@user)
+
+      respond_to do |format|
+        if @user.save
+          UserMailer.with(to: @user.email, family_name: @user.family_name).welcome.deliver_now
+          format.html { redirect_to @user,notice: "ユーザーの登録が完了致しました。" }
+          format.json { render json: @user, status: :created, location: @user }
+        else
+          format.html { render action: :new }
+          format.json { render json: @user.errors, status: :unprocessable_entity }
+        end
+      end
+
+    # else
+    #   render :new
     end
   end
 

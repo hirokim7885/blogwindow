@@ -2,10 +2,10 @@
 <h2><%= @blog.title %></h2>
 <p><%= @blog.content %></p>
 
-<p>最終更新日：<%= @blog.updated_at %></h2>
-<p>投稿日：<%= @blog.updated_at %></h2>
+<p>最終更新日：<%= @blog.updated_at %></p>
+<p>投稿日：<%= @blog.updated_at %></p>
 
-<p><%= "応援メッセージが #{@blog.reviews.size} 通あります。" %></p>
+<p><%= "応援メッセージが #{@blog.reviews.size} 件あります。" %></p>
 <p>
 <% if @blog.reviews.any? %>
 <ul>

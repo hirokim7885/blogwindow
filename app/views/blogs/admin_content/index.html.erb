@@ -22,6 +22,11 @@
   </div>
     <div id="sub_container" >
       <div id="profile">
+        <p>
+          <% if @user.portrait.attached? %>
+          <%= image_tag @user.portrait.variant(resize_to_limit:[200,200]) %>
+          <% end %>
+        </p>
         <p><%= link_to "プロフィール", users_admin_my_profile_path(@user) %></p>
       </div>
       <div id="blog_container">

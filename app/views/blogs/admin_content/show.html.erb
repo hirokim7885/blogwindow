@@ -9,6 +9,15 @@
 <p>内容：
   <%= @blog.content %>
 </p>
+<p>最終更新日：<%= @blog.updated_at %></p>
+<p>投稿日：<%= @blog.updated_at %></p>
+
+<% if @blog.privious.present? %>
+<%= link_to "<<前の記事", blogs_admin_content_path(@blog.privious) %>
+<% end %>
+<% if @blog.next.present? %>
+<%= link_to "後の記事>>", blogs_admin_content_path(@blog.next) %>
+<% end %>
 
 <p>
   <%= link_to '編集', edit_blogs_admin_content_path(@blog) %>
