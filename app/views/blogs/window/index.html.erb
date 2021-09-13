@@ -1,20 +1,33 @@
-<p><%= link_to 'ログイン', new_user_session_path %></p>
+<div id="wrapper">
+  <%= render "shared/header" %>    
 
-<ul>
-  <% @users.each do |user| %>
-  <li>
-    <%= link_to "#{user.family_name}さんのブログ", users_top_path(user.id) %>
-  </li>
-  <% end %>
-</ul>
+  <div id="window_container" %>
+    <div id="users_index">
+      <ul>
+        <% @users.each do |user| %>
+        <li>
+          <p id="users_blog">
+            <%= link_to "#{user.family_name}さんのブログ", users_top_path(user.id) %>
+          </p>
+        </li>
+        <% end %>
+      </ul>
+    </div>
 
-<p>最近の記事</p>
-  <ul>
-    <% @blogs.first(5).each do |blog| %>
-    <li>
-      <%= link_to "#{blog.user.family_name}さん", blogs_content_path(blog.id) %>
-      <%= link_to blog.title, blogs_content_path(blog.id) %>
-      <%= link_to blog.created_at, blogs_content_path(blog.id) %>
-    </li>
-    <% end %>
-  </ul>
+    <div id="latest_blogs">
+    <p>最近の記事</p>
+      <ul>
+        <% @blogs.first(5).each do |blog| %>
+        <li>
+          <p><%= link_to "#{blog.user.family_name}さん", blogs_content_path(blog.id) %></p>
+          <p><%= link_to blog.title, blogs_content_path(blog.id) %></p>
+          <p><%= link_to blog.created_at, blogs_content_path(blog.id) %></p>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+  <%= render "shared/footer" %>
+
+</div>

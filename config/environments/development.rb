@@ -47,7 +47,7 @@ Rails.application.configure do
   #   :enable_atarttls_auto => true,
   #   :address => "smtp.gmail.com",
   #   :port => 587,
-  #   :domail => 'smtp.gmail.com',
+  #   :domail => 'minato-no-en.com',
   #   :user_name => ENV["GOOGLE_MAIL_ADDRESS"],
   #   :password => ENV["GOGLE_MAILER_PASSWORD"],
   #   :authentication => 'login'

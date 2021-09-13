@@ -6,6 +6,7 @@ class Blog < ApplicationRecord
   has_many :reviews, dependent: :destroy
 
   has_many_attached :images
+  has_one_attached :background
   has_rich_text :content
 
   def privious

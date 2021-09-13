@@ -14,9 +14,7 @@ class Users::AdminController < Admin::BaseController
 
   def create
     @user = User.new(user_params)
-    if @user.save
-      # redirect_to users_admin_path(@user)
-
+    
       respond_to do |format|
         if @user.save
           UserMailer.with(to: @user.email, family_name: @user.family_name).welcome.deliver_now
@@ -28,9 +26,6 @@ class Users::AdminController < Admin::BaseController
         end
       end
 
-    # else
-    #   render :new
-    end
   end
 
   def edit

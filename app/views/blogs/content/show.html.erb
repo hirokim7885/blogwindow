@@ -29,5 +29,5 @@
 
 <p><%= link_to "コメントをのせる", new_blogs_content_review_path(@blog) %></p>
 
-<p><%= link_to "ブログTopに戻る", users_display_path(@blog.user.id) %></p>
+<p><%= link_to "ブログTopに戻る", users_top_path(@blog.user.id) %></p>
 <p><%= link_to 'Homeに戻る', blogs_window_index_path %><p>
