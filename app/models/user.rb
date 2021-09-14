@@ -7,12 +7,14 @@ class User < ApplicationRecord
   # validates :zipcode, presence: true
   # validates :address, presence: true
   # validates :telephone, presence: true
+  validates :blog_name, length: { maximum: 50 }
 
   enum admin: { user: 0, administrator: 1}
   enum suspended: { under_use: 0, under_suspension: 1 }
 
   has_many :blogs, dependent: :destroy
   has_one_attached :portrait
+  has_one_attached :background
 
   # def User.new_token
   #   SecureRandom.urlsafe_base64

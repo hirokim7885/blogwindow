@@ -15,6 +15,8 @@ Rails.application.routes.draw do
     resources :logininfo, only: [:edit, :update, :destroy]
     resources :admin_logininfo, only: [:edit, :update, :destroy]
     resources :admin_top, only: [:show]
+    resources :blog_designs, only:[:show, :edit, :update]
+    resources :admin_blog_designs, only:[:show, :edit, :update]
   end
 
   namespace :blogs do

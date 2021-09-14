@@ -1,6 +1,16 @@
 @import "colors";
 @import "dimensions";
 
+
+li {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: gray;
+}
+
 div#wrapper_header {
   width: 100%;
   height: 100px;
@@ -30,13 +40,8 @@ div#wrapper_header p {
 }
 
 header a {
-  text-decoration: none;
   color: $white;
 }
-
-  li {
-    display: inline-block;
-  }
 
 div#my_page {
   box-sizing: border-box;
@@ -80,29 +85,185 @@ div#users_index {
   display: flex;
   width: calc((100% - 5px) / 4 * 2.8);
   text-align: center;
-}
 
-  div#users_index
-    p#users_blog {
-      display: inline-block;
-      width: 300px;
-      height: 300px;
-      margin: 10px;
-      background-color: $yellow;
-      border-radius: 10px 10px 10px 10px;
+    p#users_blog_image {
+      display: block;
+      position: relative;
+      width: 350px;
+      height: 250px;
+      margin: auto 10px;
+      background-color: $white;
+      border-radius: 10px 10px 0 0;
     }
 
+      p#users_blog_image img {
+        display: block;
+        position: relative;
+        width: 350px;
+        height: 250px;
+        margin: 0;
+        border-radius: 10px 10px 0 0;
+      }
+
+        p#users_blog_image img:hover {
+          opacity: 0.8;
+        }
 
 
-    
+    p#users_blog_name {
+      box-sizing: border-box;
+      display: block;
+      position: relative;
+      width: 350px;
+      height: 50px;
+      margin: 0 auto;
+      padding-top: 20px;
+      padding-left: 20px;
+      text-align: left;
+      background-color: $white;
+      color: gray;
+    }
 
-div#latest_blogs {
-  box-sizing: border-box;
-  display: block;
-  width: calc((100% - 5px) / 4 * 1.2);
-  background-color: $light_red;
-  border-radius: 10px 10px 10px 10px;
+      p#users_blog_name a {
+        color: $dark-gray;
+        font-weight: bold;
+        font-size: $normal;
+      }
+
+      p#users_blog_name a:hover {
+        border-bottom: 1px solid $green;
+      }
+
+    p#users_blog_id {
+      box-sizing: border-box;
+      display: block;
+      position: relative;
+      width: 350px;
+      height: 50px;
+      margin: 0 auto 20px;
+      padding-left: 20px;
+      text-align: left;
+      border-radius: 0 0 10px 10px;
+      background-color: $white;
+      color: gray;
+      font-size: $normal;
+    }
+
+      p#users_blog_id a {
+        color: gray;
+        font-size: $small;
+      }
+
+
+      p#users_blog_id a:hover {
+        border-bottom: 1px solid gray;
+      }
+
+  }
+
+div#window_container {
+
+  div#latest_blogs {
+    box-sizing: border-box;
+    display: block;
+    width: calc((100% - 5px) / 4 * 1.2);
+    height: 650px;
+    background-color: $light_red;
+    border-radius: 10px 10px 10px 10px;
+  }
+
+    div#topic
+      div#title p {
+        box-sizing: border-box;
+        width: 90%;
+        height: 50px;
+        color: $white;
+        margin: 0 auto;
+        padding-top: 20px;
+        // border-bottom: 1px solid $white;
+        text-align: center;
+      }
+
+    div#topic li {
+      display: flex;
+    }
+
+    div#topic li.contents {
+      display: flex;
+    }
+
+    div#topic
+      div#icon {
+        width: calc((100% - 10px) / 3);
+        height: 100px;
+        margin: 0 0 0 10px;
+        background-color: $white;
+        border-bottom: 1px solid $light-red;
+      }
+
+    div#topic
+      div#icon img {
+        box-sizing: border-box;
+        width: 95%;
+        height: 95%;
+        margin: auto 0;
+        padding: 0 5px;
+      }
+
+    div#topic
+      div#icon img:hover {
+      opacity: 0.8;
+      }
+
+    div#topic
+      div#contents {
+        width: calc((100% - 10px) / 3 * 2);
+        height: 100px;
+        margin: 0 10px 0 0;
+        background-color: $white;
+        border-bottom: 1px solid $light-red;
+      }
+
+        div#contents 
+         div#title p {
+          box-sizing: border-box;
+          width: 100%;
+          height: 50px;
+          margin: 0 auto;
+          padding-top: 20px;
+          text-align: left;
+        }
+
+        div#contents 
+          div#title a {
+          color: $dark-gray;
+          font-size: $normal;
+          font-weight: bold;
+        }
+
+        div#contents
+          div#daytime p {
+          box-sizing: border-box;
+          width: 100%;
+          height: 50px;
+          margin: 0 auto;
+          padding-bottom: 10px;
+          text-align: left;
+        }
+
+        div#contents
+          div#daytime a {
+            font-size: $small;
+          }
+
+        div#contents 
+          div#title a:hover,
+          div#daytime a:hover {
+          border-bottom: 1px solid gray;
+        }
+
 }
+
 
 
 footer p {

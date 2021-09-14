@@ -9,11 +9,12 @@ html, body {
 }
 
 div#wrapper {
-  position: relative;
+  position: absolute;
   box-sizing: border-box;
+  width: 100%;
   min-height: 100%;
   margin: 0 auto;
-  background-color: $white;
+  background-color: $yellow;
 }
 
 // header h2 {
@@ -33,14 +34,15 @@ div#wrapper {
 //   color: $white;
 // }
 
-// footer p {
-//   width: 80%;
-//   height: 40px;
-//   margin: 0 auto;
-//   padding-top: 20px;
-//   background-color: $green;
-//   color: $white;
-//   text-align: center;
-//   border-radius: 10px 10px 0 0;
-//   font-size: $normal;
-// }
+footer p {
+  position: relative;
+  width: 80%;
+  height: 40px;
+  margin: 0 auto;
+  padding-top: 20px;
+  background-color: $green;
+  color: $white;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+  font-size: $normal;
+}

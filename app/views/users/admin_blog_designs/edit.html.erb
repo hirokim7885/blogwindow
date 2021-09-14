@@ -1,0 +1,14 @@
+<%= form_with model: @user, url: users_admin_blog_design_path(@user) do |f| %>
+  <p>ブログの屋号：
+    <%= f.text_field :blog_name, placeholder: '屋号をつけましょう！' %>
+  </p>
+  <p>背景：
+    <%= f.file_field :background, placeholder: 'お好みのイメージをどうぞ' %>
+  </p>
+  <p>選択しない場合は、元のイメージが表示されます。</p>
+  <p>
+  <%= f.submit %>
+  </p>
+<% end %>
+
+<p><%= link_to '前に戻る', users_admin_blog_design_path(@user) %></p>

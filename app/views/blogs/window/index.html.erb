@@ -6,8 +6,22 @@
       <ul>
         <% @users.each do |user| %>
         <li>
-          <p id="users_blog">
-            <%= link_to "#{user.family_name}さんのブログ", users_top_path(user.id) %>
+          <p id="users_blog_image">
+            <% if user.background.attached? %>
+              <%= link_to image_tag(user.background.variant(resize_to_limit:[300,200])), users_top_path(user.id) %>
+            <% else %>
+              <%= "ブログイメージを張りましょう!" %>
+            <% end %>
+          </p>
+          <p id="users_blog_name">
+            <% if user.blog_name? %>
+              <%= link_to user.blog_name, users_top_path(user.id) %>
+            <% else %>
+              <%= "" %>
+            <% end %>
+          </p>
+          <p id="users_blog_id">
+            <%= link_to "（#{user.family_name}さんのブログ）", users_top_path(user.id) %>
           </p>
         </li>
         <% end %>
@@ -15,16 +29,34 @@
     </div>
 
     <div id="latest_blogs">
-    <p>最近の記事</p>
-      <ul>
-        <% @blogs.first(5).each do |blog| %>
-        <li>
-          <p><%= link_to "#{blog.user.family_name}さん", blogs_content_path(blog.id) %></p>
-          <p><%= link_to blog.title, blogs_content_path(blog.id) %></p>
-          <p><%= link_to blog.created_at, blogs_content_path(blog.id) %></p>
-        </li>
-        <% end %>
-      </ul>
+      <div id="topic"%>
+        <div id="title">
+          <p>最近の記事</p>
+        </div>
+        <ul>
+          <% @blogs.first(5).each do |blog| %>
+          <li>
+            <div id="icon">
+              <p>
+                <% if blog.user.portrait.attached? %>
+                <%= link_to image_tag(blog.user.portrait.variant(resize_to_limit:[50,50])), blogs_content_path(blog.id) %>
+                <% else %>
+                <%= link_to "#{blog.user.family_name}さん", blogs_content_path(blog.id) %>
+                <% end %>
+              </p>
+            </div>
+            <div id="contents">
+              <div id="title"%>
+                <p><%= link_to blog.title, blogs_content_path(blog.id) %></p>
+              </div>
+              <div id="daytime"%>
+                <p><%= link_to blog.created_at.strftime("%Y/%m/%d %H:%m 更新"), blogs_content_path(blog.id) %></p>
+              </div>
+            </div>
+          </li>
+          <% end %>
+        </ul>
+      </div>
     </div>
   </div>
 

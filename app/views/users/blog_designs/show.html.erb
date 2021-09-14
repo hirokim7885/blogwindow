@@ -1,0 +1,36 @@
+<div id="wrapper_blog_designs">
+
+<div id="setting_blog_name">
+  <h2>
+    <% if @user.blog_name? %>
+    <%= @user.blog_name %>
+    <% else %>
+    <%= "#{@user.family_name}さんのブログ" %>
+    <% end %>
+  </h2>
+</div>
+
+<div id="blog_background">
+  <% if @user.background.attached? %>
+  <%= image_tag(@user.background.variant(resize_to_limit:[200,200])) %>
+  <% end %>
+</div>
+
+  <div id="setting_container">
+    <h2>ブログのデザイン</h2>
+      <div id="setting_background">
+        <p class="image_highlight"><%= image_tag("highlight_alt_black_24dp.svg", class: "image_highlight") %></p>
+        <p class="setting_title"><%= link_to "デザインの設定", edit_users_blog_design_path(@user) %></p>
+      </div>
+      <div id="setting_background_text">
+        <p>お客様のブログ画面のタイトル／背景などを、お好きなイメージでカスタマイズすることができます。</p>
+      </div>
+      <div id="back_to_top">
+        <p><%= link_to "Topに戻る", blogs_my_content_index_path %></p>
+      </div>
+      <div id="footer">
+        <p>&copy; 2021 minato no-en</p>
+      </div>
+  </div>
+
+</div>

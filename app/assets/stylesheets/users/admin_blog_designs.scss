@@ -1,0 +1,143 @@
+@import "colors";
+@import "dimensions";
+
+div#wrapper_admin_blog_designs {
+  position: absolute;
+  width: 100%;
+  height: calc(100% + (80px * 2));
+  z-index: 1;
+}
+
+
+div#wrapper_admin_blog_designs
+  div#blog_background img {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+div#wrapper_admin_blog_designs {
+
+  div#setting_blog_name h2 {
+    box-sizing: border-box;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    padding-top: 20px;
+    margin: 0 auto;
+    background-color: $yellow;
+    text-align: center;
+    z-index: 4;
+  }
+
+  div#setting_container {
+    box-sizing: border-box;
+    position: absolute;
+    width: 50%;
+    height: 500px;
+    margin: 50px auto;
+    top: 150px;
+    left: calc((100% - 50%) / 2);
+    background-color: $white;
+    border: 1px solid $yellow;
+    border-radius: 20px 20px 20px 20px;
+    text-align: center;
+    z-index: 3;
+  }
+
+    div#setting_container h2 {
+      width: 70%;
+      padding: 50px;
+      margin: 0 auto;
+      border-bottom: 1px solid gray;
+    }
+
+    div#setting_background {
+      display: flex;
+      width: 70%;
+      margin: 0 auto;
+    }
+
+      div#setting_background p {
+        width: 70%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: $white;
+        border-bottom: none;
+        color: gray;
+        font-size: $small;
+      }
+
+      div#setting_background a {
+        color: gray;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: large;
+      }
+
+      div#setting_background a:hover {
+        color: $yellow;
+      }
+
+      div#setting_background
+        p.image_highlight {
+        width: calc((100% - 10px) / 3);
+        text-align: right;
+      }
+
+      div#setting_background
+        p.setting_title {
+        width: calc((100% - 10px) / 3 * 2);
+        text-align: left;
+      }
+
+      div#setting_background_text p {
+        width: 70%;
+        padding-bottom: 20px;
+        margin: 0 auto;
+        border-bottom: 1px solid $red;
+        text-align: left;
+        color: gray;
+      }
+
+      div#back_to_top p {
+        width: 70%;
+        margin: 0 auto;
+        padding: 50px; 
+        border-bottom: none;
+      }
+
+      div#back_to_top a {
+        color: gray;
+        font-size: $normal;
+        text-decoration: none;
+      }
+
+      div#back_to_top a:hover {
+        border-bottom: 1px solid gray;
+      }
+
+}
+
+div#wrapper_admin_blog_designs
+    div#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 3;
+    }
+
+  div#wrapper_admin_blog_designs
+    div#footer p {
+    position: relative;
+    bottom: 0;
+    width: 80%;
+    height: 40px;
+    padding-top: 20px;
+    margin: 0 auto;
+    color: gray;
+    font-size: $normal;
+    z-index: 4;
+    }

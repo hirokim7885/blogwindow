@@ -20,15 +20,27 @@
       <p><%= link_to image_tag("account_circle_white_24dp.png", class:"image_account"), users_admin_path(@user) %></p>
     </div>
   </div>
-    <div id="sub_container" >
-      <div id="profile">
+    <div id="sub_container">
+
+      <div id="sub_sub_container">
+        <div id="profile">
+          <p>
+            <% if @user.portrait.attached? %>
+            <%= image_tag(@user.portrait.variant(resize_to_limit:[200,200])) %>
+            <% end %>
+          </p>
+          <p><%= link_to "プロフィール", users_admin_my_profile_path(@user) %></p>
+        </div>
+        <div id="blog_background">
         <p>
-          <% if @user.portrait.attached? %>
-          <%= image_tag(@user.portrait.variant(resize_to_limit:[200,200])) %>
+          <% if @user.background.attached? %>
+          <%= image_tag(@user.background.variant(resize_to_limit:[200,200])) %>
           <% end %>
         </p>
-        <p><%= link_to "プロフィール", users_admin_my_profile_path(@user) %></p>
+        <p><%= link_to "ブログのデザイン", users_admin_blog_design_path(@user) %></p>
+        </div>
       </div>
+
       <div id="blog_container">
         <div id="blog_container_title">
           <p>これまで書いたもの</p>
