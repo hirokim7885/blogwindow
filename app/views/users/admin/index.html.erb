@@ -15,6 +15,10 @@
 
 <ul>
   <% @users.each do |user| %>
+    <% if user == current_user %>
+    <% next %>
+    <% puts user %>
+    <% end %>
   <li>
     <%= link_to user.id, users_admin_path(user.id) %>
     <%= link_to user.family_name, users_admin_path(user.id) %>

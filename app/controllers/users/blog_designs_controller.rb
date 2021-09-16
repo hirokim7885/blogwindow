@@ -19,7 +19,7 @@ class Users::BlogDesignsController < AuthController
 
   private
   def user_params
-    params.require(:user).permit(:background, :blog_name)
+    params.require(:user).permit(:background, :blog_name, :blog_caption)
   end
 
 end

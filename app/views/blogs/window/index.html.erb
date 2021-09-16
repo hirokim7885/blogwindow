@@ -1,6 +1,10 @@
 <div id="wrapper">
   <%= render "shared/header" %>    
 
+  <div id="window_navi">
+    <p><%= link_to "About", "#" %></p>
+  </div>
+
   <div id="window_container" %>
     <div id="users_index">
       <ul>
@@ -20,8 +24,11 @@
               <%= "" %>
             <% end %>
           </p>
+          <p id="user_blog_caption">
+            <%= user.blog_caption %>
+          </p>
           <p id="users_blog_id">
-            <%= link_to "（#{user.family_name}さんのブログ）", users_top_path(user.id) %>
+            <%= link_to "（#{user.family_name} #{user.given_name}さんのブログ）", users_top_path(user.id) %>
           </p>
         </li>
         <% end %>
