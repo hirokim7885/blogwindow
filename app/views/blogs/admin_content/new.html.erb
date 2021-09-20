@@ -1,17 +1,17 @@
 <p><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></p>
 
 <p><%= @user.family_name %>さんのブログ</p>
-  <p>new blog</p>
+  <p>New blog</p>
   <%= form_with model: @blog, url: blogs_admin_content_index_path do |f| %>
-    <p>
-      <%= f.label :title %>
+    <p>タイトル：
       <%= f.text_field :title, placeholder: 'タイトル' %>
     </p>
-    <p>
-      <%= f.label :content %>
+    <p>見出しイメージ：
+      <%= f.file_field :caption_image, placeholder: '写真・絵など' %>
+    </p>
+    <p>内容：
       <%= f.rich_text_area :content %>
     </p>
-
     <p>
     <%= f.submit %>
     </p>

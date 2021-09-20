@@ -46,7 +46,7 @@ class Blogs::AdminContentController < Admin::BaseController
 
   private
   def blog_params
-    params.require(:blog).permit(:title, :good_counts, :content)
+    params.require(:blog).permit(:title, :good_counts, :content, :caption_image)
   end
 
 end

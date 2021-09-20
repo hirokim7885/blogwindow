@@ -7,6 +7,9 @@
   <p>タイトル：
     <%= f.text_field :title, placeholder: 'タイトル' %>
   </p>
+  <p>見出しイメージ：
+    <%= f.file_field :caption_image, placeholder: '写真・絵など' %>
+  </p>
   <p>内容：
     <%= f.rich_text_area :content, placeholder: '内容' %>
   </p>

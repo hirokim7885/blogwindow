@@ -145,45 +145,224 @@ div#latest {
     padding-top: 5px;
     background-color: $天色;
     color: $white;
+    font-size: $large;
     text-align: center;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 20px 20px 20px 20px;
   }
 
 div#blog_container {
   position: absolute;
   top: 200px;
-  display: flex;
   width: 100%;
   min-height: 500px;
   z-index: 2;
 }
 
-div#blog_container ul {
-  box-sizing: border-box;
-  position: relative;
-  width: 80%;
-  min-height: inherit;
-  margin: 0 auto;
-  padding: 0 65px 0;
-  text-align: left;
-  border-top: 2px dashed $white;
-}
-
-div#blog_container li {
-  box-sizing: border-box;
-  width: 320px;
-  height: 100px;
-  margin: 10px auto;
-}
+div#blog_container
+  div#dummy {
+    position: relative;
+    width: 70%;
+    height: inherit;
+    margin: 0 auto;
+    border-top: 2px dashed $white;
+    z-index: 2;
+    }
 
 div#blog_container
-  p#article {
-    height: inherit;
-    margin: 0 10px 0;
-    padding: 0 10px;
-    background-color: $white;
-    border-radius: 0 0 10px 10px;
+  div#navi_container {
+    position: absolute;
+    display: flex;
+    top: 30px;
+    left: 80px
+    }
+
+  div#navi_container
+    p#navi {
+      color: $white;
+      font-weight: bold;
+    }
+
+
+div#blog_container
+  div#sub_container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin: 50px auto;
+    background-color: $空色;
+    border-radius: 10px 10px 10px 10px;
+    z-index: 2;
+  }
+
+  div#sub_container ul {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    margin: 0 auto;
+    padding: 50px 68px 70px;
+    text-align: left;
+  }
+
+  div#sub_container li {
+    box-sizing: border-box;
+    width: 250px;
+    height: 250px;
+    margin: 30px auto;
+  }
+
+  div#sub_container {
+  
+    p#caption_image {
+      height: 150px;
+      margin: 0 10px 0;
+      background-color: $white;
+      border-radius: 10px 10px 0 0;
+      text-align: center;
+    }
+
+    p#caption_image img {
+      width: 100%;
+      height: 150px;
+      margin: 0 auto;
+      border-radius: 10px 10px 0 0;
+    }
+
+      p#caption_image img:hover {
+        opacity: 0.8;
+      }
+
   }
 
 
-}
+  div#sub_container {
+
+    div#article {
+      height: 100px;
+      margin: 0 10px 0;
+      padding: 5px 10px;
+      background-color: $white;
+      border-radius: 0 0 10px 10px;
+    }
+
+    div#article p {
+      margin: 0;
+    }
+
+    div#article
+      p#title {
+      width: 100%;
+      height: 25px;
+      box-sizing: border-box;
+      margin-bottom: 5px;
+    }
+
+      div#article
+        p#title a {
+        color: black;
+        font-weight: bold;
+        }
+
+        div#article
+          p#title a:hover {
+          border-bottom: 1px solid black;        
+        }
+
+    div#article
+      p#content {
+      width: 95%;
+      height: 40px;
+      font-size: $small;
+      margin: 0 auto 10px;
+      color: gray;
+    }
+
+    div#article
+      p#time {
+      width: 100%;
+      height: 17px;
+      font-size: $tiny;
+    }
+
+      div#article
+        p#content a:hover, p#time a:hover {
+        border-bottom: 1px solid gray;        
+      }
+  
+    }
+
+
+    div#blog_container
+      div#dummy {
+
+        p#archive {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        height: 30px;
+        text-align: center;
+        z-index: 2;
+        }
+
+        p#archive a {
+          color: $white;
+        }
+
+        p#archive a:hover {
+          border-bottom: 1px solid $white;
+        }
+
+    }
+  
+    div#home_tag {
+      display: flex;
+      position: relative;
+      bottom: 0px;
+      width: 80%;
+      height: 40px;
+      margin: 0 auto;
+      text-align: center;
+      z-index: 3;
+    }
+
+    div#home_tag
+      p#image {
+      position: relative;
+      bottom: 0px;
+      width: calc(100% / 10);
+      height: inherit;
+      margin: 0 auto;
+      padding-top: 10px;
+      background-color: $yellow;
+      text-align: right;
+      border-radius: 10px 0 0 0;
+      z-index: 3;
+      }
+
+    div#home_tag
+      p#come_home {
+      position: relative;
+      bottom: 0px;
+      width: calc(100% / 10 * 9);
+      height: inherit;
+      margin: 0 auto;
+      padding-top: 10px;
+      background-color: $yellow;
+      text-align: left;
+      border-radius: 0 10px 0 0;
+      z-index: 3;
+    }
+
+      div#home_tag
+        p#come_home a {
+        color: $white;
+        font-size: $large;
+        }
+
+        div#home_tag
+          p#come_home a:hover {
+          border-bottom: 1px solid $white;
+          }
+
+    }
