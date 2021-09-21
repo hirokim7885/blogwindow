@@ -1,6 +1,6 @@
 class Blog < ApplicationRecord
 
-  validates :title, presence: true, length: { maximum: 50 }
+  validates :title, presence: true, length: { maximum: 20 }
 
   belongs_to :user
   has_many :reviews, dependent: :destroy

@@ -112,7 +112,6 @@ div#wrapper_top {
     padding-top: 5px;
     background-color: $light-red;
     text-align: center;
-    color: $white;
     border-radius: 0 0 10px 10px;
     z-index: 1;
   }
@@ -178,8 +177,7 @@ div#blog_container
 
   div#navi_container
     p#navi {
-      color: $white;
-      font-weight: bold;
+      color: $黒紅;
     }
 
 
@@ -190,7 +188,7 @@ div#blog_container
     width: 100%;
     height: auto;
     margin: 50px auto;
-    background-color: $空色;
+    background-color: $桜色;
     border-radius: 10px 10px 10px 10px;
     z-index: 2;
   }
@@ -220,6 +218,7 @@ div#blog_container
       background-color: $white;
       border-radius: 10px 10px 0 0;
       text-align: center;
+      box-shadow: 1px 1px $gray;
     }
 
     p#caption_image img {
@@ -242,8 +241,9 @@ div#blog_container
       height: 100px;
       margin: 0 10px 0;
       padding: 5px 10px;
-      background-color: $white;
+      background-color: $黄支子色;
       border-radius: 0 0 10px 10px;
+      box-shadow: 1px 1px $gray;
     }
 
     div#article p {
@@ -260,7 +260,8 @@ div#blog_container
 
       div#article
         p#title a {
-        color: black;
+        color: $藍鉄;
+        font-size: $small;
         font-weight: bold;
         }
 
@@ -306,11 +307,11 @@ div#blog_container
         }
 
         p#archive a {
-          color: $white;
+          color: $黒紅;
         }
 
         p#archive a:hover {
-          border-bottom: 1px solid $white;
+          border-bottom: 1px solid $黒紅;
         }
 
     }
@@ -351,7 +352,7 @@ div#blog_container
       background-color: $yellow;
       text-align: left;
       border-radius: 0 10px 0 0;
-      z-index: 3;
+      z-index: 4;
     }
 
       div#home_tag

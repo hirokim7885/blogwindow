@@ -5,7 +5,7 @@
 
 <%= form_with model: @blog, url: blogs_admin_content_path(@blog) do |f| %>
   <p>タイトル：
-    <%= f.text_field :title, placeholder: 'タイトル' %>
+    <%= f.text_field :title, placeholder: '20字以内' %>
   </p>
   <p>見出しイメージ：
     <%= f.file_field :caption_image, placeholder: '写真・絵など' %>

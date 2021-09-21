@@ -19,7 +19,7 @@ class Users::AdminMyProfileController < Admin::BaseController
   
   private
   def user_params
-    params.require(:user).permit(:portrait, :family_name, :given_name, :family_name_kana, :given_name_kana, :career)
+    params.require(:user).permit(:portrait, :family_name, :given_name, :family_name_kana, :given_name_kana, :career, :life_history)
   end  
 
 end

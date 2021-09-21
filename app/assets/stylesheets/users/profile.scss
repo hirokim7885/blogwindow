@@ -1,3 +1,295 @@
-// Place all the styles related to the users::profile controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+@import "colors";
+@import "dimensions";
+
+div#wrapper_profile {
+  position: absolute;
+  width: 100%;
+  height: calc(100% + (80px * 2));
+  z-index: 1;
+}
+
+div#wrapper_profile
+  div#blog_background img {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+
+div#wrapper_profile {
+
+  div#setting_blog_name {
+    box-sizing: border-box;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    z-index: 4;
+  }
+
+  div#setting_blog_name h2 {
+    box-sizing: border-box;
+    position: relative;
+    width: 80%;
+    height: inherit;
+    margin: 0 auto;
+    padding-top: 15px;
+    text-align: center;
+    background-color: $yellow;
+    font-size: 22px;
+    z-index: 4;
+  }
+
+  div#container_my_page {
+    position: fixed;
+    display: flex;
+    top: 40px;
+    width: 100%;
+    height: 30px;
+    margin: 0 auto;
+    z-index: 4;
+    }
+
+    div#my_page {
+      position: relative;
+      width: 80%;
+      height: 30px;
+      margin: 0 auto;
+      background-color: $yellow;
+      z-index: 4;
+    }
+
+    div#my_page p {
+      box-sizing: border-box;
+      width: calc((100% - 20px) / 9 * 8);
+      height: inherit;
+      margin: 0;
+      padding-top: 0;
+      color: $white;
+      text-align: right;
+    }
+
+    div#my_page
+      p#chara_my_page {
+      box-sizing: border-box;
+      width: calc((100% - 20px) / 9);
+      height: inherit;
+      margin: 0 10px 0 0;
+      padding-top: 0;
+      color: $white;
+      text-align: left;
+      font-size: $large;
+    }
+
+    p#chara_my_page a {
+      color: $white;
+      font-weight: bold;
+    }
+
+    p#chara_my_page a:hover {
+      border-bottom: 1px solid $white;
+    }
+
+  div#container_back_to_top {
+    position: absolute;
+    display: flex;
+    top: 70px;
+    width: 100%;
+    height: 35px;
+    margin-top: 3px;
+  }
+
+  div#container_back_to_top
+    div#back_to_top {
+    position: relative;
+    display: flex;
+    width: 80%;
+    height: 35px;
+    margin: 0 auto;
+    z-index: 2;
+    }
+
+  div#container_back_to_top p {
+    box-sizing: border-box;
+    width: calc(100% / 7 * 6);
+    height: inherit;
+    margin: 0;
+    padding-top: 5px;
+    background-color: $light-red;
+    text-align: right;
+    border-radius: 0 0 0 10px;
+    z-index: 2;
+  }
+
+  div#container_back_to_top
+    p#chara_back_to_top {
+    box-sizing: border-box;
+    width: calc(100% / 7);
+    height: inherit;
+    margin: 0;
+    padding-top: 5px;
+    background-color: $light-red;
+    text-align: left;
+    border-radius: 0 0 10px 0;
+    z-index: 2;
+  }
+
+    p#chara_back_to_top a {
+      color: $white;
+    }
+
+      p#chara_back_to_top a:hover {
+        border-bottom: 1px solid $white;
+      }
+
+  div#container_profile {
+    position: absolute;
+    top: 150px;
+    width: 100%;
+    height: 100%;
+  }
+
+  div#container_profile {
+
+    div#profile {
+      box-sizing: border-box;
+      position: relative;
+      width: 45%;
+      height: auto;
+      margin: 0 auto 50px;
+      padding-bottom: 30px;
+      background-color: $桜色;
+      border-radius: 10px 10px 10px 10px;
+      z-index: 2;
+    }
+  
+    p#title {
+      box-sizing: border-box;
+      width: 100%;
+      height: 50px;
+      margin: 0;
+      padding-top: 10px;
+      background-color: $天色;
+      color: $white;
+      font-size: $huge;
+      text-align: center;
+      border-radius: 10px 10px 0 0;
+    }
+
+    p#image {
+      box-sizing: border-box;
+      width: 100%;
+      height: 300px;
+      margin: 30px auto;
+      text-align: center;
+    }
+
+      p#image img {
+        height: inherit;
+        border-radius: 10px 10px 10px 10px;
+      }
+
+    p#tab_name,
+      p#tab_name_kana,
+        p#tab_career {
+      box-sizing: border-box;
+      width: 70%;
+      height: 25px;
+      margin: 0 auto;
+      text-align: center;
+      color: $黒紅;
+    }
+
+    p#tab_name, p#tab_name_kana {
+      border-bottom: 1px solid $蜜柑色;
+      background-color: $蜜柑色;
+      color: $white;
+      border-radius: 0 0 5px 5px;
+    }
+
+    p#tab_career {
+      border-bottom: 1px solid $小豆色;
+      background-color: $小豆色;
+      color: $white;
+      border-radius: 0 0 5px 5px;
+    }
+
+    p#name, p#name_kana {
+      box-sizing: border-box;
+      width: 100%;
+      height: 50px;
+      text-align: center;
+      font-size: $large;;
+    }
+
+    div.trix-content {
+      box-sizing: border-box;
+      width: 100%;
+      min-height: 200px;
+      text-align: left;
+    }
+
+    div#career {
+      width: 70%;
+      height: 200px;
+      margin: 30px auto;
+      text-align: center;
+    }
+  }
+
+
+  div#home_tag {
+    position: relative;
+    display: flex;
+    bottom: 0px;
+    width: 80%;
+    height: 50px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 3;
+  }
+
+  div#home_tag
+    p#image {
+    box-sizing: border-box;
+    position: relative;
+    bottom: 0px;
+    width: calc(100% / 10);
+    height: inherit;
+    margin: 0 auto;
+    padding-top: 10px;
+    background-color: $yellow;
+    text-align: right;
+    border-radius: 10px 0 0 0;
+    z-index: 3;
+    }
+
+  div#home_tag
+    p#come_home {
+    box-sizing: border-box;
+    position: relative;
+    bottom: 0px;
+    width: calc(100% / 10 * 9);
+    height: inherit;
+    margin: 0 auto;
+    padding-top: 10px;
+    background-color: $yellow;
+    text-align: left;
+    border-radius: 0 10px 0 0;
+    z-index: 4;
+  }
+
+    div#home_tag
+      p#come_home a {
+      color: $white;
+      font-size: $large;
+      }
+
+      div#home_tag
+        p#come_home a:hover {
+        border-bottom: 1px solid $white;
+        }
+
+}

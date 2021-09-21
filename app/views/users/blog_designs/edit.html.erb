@@ -1,13 +1,13 @@
 <%= form_with model: @user, url: users_blog_design_path(@user) do |f| %>
   <p>ブログの屋号：
-    <%= f.text_field :blog_name, placeholder: '屋号をつけましょう！' %>
+    <%= f.text_field :blog_name, placeholder: '屋号をつけましょう！（20字以内）' %>
   </p>
   <p>背景：
     <%= f.file_field :background, placeholder: 'お好みのイメージをどうぞ' %>
   </p>
   <p>選択しない場合は、元のイメージが表示されます。</p>
   <p>ブログの見出し：
-    <%= f.text_field :blog_caption, placeholder: '魅力的な見出しを書きましょう！'%>
+    <%= f.text_field :blog_caption, placeholder: '魅力的な見出しを書きましょう！（40字以内）'%>
   <p>見出しは、ホーム画面で確認できます。</p>
   </p>
   <p>
