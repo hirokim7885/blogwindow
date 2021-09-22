@@ -167,15 +167,17 @@ div#wrapper_profile {
   
     p#title {
       box-sizing: border-box;
-      width: 100%;
-      height: 50px;
-      margin: 0;
-      padding-top: 10px;
-      background-color: $天色;
-      color: $white;
+      width: 70%;
+      height: 80px;
+      margin: 0 auto;
+      padding-top: 25px;
+      // background-color: $天色;
+      color: $黒紅;
       font-size: $huge;
+      font-weight: bold;
       text-align: center;
-      border-radius: 10px 10px 0 0;
+      border-bottom: 1px solid $黒紅;
+      border-radius:10px 10px 0 0 ;
     }
 
     p#image {

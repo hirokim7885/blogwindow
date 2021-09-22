@@ -1,9 +1,6 @@
 @import "colors";
 @import "dimensions";
 
-li {
-  display: inline-block;
-}
 
 div#wrapper_display {
   position: absolute;
@@ -13,6 +10,19 @@ div#wrapper_display {
 }
 
 div#wrapper_display {
+
+  ul {
+    margin: 0;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  p {
+    margin: 0;
+  }
+
 
   div#blog_background img {
   position: fixed;
@@ -125,6 +135,37 @@ div#wrapper_display {
         border-bottom: 1px solid $white;
       }
 
+  div#container_past {
+    width: 100%;
+    height: 80px;
+  }
+    div#subcontainer_past {
+      width: 60%;
+      height: inherit;
+      margin: 0 auto;
+    }
+
+    div#past {
+      width: 100%;
+      height: inherit;
+      background-color: $桜色;
+      border-radius: 10px 10px 0 0;
+    }
+
+    div#past p {
+      box-sizing: border-box;
+      width: 80%;
+      height: inherit;
+      margin: 0 auto;
+      padding-top: 30px;
+      color: $黒紅;
+      text-align: center;
+      font-size: $large;
+      font-weight: bold;
+      border-bottom: 1px solid $黒紅;
+      z-index: 2;
+    }
+
   div#container_archive {
     position: absolute;
     top: 200px;
@@ -136,9 +177,13 @@ div#wrapper_display {
     div#container_archive
       div#subcontainer {
         position: relative;
-        width: 70%;
+        width: 60%;
         height: auto;
+        min-height: 500px;
         margin: 0 auto;
+        margin-bottom: 50px;
+        background-color: $桜色;
+        border-radius: 0 0 10px 10px;
         z-index: 1;
       }
 
@@ -147,24 +192,232 @@ div#wrapper_display {
           display: block;
         }
 
-    div#subcontainer
-      div#sub_subcontainer {
+    div#container_archive
+      div#dummy {
         position: relative;
-        display: flex;
         width: 100%;
         height: auto;
-        background-color: $桜色;
+        min-height: inherit;
+        margin: 0 auto;
+        z-index: 1;
+      }
+
+    div#subcontainer
+      div#sub_subcontainer {
+        box-sizing: border-box;
+        position: relative;
+        display: flex;
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+        padding: 20px 0 20px 0px;
+        border-bottom: 1px solid $蜜柑色;
         z-index: 1;
       }
 
     div#sub_subcontainer {
 
       div#container_blogs {
+        box-sizing: border-box;
         display: flex;
-        width: calc(100% / 3 * 2);
-        height: 150px;
+        width: calc(100% / 4 * 3);
+        height: 130px;
+        padding: 10px 0 10px;
       }
+
+      p#caption_image {
+        width: calc(100% / 3);
+        height: inherit;
+      }
+
+        p#caption_image:hover {
+          opacity: 0.8;
+        }
+
+
+      div#container_content {
+        box-sizing: border-box;
+        width: 100%;
+        height: 115px;
+        padding-top: 5px;
+      }
+
+      p#title {
+        width: 100%;
+        height: 25px;
+        padding-left: 15px;
+      }
+        p#title a {
+          color: $黒紅;
+          font-weight: bold;
+        }
+
+        p#title a:hover {
+          border-bottom: 1px solid $黒紅;
+        }
+
+      p#content {
+        width: 100%;
+        height: 50px;
+        padding-left: 15px;
+      }
+
+        p#content a {
+          font-size: $normal;
+        }
+
+      p#time {
+        width: 100%;
+        height: 20px;
+        padding-left: 15px;
+      }
+        p#time a {
+          font-size: $small;
+        }
+
+        p#content a:hover,
+          p#time a:hover {
+          border-bottom: 1px solid $gray;
+        }
+
+      div#container_reviews {
+        box-sizing: border-box;
+        width: calc(100% / 4);
+        height: 130px;
+        padding: 25px 0 10px;
+        text-align: center;
+      }
+
+      p#string a,
+        p#counts a {
+        color: $黒紅;
+        font-size: $normal;
+      }
+
+        p#string a:hover,
+          p#counts a:hover {
+          color: $蜜柑色;
+        }
 
     }
 
+  div#subcontainer
+    nav.pagination {
+      width: 100%;
+      height: 50px;
+      margin: 20px auto;
+      text-align: center;
+    }
+
+  nav.pagination  {
+
+    span.first,
+    span.prev,
+    span.page.current,
+    span.page.gap,
+    span.page,
+    span.next {
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    padding: 0 5px;
+    border-right: 1px solid $gray;
+    color: $gray;
+    }
+
+    span.last {
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    padding: 0 5px;
+    color: $gray;
+    }
+
+    span.page.current {
+      color: $黒紅;
+      font-weight: bold;
+      font-size: $huge;
+    }
+
+    span.first a:hover,
+    span.prev a:hover,
+    span.page a:hover,
+    span.next a:hover,
+    span.last a:hover {
+    color: $蜜柑色;
+    }
+
+  }
+    
+  div#home_tag {
+    display: flex;
+    position: relative;
+    bottom: 0px;
+    width: 80%;
+    height: 40px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 3;
+  }
+
+  div#home_tag
+    p#image {
+    position: relative;
+    bottom: 0px;
+    width: calc(100% / 10);
+    height: inherit;
+    margin: 0 auto;
+    padding-top: 10px;
+    background-color: $yellow;
+    text-align: right;
+    border-radius: 10px 0 0 0;
+    z-index: 3;
+    }
+
+  div#home_tag
+    p#come_home {
+    position: relative;
+    bottom: 0px;
+    width: calc(100% / 10 * 9);
+    height: inherit;
+    margin: 0 auto;
+    padding-top: 10px;
+    background-color: $yellow;
+    text-align: left;
+    border-radius: 0 10px 0 0;
+    z-index: 4;
+  }
+
+    div#home_tag
+      p#come_home a {
+      color: $white;
+      font-size: $large;
+      }
+
+      div#home_tag
+        p#come_home a:hover {
+        border-bottom: 1px solid $white;
+        }
+
+div#subcontainer
+  p#back_to_top {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px auto 30px;
+    text-align: center;
+  }
+      
+  div#subcontainer {
+
+    p#back_to_top a {
+      color: $黒紅;
+    }
+      
+      p#back_to_top a:hover {
+        border-bottom: 1px solid $黒紅;
+      }       
+
+  }
+     
 }

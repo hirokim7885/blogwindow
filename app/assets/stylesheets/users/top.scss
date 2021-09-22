@@ -126,29 +126,6 @@ div#wrapper_top {
       border-bottom: 1px solid $white;
     }
 
-div#latest {
-  position: absolute;
-  display: flex;
-  top: calc(200px - (35px / 2));
-  width: 100%;
-  height: 35px;
-  z-index: 3;
-}
-
-  div#latest p {
-    box-sizing: border-box;
-    position: relative;
-    width: 200px;
-    height: inherit;
-    margin: 0 auto;
-    padding-top: 5px;
-    background-color: $天色;
-    color: $white;
-    font-size: $large;
-    text-align: center;
-    border-radius: 20px 20px 20px 20px;
-  }
-
 div#blog_container {
   position: absolute;
   top: 200px;
@@ -157,17 +134,49 @@ div#blog_container {
   z-index: 2;
 }
 
-div#blog_container
+div#blog_container {
+
+  div#container_latest {
+    width: 100%;
+    height: 80px;
+  }
+
+    div#subcontainer_latest {
+      width: 65%;
+      height: inherit;
+      margin: 0 auto;
+    }
+
+    div#latest {
+      width: 100%;
+      height: inherit;
+      margin-left: 0;
+      background-color: $桜色;
+      border-radius: 20px 20px 0 0;
+      }
+
+      div#latest p {
+        box-sizing: border-box;
+        width: 80%;
+        height: inherit;
+        margin: 0 auto;
+        padding-top: 30px;
+        text-align: center;
+        font-size: $large;
+        font-weight: bold;
+        border-bottom: 1px solid $黒紅;
+        }
+
   div#dummy {
     position: relative;
-    width: 70%;
+    width: 65%;
     height: inherit;
     margin: 0 auto;
-    border-top: 2px dashed $white;
+    background-color: $桜色;
+    border-radius: 0 0 10px 10px;
     z-index: 2;
     }
 
-div#blog_container
   div#navi_container {
     position: absolute;
     display: flex;
@@ -180,26 +189,22 @@ div#blog_container
       color: $黒紅;
     }
 
-
-div#blog_container
   div#sub_container {
     position: relative;
     display: flex;
     width: 100%;
     height: auto;
-    margin: 50px auto;
-    background-color: $桜色;
-    border-radius: 10px 10px 10px 10px;
+    margin-bottom: 50px;
     z-index: 2;
   }
 
   div#sub_container ul {
     box-sizing: border-box;
     position: relative;
-    width: 100%;
+    width: inherit;
     min-height: 600px;
     margin: 0 auto;
-    padding: 50px 68px 70px;
+    padding: 50px 65px 70px;
     text-align: left;
   }
 
@@ -209,6 +214,8 @@ div#blog_container
     height: 250px;
     margin: 30px auto;
   }
+
+}
 
   div#sub_container {
   

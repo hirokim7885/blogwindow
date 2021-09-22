@@ -1,3 +1,129 @@
-// Place all the styles related to the blogs::content controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+@import "colors";
+@import "dimensions";
+
+li {
+  display: inline-block;
+}
+
+div#wrapper_content {
+  position: absolute;
+  width: 100%;
+  height: calc(100% + (80px * 2));
+  z-index: 1;
+}
+
+div#wrapper_content
+  div#blog_background img {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+div#wrapper_content {
+
+  div#setting_blog_name {
+    box-sizing: border-box;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    z-index: 4;
+  }
+
+  div#setting_blog_name h2 {
+    box-sizing: border-box;
+    position: relative;
+    width: 80%;
+    height: inherit;
+    margin: 0 auto;
+    padding-top: 15px;
+    text-align: center;
+    background-color: $yellow;
+    font-size: 22px;
+    z-index: 4;
+  }
+
+  div#container_my_page {
+    position: fixed;
+    display: flex;
+    top: 40px;
+    width: 100%;
+    height: 30px;
+    margin: 0 auto;
+    z-index: 4;
+    }
+
+    div#my_page {
+      position: relative;
+      width: 80%;
+      height: 30px;
+      margin: 0 auto;
+      background-color: $yellow;
+      z-index: 4;
+    }
+
+    div#my_page p {
+      box-sizing: border-box;
+      width: calc((100% - 20px) / 9 * 8);
+      height: inherit;
+      margin: 0;
+      padding-top: 0;
+      color: $white;
+      text-align: right;
+    }
+
+    div#my_page
+      p#chara_my_page {
+      box-sizing: border-box;
+      width: calc((100% - 20px) / 9);
+      height: inherit;
+      margin: 0 10px 0 0;
+      padding-top: 0;
+      color: $white;
+      text-align: left;
+      font-size: $large;
+  }
+
+    p#chara_my_page a {
+      color: $white;
+      font-weight: bold;
+    }
+
+    p#chara_my_page a:hover {
+      border-bottom: 1px solid $white;
+    }
+
+  div#profile {
+    position: absolute;
+    top: 70px;
+    display: flex;
+    width: 100%;
+    height: 35px;
+  }
+
+  div#profile p {
+    box-sizing: border-box;
+    position: relative;
+    width: 80%;
+    height: inherit;
+    margin: 3px auto;
+    padding-top: 5px;
+    background-color: $light-red;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+    z-index: 1;
+  }
+
+    div#profile a {
+      color: $white;
+      font-size: $large;;
+      z-index: 1;
+    }
+
+    div#profile a:hover {
+      border-bottom: 1px solid $white;
+    }
+
+  }

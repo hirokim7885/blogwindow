@@ -27,44 +27,58 @@
   </div>
 
   <div id="container_archive">
+
+    <div id="container_past">
+      <div id="subcontainer_past">
+        <div id="past">
+          <p>過去のブログ</p>
+        </div>
+      </div>
+    </div>
+
     <div id="subcontainer">
-      <ul><% @blogs.each do |blog| %>
-        <li>
-          <div id="sub_subcontainer">
-            <div id="container_blogs">
-              <p id="caption_image">
-                <% if blog.caption_image.attached? %>
-                  <%= link_to image_tag(blog.caption_image.variant(resize_to_limit:[150,150])), blogs_content_path(blog.id) %>
-                <% else %>
-                  <%= link_to image_tag(blog.user.background.variant(resize_to_limit:[150,150])), blogs_content_path(blog.id) %>
-                <% end %>
-              </p>
-              <div id="container_content">
-                <p id="title"><%= link_to blog.title, blogs_content_path(blog.id) %></p>
-                <p id="content"><%= link_to truncate(strip_tags(blog.content.to_s), length: 30, omission: "…"), blogs_content_path(blog.id) %></p>
-                <p id="time"><%= link_to blog.created_at.strftime("%Y/%m/%d %H:%m 更新"), blogs_content_path(blog.id) %></p>
+      <div id="dummy">
+        <ul><% @blogs.offset(9).each do |blog| %>
+          <li>
+            <div id="sub_subcontainer">
+              <div id="container_blogs">
+                <p id="caption_image">
+                  <% if blog.caption_image.attached? %>
+                    <%= link_to image_tag(blog.caption_image.variant(resize_to_limit:[150,150])), blogs_content_path(blog.id) %>
+                  <% else %>
+                    <%= link_to image_tag(blog.user.background.variant(resize_to_limit:[150,150])), blogs_content_path(blog.id) %>
+                  <% end %>
+                </p>
+                <div id="container_content">
+                  <p id="title"><%= link_to blog.title, blogs_content_path(blog.id) %></p>
+                  <p id="content"><%= link_to truncate(strip_tags(blog.content.to_s), length: 30, omission: "…"), blogs_content_path(blog.id) %></p>
+                  <p id="time"><%= link_to blog.created_at.strftime("%Y/%m/%d %H:%m 更新"), blogs_content_path(blog.id) %></p>
+                </div>
               </div>
-            </div>
-            <div id="container_reviews">
-              <p id="review">
+              <div id="container_reviews">
                 <% if blog.good_count > 0 %>
-                  <%= link_to image_tag("email_black_24dp.svg", class:"good_count") %>
-                  <%= link_to "#{blog.good_count} 件", blogs_content_path(blog.id) %>
+                  <p id="image"><%= link_to image_tag("email_black_24dp.svg", class:"good_count") %></p>
+                  <p id="string"><%=link_to "メッセージ", blogs_content_path(blog.id) %></p>
+                  <p id="counts"><%= link_to "#{blog.good_count} 件", blogs_content_path(blog.id) %></p>
                 <% else %>
                   <%= "" %>
                 <% end %>
-              </p>
+              </div>
             </div>
-          </div>
-        </li>
-        <% end %>
-      </ul>
-      <p><%= paginate @blogs %></p>
+          </li>
+          <% end %>
+        </ul>
+        <%= paginate @blogs %>
+      </div>
+      <p id="back_to_top"><%= link_to "ブログTOPに戻る", users_top_path(@user) %></p>
     </div>
+
+    <div id="home_tag">
+      <p id="image"><%= link_to image_tag("home_white_24dp.svg", class:"home"), blogs_window_index_path %></p>
+      <p id="come_home"><%= link_to 'Homeに戻る', blogs_window_index_path %><p>
+    </div>
+
   </div>
-
-  <p><%= link_to "ブログTOPに戻る", users_top_path(@user) %></p>
-
 
 </div>
 
