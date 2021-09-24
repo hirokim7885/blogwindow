@@ -16,7 +16,9 @@ class User < ApplicationRecord
   has_many :blogs, dependent: :destroy
   has_one_attached :portrait
   has_one_attached :background
+  has_one_attached :title_image
   has_rich_text :life_history
+  has_rich_text :self_introduction
 
   # def User.new_token
   #   SecureRandom.urlsafe_base64

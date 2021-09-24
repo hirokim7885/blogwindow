@@ -2,7 +2,7 @@ class Users::DisplayController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @blogs = @user.blogs.page(params[:page]).order(created_at: :desc)
+    @blogs = @user.blogs.order(created_at: :desc).page(params[:page])
   end
 
 end

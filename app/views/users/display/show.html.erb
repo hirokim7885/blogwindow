@@ -38,7 +38,7 @@
 
     <div id="subcontainer">
       <div id="dummy">
-        <ul><% @blogs.offset(9).each do |blog| %>
+        <ul><% @blogs.each do |blog| %>
           <li>
             <div id="sub_subcontainer">
               <div id="container_blogs">
@@ -51,7 +51,7 @@
                 </p>
                 <div id="container_content">
                   <p id="title"><%= link_to blog.title, blogs_content_path(blog.id) %></p>
-                  <p id="content"><%= link_to truncate(strip_tags(blog.content.to_s), length: 30, omission: "…"), blogs_content_path(blog.id) %></p>
+                  <p id="content"><%= link_to truncate(strip_tags(blog.content.to_s), length: 55, omission: "…"), blogs_content_path(blog.id) %></p>
                   <p id="time"><%= link_to blog.created_at.strftime("%Y/%m/%d %H:%m 更新"), blogs_content_path(blog.id) %></p>
                 </div>
               </div>

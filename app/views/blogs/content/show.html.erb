@@ -1,64 +1,55 @@
 <div id="wrapper_content">
 
-<div id="setting_blog_name">
-    <h2>
-      <% if @user.blog_name? %>
-      <%= @user.blog_name %>
-      <% else %>
-      <%= "#{@user.family_name}さんのブログ" %>
-      <% end %>
-    </h2>
-  </div>
-  <div id="container_my_page">
-    <div id="my_page">
-      <p><%= link_to image_tag("person_white_24dp.svg", class:'logo_sign_in'), new_user_session_path %></p>
-      <p id="chara_my_page"><%= link_to "My page", new_user_session_path %></p>
-    </div>
-  </div>
-
   <div id="blog_background">
     <% if @user.background.attached? %>
     <%= image_tag(@user.background.variant(resize_to_limit:[200,200])) %>
     <% end %>
   </div>
 
-    <div id="profile">
-      <p><%= link_to 'Profile', users_profile_path(@user) %></p>
-    </div>
+  <div id="container_blog_load">
+    <div id="blog_load">
 
+      <div id="container_blog_name">
+        <p>minato no-en presents</p>
+        <h2><%= @user.blog_name %></h2>
+      </div>
 
+      
     
-    <h2><%= @blog.title %></h2>
-    <p><%= @blog.content %></p>
+      <h2><%= @blog.title %></h2>
+      <p><%= @blog.content %></p>
 
-    <p>最終更新日：<%= @blog.updated_at %></p>
-    <p>投稿日：<%= @blog.updated_at %></p>
+      <p>最終更新日：<%= @blog.updated_at %></p>
+      <p>投稿日：<%= @blog.updated_at %></p>
 
-    <p><%= "応援メッセージが #{@blog.reviews.size} 件あります。" %></p>
-    <p>
-    <% if @blog.reviews.any? %>
-    <ul>
-      <% @blog.reviews.each do |review| %>
-        <li>
-        <%= "#{review.name}：" %>
-        <%= review.comment %>
-        </li>
+      <p><%= "応援メッセージが #{@blog.reviews.size} 件あります。" %></p>
+      <p>
+      <% if @blog.reviews.any? %>
+      <ul>
+        <% @blog.reviews.each do |review| %>
+          <li>
+          <%= "#{review.name}：" %>
+          <%= review.comment %>
+          </li>
+        <% end %>
+      </ul>
       <% end %>
-    </ul>
-    <% end %>
-    </p>
+      </p>
 
-    <% if @blog.privious.present? %>
-    <%= link_to "<<前の記事", blogs_content_path(@blog.privious) %>
-    <% end %>
-    <% if @blog.next.present? %>
-    <%= link_to "後の記事>>", blogs_content_path(@blog.next) %>
-    <% end %>
+      <% if @blog.privious.present? %>
+      <%= link_to "<<前の記事", blogs_content_path(@blog.privious) %>
+      <% end %>
+      <% if @blog.next.present? %>
+      <%= link_to "後の記事>>", blogs_content_path(@blog.next) %>
+      <% end %>
 
+      <p><%= link_to "コメントをのせる", new_blogs_content_review_path(@blog) %></p>
 
-    <p><%= link_to "コメントをのせる", new_blogs_content_review_path(@blog) %></p>
+      <p><%= link_to "ブログTopに戻る", users_top_path(@blog.user.id) %></p>
 
-    <p><%= link_to "ブログTopに戻る", users_top_path(@blog.user.id) %></p>
+  </div>
+</div>
+
     <p><%= link_to 'Homeに戻る', blogs_window_index_path %><p>
 
 </div>
