@@ -16,6 +16,8 @@ div#wrapper_content {
 
   li {
     display: inline-block;
+    width: 100%;
+    height: auto;
   }
 
   div#blog_background img {
@@ -24,9 +26,6 @@ div#wrapper_content {
   height: 100%;
   z-index: 1;
 }
-
-}
-
 
 div#container_blog_load {
   position: absolute;
@@ -48,5 +47,258 @@ div#container_blog_load {
     overflow: auto;
     z-index: 1;
   }
+
+}
+
+div#container_blog_name {
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 80px 0;
+  text-align: center;
+}
+
+div#container_blog_name {
+
+  p#corp_name {
+    margin: 20px 0;
+    color: $黒紅;
+  }
+  p#title_image {
+    width: 100%;
+    height: auto;
+    margin: 50px 0;
+  }
+
+    #title_image img {
+      box-sizing: border-box;
+      width: 100%;
+      height: auto;
+      padding: 0 2px;
+      border-radius: 5px 5px 5px 5px;
+    }
+
+  div#dummy {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+  }
+
+  div#dummy {
+
+    p#profile {
+      box-sizing: border-box;
+      width: 80%;
+      height: 50px;
+      margin: 0 auto;
+      border-bottom: 1px solid $黒紅;
+    }
+
+    div.trix-content#text {
+      font-size: $large;
+    }
+
+    p#profile a {
+      font-size: $large;
+    }
+
+      p#profile a:hover {
+        color: $蜜柑色;
+      }
+
+  }
+}
+
+div#container_article {
+
+  div#title {
+    width: 100%;
+    height: 100px;
+  }
+
+    div#title h2 {
+      width: 80%;
+      height: inherit;
+      margin: 0 auto;
+      text-align: center;
+    }
+  
+  div#content {
+    margin: 0 100px;
+  }
+
+  div.trix-content div {
+    box-sizing: border-box;
+    padding: 5px 0;
+  }
+
+}
+
+div#updated_at {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+  p#update {
+    width: 100%;
+    height: 30px;
+    margin-top: 30px;
+    color: $gray;
+    font-size: $small;
+  }
+
+  p#create {
+    width: 80%;
+    height: 30px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    color: $gray;
+    font-size: $small;
+  }
+
+  div#move {
+    box-sizing: border-box;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    border-bottom: 1px solid $黒紅;
+  }
+
+  div#move a {
+    color: $黒紅;
+  }
+
+    div#move a:hover {
+      color: $蜜柑色;
+    }
+
+    div#support {
+      width: 100%;
+      height: auto;
+      text-align: center;
+    }
+    
+    p#message {
+      width: 70%;
+      height: auto;
+      margin: 50px auto 30px;
+      background-color: $蜜柑色;
+      color: $white;
+      border-radius: 0 0 20px 20px;
+    }
+    
+    div#reviews {
+      width: 70%;
+      height: auto;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+
+  div#support {
+
+    div#reviews {
+      display: flex;
+    }
+
+    div#reviews
+      p#name {
+        box-sizing: border-box;
+        display: inline-block;
+        width: 180px;
+        height: 30px;
+        margin: 10px 0 10px 10px;
+        padding: 5px 3px 0;
+        background-color: $天色;
+        text-align: center;
+        color: $white;
+        font-size: $small;
+        border-radius: 10px 10px 10px 10px;
+      }
+
+      p#chara {
+        box-sizing: border-box;
+        width: 100%;
+        height: inherit;
+        margin: 10px 0 10px 10px;
+        padding-top: 3px;
+        font-size: $normal;
+      }
+  }
+
+  div#container_comment {
+    width: 100%;
+    height: auto;
+    margin: 20px auto;
+  }
+
+  div#container_comment {
+
+    div#comment {
+      display: flex;
+      width: 180px;
+      height: 45px;
+      margin: 0 auto;
+      text-align: center;
+      border-radius: 10px 10px 10px 10px;
+    }
+
+    p#image {
+      width: calc(100% / 7);
+      padding: 10px 0 0 10px;
+    }
+
+    p#chara {
+      width: calc(100% / 7 * 6);
+      padding-top: 10px;
+    }
+
+      p#chara a {
+        color: $黒紅;
+      }
+
+      p#chara a:hover {
+        color: $蜜柑色;
+      }
+
+  }
+
+div#container_back_to_top {
+  width: 100%;
+  height: auto;
+  margin: 30px 0 30px;
+  }
+
+  div#container_back_to_top {
+
+    p#back_to_top,
+    p#back_to_past {
+    width: 100%;
+    height: auto;
+    margin: 0 auto 5px;
+    text-align: center;
+    }
+
+    p#back_to_top a,
+    p#back_to_past a {
+      color: $黒紅;
+    }
+    
+    p#back_to_past a {
+      font-size: $normal;
+    }
+  
+      p#back_to_top a:hover,
+      p#back_to_past a:hover {
+        border-bottom: 1px solid $黒紅;
+      }
+  
+    
+
+  }
+    
 
 }

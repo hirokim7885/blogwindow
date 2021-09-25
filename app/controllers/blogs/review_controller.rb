@@ -3,6 +3,7 @@ class Blogs::ReviewController < ApplicationController
   def new
     @blog = Blog.find(params[:content_id])
     @review = @blog.reviews.build
+    @user = User.find(@blog.user_id)
   end
 
   def create

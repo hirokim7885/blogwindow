@@ -290,7 +290,7 @@ div#wrapper_blog_designs {
     }
 
     p#back_to_prev a {
-      color: $黒紅;
+      color: $gray;
     }
 
       p#back_to_prev a:hover {
@@ -340,24 +340,19 @@ div#wrapper_blog_designs {
 
 }
 
-div#wrapper_blog_designs
-    div#footer {
-    position: absolute;
-    bottom: 0;
+div#main_container
+  div#footer {
+    position: relative;
     width: 100%;
     height: 60px;
-    z-index: 3;
-    }
+  }
 
-  div#wrapper_blog_designs
-    div#footer p {
-    position: relative;
-    bottom: 0;
+div#main_container
+  div#footer p {
     width: 80%;
-    height: 40px;
-    padding-top: 20px;
+    height: 50px;
     margin: 0 auto;
-    color: gray;
-    font-size: $normal;
-    z-index: 4;
-    }
+    padding-top: 15px;
+    background-color: $yellow;
+    color: $white;
+  }

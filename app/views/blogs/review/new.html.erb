@@ -1,15 +1,44 @@
-<%= form_with model: [@blog, @review], url: blogs_content_review_index_path(@blog) do |f| %>
-  <p>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :comment %>
-    <%= f.text_field :comment %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+<div id="wrapper_reviews">
 
-<p><%= link_to "前に戻る", blogs_content_path(@blog) %></p>
+  <div id="blog_background">
+    <% if @user.background.attached? %>
+    <%= image_tag(@user.background.variant(resize_to_limit:[200,200])) %>
+    <% end %>
+  </div>
+
+  <div id="container_blog_load">
+
+    <div id="blog_load">
+      <div id="container_blog_name">
+        <p id="corp_name">minato no-en presents</p>
+        <h1><%= @user.blog_name %></h1>
+      </div>
+
+      <div id="container_comment">
+        <div id="dummy">
+          <p id="title">Message form</p>
+          <div id="container_ex">
+            <p id="ex"><%= "#{@user.family_name}さんの" %>ブログを読んだ感想や、応援メッセージなどをお書き下さい。（50字以内）</p>
+          <%= form_with model: [@blog, @review], url: blogs_content_review_index_path(@blog) do |f| %>
+            <div id="subcontainer">
+              <p id="name">お名前</p>
+              <p id="form"><%= f.text_field :name %></p>
+              <p id="necessary"><%= "必須" %></p>
+            </div>
+            <div id="subcontainer">
+              <p id="message">メッセージ</p>
+              <p id="form"><%= f.text_field :comment, placeholder: "　50字以内でお書き下さい。" %></p>
+              <p id="necessary"><%= "必須" %></p>
+            </div>
+            <div id="container_submit">
+              <p id="submit">
+                <%= f.submit %>
+              </p>
+            </div>
+          <% end %>
+          <p id="back_to_prev"><%= link_to "前に戻る", blogs_content_path(@blog) %></p>
+        </div>
+      </div>
+  </div>
+
+</div>
