@@ -20,7 +20,7 @@
 
   <div id="main_container">
     <div id="container_setting_title">
-      <div id="dummy">
+      <div class="dummy">
         <h2>ブログのデザイン</h2>
         <div id="setting_background">
           <p class="image_highlight"><%= image_tag("highlight_alt_white_24dp.svg", class: "image_highlight") %></p>
@@ -75,13 +75,11 @@
         </div>
         <div id="shelter">
           <p>ブログの見出し（長め）</p>
-          <p id="caption_long">
-            <% if @user.self_introduction? %>
-              <%= @user.self_introduction %>
-            <% else %>
-              <%= "設定されていません" %>
-            <% end %>
-          </p>
+          <% if @user.self_introduction? %>
+            <%= @user.self_introduction %>
+          <% else %>
+            <%= "設定されていません" %>
+          <% end %>
         </div>
 
         <div id="back_to_top">

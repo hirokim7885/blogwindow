@@ -26,7 +26,7 @@
               <li>屋号はホーム画面に表示されます。</li>
             </ul>
           </div>
-          <div id="dummy"><%= f.text_field :blog_name, placeholder: '屋号をつけましょう！（20字以内）' %></div>
+          <div class="dummy"><%= f.text_field :blog_name, placeholder: '屋号をつけましょう！（20字以内）' %></div>
         </div>
 
         <div id="shelter"><p>ブログの屋号（イメージ）</p></div>
@@ -38,7 +38,7 @@
               <li>選択しない場合は、元のイメージか、弊社で用意している背景色が表示されます。</li>
             </ul>
           </div>
-          <div id="dummy"><%= f.file_field :title_image, placeholder: 'お好みのイメージをどうぞ' %></div>
+          <div class="dummy"><%= f.file_field :title_image, placeholder: 'お好みのイメージをどうぞ' %></div>
         </div>
 
         <div id="shelter"><p>背景</p></div>
@@ -50,7 +50,7 @@
               <li>選択しない場合は、元のイメージか、弊社で用意している背景色が表示されます。</li>
             </ul>
           </div>
-          <div id="dummy"><%= f.file_field :background, placeholder: 'お好みのイメージをどうぞ' %></div>
+          <div class="dummy"><%= f.file_field :background, placeholder: 'お好みのイメージをどうぞ' %></div>
         </div>
 
         <div id="shelter"><p>ブログの見出し（短め）</p></div>
@@ -63,7 +63,7 @@
               <li>見出しは、ホーム画面で確認できます。</li>
             </ul>
           </div>
-          <div id="dummy"><%= f.text_field :blog_caption, placeholder: '魅力的な見出しを書きましょう！（40字以内）'%></div>
+          <div class="dummy"><%= f.text_field :blog_caption, placeholder: '魅力的な見出しを書きましょう！（40字以内）'%></div>
         </div>
 
         <div id="shelter"><p>ブログの見出し（長め）</p></div>
@@ -75,7 +75,7 @@
               <li>100〜200字程度（目安）</li>
             </ul>
           </div>
-          <div id="dummy_introduction"><%= f.rich_text_area :self_introduction %></div>
+          <div class="dummy_introduction"><%= f.rich_text_area :self_introduction %></div>
         </div>
 
         <p id="submit">

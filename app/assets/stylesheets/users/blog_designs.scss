@@ -43,7 +43,7 @@ div#wrapper_blog_designs {
 
   div#main_container {
     position: absolute;
-    top: 150px;
+    top: 100px;
     width: 100%;
     height: auto;
     z-index: 2;
@@ -101,7 +101,7 @@ div#wrapper_blog_designs {
   } 
 
   div#container_setting_title
-    div#dummy {
+    div.dummy {
       width: 55%;
       height: auto;
       margin: 0 auto;
@@ -132,7 +132,6 @@ div#wrapper_blog_designs {
         width: 70%;
         margin: 0 auto;
         padding: 20px;
-        // background-color: $white;
         border-bottom: none;
         color: gray;
         font-size: $small;
@@ -215,7 +214,7 @@ div#wrapper_blog_designs {
       margin-left: 45px;
     }
   
-    div#dummy {
+    div.dummy {
       width: calc(100% / 2.5 * 1.5);
       height: 100%;
       margin: 0 50px;
@@ -231,7 +230,7 @@ div#wrapper_blog_designs {
       border: 1px solid $黒紅;
     }
 
-    div#dummy_introduction {
+    div.dummy_introduction {
       box-sizing: border-box;
       width: calc(100% / 2.5 * 1.5);
       height: auto;
@@ -275,6 +274,7 @@ div#wrapper_blog_designs {
       background-color: $green;
       color: $white;
       border: 1px solid $green;
+      border-radius: 5px;
     }
 
       p#submit input:hover {
@@ -308,14 +308,23 @@ div#wrapper_blog_designs {
       border: none;
     }
 
-      p#caption_short,
-      p#caption_long {
+      p#caption_short {
+        width: 70%;
+        height: auto;
         text-align: left;
         font-size: $large;
       }
 
+    div.trix-content {
+      width: 70%;
+      height: auto;
+      margin: 50px auto;
+      text-align: center;
+      color: $蜜柑色;
+    }
+
     div#shelter img {
-      width: 300px;
+      width: 400px;
       height: auto;
     }
 

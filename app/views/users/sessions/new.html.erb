@@ -1,35 +1,44 @@
 <div id="wrapper">
-  <%= render "users/shared/header" %>    
+  <%= render "users/shared/header" %>
+  <div id="back_to_home">
+    <div id="dummy">
+      <p><%= link_to image_tag("home_white_24dp.svg", class:'home'), blogs_window_index_path %></p>
+      <p id="chara_home"><%= link_to "Home", blogs_window_index_path %></p>
+    </div>
+  </div>
+
   <div id="container">
 
-  <%= flash[:error] %>
+    <p class="error"><%= flash[:error] %></p>
 
-  <div id="title">
-    <h2>ご利用者さまのページ</h2>
-  </div>
-
-    <div id="form">
-    <%= form_with model: @user, url: user_session_path do |f| %>
-      <div class="field">
-        <%= f.label "メールアドレス" %><br />
-        <%= f.email_field :email, placeholder: "メールアドレス", autofocus: true, autocomplete: "email" %>
+    <div id="container_sign_in">
+      <div id="title">
+        <h2>ご利用者さまのページ</h2>
       </div>
 
-      <div class="field">
-        <%= f.label "パスワード" %><br />
-        <%= f.password_field :password, placeholder: "パスワード", autofocus: true, autocomplete: "current-password" %>
-      </div>
-      
-      <div class="actions">
-        <%= f.submit "ログイン" %>
-      </div>
-    <% end %>
+        <div id="form">
+          <%= form_with model: @user, url: user_session_path do |f| %>
+            <div class="field">
+              <%= f.label "メールアドレス" %><br/>
+              <%= f.email_field :email, placeholder: "メールアドレス", autofocus: true, autocomplete: "email" %>
+            </div>
+
+            <div class="field">
+              <%= f.label "パスワード" %><br/>
+              <%= f.password_field :password, placeholder: "パスワード", autofocus: true, autocomplete: "current-password" %>
+            </div>
+            
+            <div class="actions">
+              <%= f.submit "ログイン" %>
+            </div>
+          <% end %>
+        </div>
     </div>
-  
+    
+    <%= render "users/shared/links" %>
   </div>
-  <%= render "users/shared/links" %>
 
-  <%= render "users/shared/footer" %>
+    <%= render "users/shared/footer" %>
 
 </div>
 

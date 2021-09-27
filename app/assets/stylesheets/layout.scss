@@ -17,25 +17,14 @@ div#wrapper {
   background-color: $yellow;
 }
 
-// header h2 {
-//   box-sizing: border-box;
-//   width: 80%;
-//   height: 80px;
-//   margin: 0 auto;
-//   padding-top: 30px;
-//   background-color: $green;
-//   color: $white;
-//   text-align: left;
-// }
-
-// header a {
-//   margin-left: 10px;
-//   text-decoration: none;
-//   color: $white;
-// }
+footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: auto;
+}
 
 footer p {
-  position: relative;
   width: 80%;
   height: 40px;
   margin: 0 auto;

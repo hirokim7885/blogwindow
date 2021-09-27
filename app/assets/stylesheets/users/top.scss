@@ -167,7 +167,7 @@ div#blog_container {
         border-bottom: 1px solid $黒紅;
         }
 
-  div#dummy {
+  div.dummy {
     position: relative;
     width: 65%;
     height: inherit;
@@ -181,15 +181,18 @@ div#blog_container {
     position: absolute;
     display: flex;
     top: 30px;
-    left: 80px
+    left: 80px;
+    width: 200px;
     }
 
   div#navi_container
-    p#navi {
+    p#navi, p {
+      width: 100%;
+      text-align: left;
       color: $黒紅;
     }
 
-  div#sub_container {
+  div.sub_container {
     position: relative;
     display: flex;
     width: 100%;
@@ -198,7 +201,7 @@ div#blog_container {
     z-index: 2;
   }
 
-  div#sub_container ul {
+  div.sub_container ul {
     box-sizing: border-box;
     position: relative;
     width: inherit;
@@ -208,7 +211,7 @@ div#blog_container {
     text-align: left;
   }
 
-  div#sub_container li {
+  div.sub_container li {
     box-sizing: border-box;
     width: 250px;
     height: 250px;
@@ -217,9 +220,10 @@ div#blog_container {
 
 }
 
-  div#sub_container {
+  div.sub_container {
   
     p#caption_image {
+      width: auto;
       height: 150px;
       margin: 0 10px 0;
       background-color: $white;
@@ -242,7 +246,7 @@ div#blog_container {
   }
 
 
-  div#sub_container {
+  div.sub_container {
 
     div#article {
       height: 100px;
@@ -302,13 +306,14 @@ div#blog_container {
 
 
     div#blog_container
-      div#dummy {
+      div.dummy {
 
         p#archive {
         position: absolute;
         bottom: 0px;
         width: 100%;
         height: 30px;
+        margin: 30px 0;
         text-align: center;
         z-index: 2;
         }
@@ -329,7 +334,7 @@ div#blog_container {
       bottom: 0px;
       width: 80%;
       height: 40px;
-      margin: 0 auto;
+      margin: 50px auto 0;
       text-align: center;
       z-index: 3;
     }

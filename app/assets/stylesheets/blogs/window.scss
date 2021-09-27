@@ -213,7 +213,6 @@ div#window_container {
         color: $white;
         margin: 0 auto;
         padding-top: 20px;
-        // border-bottom: 1px solid $white;
         text-align: center;
       }
 
@@ -236,6 +235,7 @@ div#window_container {
 
     div#topic
       div#icon p {
+        margin: 20px 0;
         text-align: center;
       }
 

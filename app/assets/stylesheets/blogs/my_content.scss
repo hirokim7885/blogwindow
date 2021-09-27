@@ -1,231 +1,263 @@
 @import "colors";
 @import "dimensions";
 
-div#main_container {
+div#wrapper_my_content {
+  position: absolute;
+  display: fixed;
   width: 100%;
   height: 100%;
-  min-height: 800px;
 }
 
-div#header_local {
-  position: relative;
-  width: 80%;
-  height: 45px;
-  margin: 2.5px auto 0;
-  background-color: $red;
-  opacity: 0.9;
-  border-radius: 5px 5px 20px 20px;
-  box-shadow: 1px 1px 1px 1px gray;
-}
-
-div#header_local
-  div#header_local_image {
-  box-sizing: border-box;
-  width: 100%;
-  padding-right: 30px;
-  padding-top: 3px;
-  margin: 0; 
-  height: inherit;
-}
-
-div#header_local p {
-  box-sizing: border-box;
-  width: inherit;
-  height: inherit;
-  padding: 0;
-  margin: 0 auto;
-  text-align: right;
-  text-decoration: none;
-}
-
-div#header_local_image .image_logout {
-  height: 35px;
-  margin-top: 3px;
-  margin-right: 15px;
-}
-
-div#header_blog {
-  position: relative;
+div.main_container {
+  position: absolute;
   display: flex;
-  width: 80%;
-  height: 45px;
-  margin-top: 20px;
-  background-color: $brown;
-  opacity: 0.9;
-  border-radius: 0 5px 20px 0;
-  box-shadow: 1px 1px 1px 1px gray;
+  width: 100%;
+  height: 100%;
+  background-color: $yellow;
+  z-index: 1;
 }
 
-div#header_blog
-  div#name, div#account {
-    box-sizing: border-box;
+div.container_setting {
+  width: calc(100% / 10 * 3);
+  height: auto;
+}
+
+div.blog_load {
+  width: calc(100% / 10 * 6);
+  height: auto;
+  background-color: $桜色;
+}
+
+div.container_setting {
+
+  div.owner {
     width: 100%;
-    height: inherit;
+    height: auto;
   }
 
-div#header_blog
-  div#name p {
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin-top: 15px;
-  margin-left: 100px;
-  text-align: left;
-  color: $white;
-  font-weight: bold;
-}
-
-div#header_blog
-  div#account p {
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0 auto;
-  text-align: right;
-  color: $white;
-  font-weight: bold;
-}
-
-div#header_blog a {
-  text-decoration: none;
-  color: $white;
-  font-size: $small;
-  font-weight: bold;
-}
-
-div#header_blog .image_account {
-  height: 35px;
-  margin-top: 5px;
-  margin-right: 50px;
-}
-
-div#sub_container {
-  position: relative;
-  display: flex;
-  width: 80%;
-  max-width: 900px;
-  min-height: inherit;
-  margin: 0 auto;
-}
-
-div#sub_container
-  div#profile {
-    box-sizing: border-box;
-    width: 300px;
-    height: 300px;
-    margin: 30px auto;
-    padding-top: 15px;
-    text-align: center;
-    background-color: $white;
-    // border: 1px solid $dark-red;
-    border-radius: 5px 5px 5px 5px;
-    box-shadow: 1px 1px 1px 1px $brown;
-}
-
-div#sub_container
-  div#profile a {
-    align-items: end;
-    text-decoration: none;
-    color: $green;
-  }
-
-div#sub_container
-  div#blog_container {
-    box-sizing: border-box;
-    width: 500px;
-    height: 100%;
-    min-height: 500px;
-    margin: 30px auto;
-    text-align: center;
-    background-color: $white;
-    // border: 1px solid $orange;
-    border-radius: 20px 0 20px 0;
-    box-shadow: 1px 1px 1px 1px $brown;
-}
-
-div#blog_container
-  div#blog_container_title p {
-  box-sizing: border-box;
-  width: 450px;
-  height: 50px;
-  padding-top: 15px;
-  margin: 15px auto 0;
-  text-align: center;
-  // border-bottom: 1px solid $light-orange;
-  color: gray;
-  font-size: $large;
-}
-
-div#blog_container
-  div#blog_new p {
+  p.name {
     box-sizing: border-box;
     width: 100%;
-    height: 100%;
-    padding-right: 30px;
-    margin: 0;
-    text-align: right;  
-}
-
-div#blog_container
-  div#blog_new a {
-    color: $green;
+    height: 70px;
+    margin: 0 auto;
+    padding-top: 20px;
+    background-color: $green;
+    color: $white;
     font-size: $large;
     font-weight: bold;
-    text-decoration: none;
+    text-align: center;
+    // border-radius: 0 0 10px 10px;
   }
 
-div#blog_container
-  div#blogs li {
+  div.account {
+    width: 100%;
+    height: auto;
+    margin: 30px 0;
+    margin-top: 50px;
+  }
+
+  div.account p.image,
+  div.account p.chara_account {
     box-sizing: border-box;
-    width: 85%;
-    height: 100px;
-    padding: 20px 10px 10px 50px;
-    margin: 0 auto;
-    // background-color: $light-yellow;
-    border-top: 1px solid $light-orange;
-    text-align: left;
+    width: 50%;
+    height: 70px;
+    margin:0 auto;
+    padding-top: 20px;
+    background-color: $light-red;
+    text-align: center;
+  }
+
+  div.account p.image {
+    border-radius: 10px 10px 0 0;
+  }
+
+  div.account p.chara_account {
+    border-radius:0 0 10px 10px ;
+  }
+
+  div.account a {
+    color: $white;
     font-weight: bold;
   }
 
-div#blog_container
-  div#blogs a {
-    text-decoration: none;
-    color: $green;
+    div.account 
+      p.chara_account a:hover {
+      border-bottom: 1px solid $white;
+    }
+
+  div.profile {
+    width: 100%;
+    height: auto;
+    margin: 30px auto;
   }
 
-div#blogs
-  div#time a {
-    font-size: $small;
-    font-weight: normal;
-    color: gray;
+  p.portrait {
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    background-color: $天色;
+    border-radius: 10px 10px 0 0;
   }
 
-div#blogs
-  div#delete {
-    box-sizing: border-box;
-    padding-right: 20px;
-    margin: 0;
-    text-align: right;
+    p.portrait img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px 10px 0 0;
+    }
+
+      p.portrait img:hover {
+        opacity: 0.8;
+      }
+
+  p.chara_profile {
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 5px;
+    background-color: $天色;
+    text-align: center;
+    border-radius:0 0 10px 10px;
   }
 
-div#blogs
-  div#delete .image_trash {
-    height: 23px;
+  p.chara_profile a {
+    color: $white;
+    font-weight: bold;
   }
 
-div#blogs
-  div#delete a {
-    font-size: $small;
-    font-weight: normal;
-    color: $green;
+    p.chara_profile a:hover {
+      border-bottom: 1px solid $white;
+    }
+  
+  div.background-color {
+    width: 100%;
+    height: auto;
   }
 
-ul {
-  padding: 0;
+  p.background_image {
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    background-color: $紅紫;
+    border-radius: 10px 10px 0 0;
+  }
+
+    p.background_image img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px 10px 0 0;
+    }
+
+    p.chara_background_image {
+      width: 50%;
+      height: auto;
+      margin: 0 auto;
+      padding-bottom: 10px;
+      background-color: $紅紫;
+      text-align: center;
+      border-radius:0 0 10px 10px;
+    }
+
+    p.chara_background_image a {
+      color: $white;
+      font-weight: bold;
+    }
+
+      p.chara_background_image a:hover {
+        border-bottom: 1px solid $white;
+      }
+
+      p.background_image img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px 10px 0 0;
+      }
+  
+        p.background_image img:hover {
+          opacity: 0.8;
+        }
+
 }
 
-li {
-    list-style: none;
+
+div.blog_load {
+
+  div.blog_name {
+    width: 100%;
+    height: auto;
+  }
+
+  p.name {
+    width: 70%;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    border-bottom: 1px solid $黒紅;
+  }
+
+  div.blog_container_title {
+    width: 100%;
+    height: auto;
+    margin: 30px 0 10px;
+  }
+
+  div.blog_container_title p {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  div.blog_new {
+    width: 100%;
+    height: auto;
+  }
+
+  div.blog_new p {
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+    padding-right: 20px;
+    text-align: right;
+    border-bottom: 1px solid $蜜柑色;
+  }
+
+}
+
+div#header_logout {
+  width: calc(100% / 9);
+  height: auto;
+}
+
+div#header_logout {
+
+  p.image {
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+  }
+
+  p.image img {
+    width: auto;
+    height: 20px;
+    margin-top: 20px;
+  }
+
+  p.chara {
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+    // padding-bottom: 10px;
+    text-align: center;
+  }
+
+  p.chara a {
+    color: $white;
+    font-size: $small;
+    font-weight: bold;
+  }
+
 }

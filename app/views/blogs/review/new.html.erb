@@ -2,7 +2,9 @@
 
   <div id="blog_background">
     <% if @user.background.attached? %>
-    <%= image_tag(@user.background.variant(resize_to_limit:[200,200])) %>
+      <%= image_tag(@user.background.variant(resize_to_limit:[200,200])) %>
+    <% else %>
+      <% "" %>
     <% end %>
   </div>
 
@@ -15,30 +17,38 @@
       </div>
 
       <div id="container_comment">
-        <div id="dummy">
+        <div class="dummy">
           <p id="title">Message form</p>
           <div id="container_ex">
-            <p id="ex"><%= "#{@user.family_name}さんの" %>ブログを読んだ感想や、応援メッセージなどをお書き下さい。（50字以内）</p>
-          <%= form_with model: [@blog, @review], url: blogs_content_review_index_path(@blog) do |f| %>
-            <div id="subcontainer">
-              <p id="name">お名前</p>
-              <p id="form"><%= f.text_field :name %></p>
-              <p id="necessary"><%= "必須" %></p>
-            </div>
-            <div id="subcontainer">
-              <p id="message">メッセージ</p>
-              <p id="form"><%= f.text_field :comment, placeholder: "　50字以内でお書き下さい。" %></p>
-              <p id="necessary"><%= "必須" %></p>
-            </div>
-            <div id="container_submit">
-              <p id="submit">
-                <%= f.submit %>
-              </p>
-            </div>
-          <% end %>
-          <p id="back_to_prev"><%= link_to "前に戻る", blogs_content_path(@blog) %></p>
+            <p id="ex"><%= "#{@user.family_name}さんの" %>ブログを読んだ感想や、応援メッセージなどをお寄せ下さい。（50字以内）</p>
+            <%= form_with model: [@blog, @review], url: blogs_content_review_index_path(@blog) do |f| %>
+              <div class="sub_container">
+                <p id="name">お名前</p>
+                <%= f.text_field :name %>
+                <p id="necessary"><%= "必須" %></p>
+              </div>
+                <% if @review.errors.messages[:name].any? %>
+                  <p class="error"><%= "名前を入力して下さい。" %></p>
+                <% end %>
+              <div class="sub_container">
+                <p id="message">メッセージ</p>
+                <%= f.text_field :comment, placeholder: "　50字以内でお書き下さい。" %>
+                <p id="necessary"><%= "必須" %></p>
+              </div>
+                <%if @review.errors.messages[:comment].any? %>
+                  <p class="error"><%= "メッセージを入力して下さい。または入力文字数を50字以下として下さい。" %></p>
+                <% end %>
+              <div id="container_submit">
+                <p id="submit">
+                  <%= f.submit %>
+                </p>
+              </div>
+            <% end %>
+            <p id="back_to_prev"><%= link_to "前に戻る", blogs_content_path(@blog) %></p>
+          </div>
         </div>
       </div>
+    </div>
   </div>
 
 </div>
