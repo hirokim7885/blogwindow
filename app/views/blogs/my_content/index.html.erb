@@ -1,8 +1,6 @@
 <div id="wrapper_my_content">
 
   <div class="main_container">
-
-
     <div class="container_setting">
 
       <div class="owner">
@@ -16,7 +14,9 @@
       <div class="profile">
         <p class="portrait">
           <% if @user.portrait.attached? %>
-          <%= link_to image_tag(@user.portrait.variant(resize_to_limit:[200,200])), users_my_profile_path(@user) %>
+            <%= link_to image_tag(@user.portrait.variant(resize_to_limit:[200,200])), users_my_profile_path(@user) %>
+          <% else %>
+             <%= "" %>
           <% end %>
         </p>
         <p class="chara_profile"><%= link_to "Profile", users_my_profile_path(@user) %></p>
@@ -26,6 +26,8 @@
         <p class="background_image">
           <% if @user.background.attached? %>
             <%= link_to image_tag(@user.background.variant(resize_to_limit:[200,200])), users_blog_design_path(@user) %>
+          <% else %>
+            <%= "" %>
           <% end %>
         </p>
         <p class="chara_background_image"><%= link_to "ブログのデザイン", users_blog_design_path(@user) %></p>
@@ -33,8 +35,18 @@
 
     </div>
 
-    <div class="blog_load">
+    <div class="dummy">
+    </div>
 
+    <div id="header_logout">
+      <p class="image"><%= link_to image_tag("logout_white_24dp.svg", class:"image_logout"), destroy_user_session_path, method: :delete %></p>
+      <p class="chara"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></p>
+    </div>
+
+  </div>  
+  
+  <div class="container_blog_load">
+    <div class="blog_load">
       <div class="blog_name">
         <p class="name">
           <% if @user.blog_name? %>
@@ -45,38 +57,46 @@
         </p>
       </div>
 
-          <div class="blog_container_title">
-            <p>これまで書いたもの</p>
+      <div class="blog_container_title">
+        <p>これまで書いたもの</p>
+      </div>
+      <div class="blog_new">
+        <p><%= link_to '＋', new_blogs_my_content_path %></p>
+      </div>
+      <div class="blogs">
+        <ul>
+        <% @blogs.each do |blog| %>
+        <li>
+          <div class="container_caption">
+            <p class="image">
+              <% if blog.caption_image.attached? %>
+                <%= link_to image_tag(blog.caption_image.variant(resize_to_limit:[150,150])), blogs_my_content_path(blog.id) %>
+              <% else %>
+                <%= link_to image_tag(blog.user.background.variant(resize_to_limit:[150,150])), blogs_my_content_path(blog.id) %>
+              <% end %>
+            </p>
           </div>
-          <div class="blog_new">
-            <p><%= link_to '＋', new_blogs_my_content_path %></p>
+          <div class="container_content">
+            <p class="title"><%= link_to blog.title, blogs_my_content_path(blog.id) %></p>
+            <p class="content"><%= link_to truncate(strip_tags(blog.content.to_s), length: 60, omission: "…"), blogs_my_content_path(blog.id) %></p>
+          <div class="container_delete">
+            <p class="time">
+              <%= link_to blog.created_at.strftime("%Y/%m/%d %H:%m 更新"), blogs_my_content_path(blog.id) %>
+            </p>
+            <p class="delete">
+              <%= link_to image_tag("delete_outline_black_24dp.png", class:"image_trash"), blogs_my_content_path(blog.id), method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } %>
+            </p>
           </div>
-          <div class="blogs">
-            <ul>
-            <% @blogs.each do |blog| %>
-            <li>
-              <%= link_to blog.title, blogs_my_content_path(blog.id) %><br />
-              <div id="time">
-                <%= link_to blog.created_at.strftime("%Y/%m/%d %H:%m 更新"), blogs_my_content_path(blog.id) %>
-              </div>
-              <div id="delete">
-                <%= link_to image_tag("delete_outline_black_24dp.png", class:"image_trash"), blogs_my_content_path(blog.id), method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } %>
-              </div>
-            </li>
-            <% end %>
-            </ul>
           </div>
+        </li>
+        <% end %>
+        </ul>
+      </div>
 
-          <div id="blog_pagenation_bottom">
-            <p><%= paginate @blogs %></p>
-          </div>
+      <div class="pagination">
+        <%= paginate @blogs %>
+      </div>
+    </div> 
+  </div> 
 
-    </div>
-
-    <div id="header_logout">
-      <p class="image"><%= link_to image_tag("logout_white_24dp.svg", class:"image_logout"), destroy_user_session_path, method: :delete %></p>
-      <p class="chara"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></p>
-    </div>
-
-  </div>   
 </div>

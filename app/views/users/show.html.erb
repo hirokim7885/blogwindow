@@ -1,19 +1,59 @@
-<p><%= @user.family_name %>さんの個人情報</p>
+<div id="wrapper_user">
 
-<h2>基本情報</h2>
-  <p>氏名：<%= "#{@user.family_name}" "　#{@user.given_name}" %></p>
-  <p>ふりがな：<%= "#{@user.family_name_kana}" "　#{@user.given_name_kana}" %></p>
-  <p>郵便番号：<%= @user.zipcode %></p>
-  <p>住所：<%= @user.address %></p>
-  <p>電話番号：<%= @user.telephone %></p>
+  <div class="main_container_user">
+    <p class="name_user">
+      <%= "#{@user.family_name} #{@user.given_name}さんのページ" %>
+    </p>
 
-  <p><%= link_to '編集', edit_user_path(@user) %></p>
+    <div class="dummy_user">
+    </div>
 
+    <div id="header_logout">
+      <p class="image"><%= link_to image_tag("logout_white_24dp.svg", class:"image_logout"), destroy_user_session_path, method: :delete %></p>
+      <p class="chara"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></p>
+    </div>
+  </div>
 
-<h2>ログイン情報</h2>
-  <p>メールアドレス：<%= @user.email %></p> 
-  <p>パスワード：<%= @user.password %></p>
+  <div class="sub_container_user">
+    <div class="container_info">
+      <p class="info">ユーザー情報</p>
+        <p class="basic_user">基本情報</p>
+          <div class="name">
+            <p class="chara">氏名</p>
+            <p class="content"><%= "#{@user.family_name}" "　#{@user.given_name}" %></p>
+          </div>
+          <div class="name_kana">
+            <p class="chara">ふりがな</p>
+            <p class="content"><%= "#{@user.family_name_kana}" "　#{@user.given_name_kana}" %></p>
+          </div>
+          <div class="zipcode">
+            <p class="chara">郵便番号</p>
+            <p class="content"><%= @user.zipcode %></p>
+          </div>
+          <div class="address">
+            <p class="chara">住所</p>
+            <p class="content"><%= @user.address %></p>
+          </div>
+          <div class="telephone">
+            <p class="chara">電話番号</p>
+            <p class="content"><%= @user.telephone %></p>
+          </div>
+        <p class="edit"><%= link_to '編集', edit_user_path(@user) %></p>
 
-  <p><%= link_to '編集', edit_users_logininfo_path(@user) %></p>
+        <p class="basic_user">ログイン情報</p>
+          <div class="email">
+            <p class="chara">メールアドレス</p>
+            <p class="content"><%= @user.email %></p> 
+          </div>
+          <div class="password">
+            <p class="chara">パスワード</p>
+            <p class="content"><%= @user.password %>非表示</p>
+          </div>
 
-<p><%= link_to 'TOPに戻る', root_path %></p>
+        <p class="edit"><%= link_to '編集', edit_users_logininfo_path(@user) %></p>
+
+      <p class="back_to_top"><%= link_to 'TOPに戻る', root_path %></p>
+    </div>
+  </div>
+
+</div>

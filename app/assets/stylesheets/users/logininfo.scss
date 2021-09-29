@@ -1,3 +1,272 @@
-// Place all the styles related to the Users::logininfo controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+@import "colors";
+@import "dimensions";
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: gray;
+}
+
+div#wrapper_logininfo {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  opacity: 0.9;
+}
+
+div.main_container_logininfo {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  background-color: $yellow;
+}
+
+div.main_container_logininfo {
+
+  p.name_logininfo {
+    box-sizing: border-box;
+    width: calc(100% / 10 * 2);
+    height: 70px;
+    padding-top: 30px;
+    background-color: $green;
+    color: $white;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  div.dummy_logininfo {
+    width: calc(100% / 10 * 7);
+    height: 100%;
+  }
+
+  div#header_logout {
+    width: calc(100% / 10);
+    height: auto;
+  }
+  
+  div#header_logout {
+  
+    p.image {
+      box-sizing: border-box;
+      position: absolute;
+      bottom: 30px;
+      width: calc(100% / 9);
+      height: 40px;
+      padding-right: 10px;
+      text-align: center;
+      background-color: $葡萄色;
+    }
+  
+    p.image img {
+      width: auto;
+      height: 20px;
+      margin-top: 15px;
+    }
+  
+    p.chara {
+      box-sizing: border-box;
+      position: absolute;
+      bottom: 0;
+      width: calc(100% / 9);
+      height: 30px;
+      padding-right: 10px;
+      text-align: center;
+      background-color: $葡萄色;
+    }
+  
+    p.chara a {
+      color: $white;
+      font-size: $small;
+      font-weight: bold;
+    }
+  
+      p.chara a:hover {
+        border-bottom: 1px solid $white;
+      }
+  
+  }
+
+}
+
+div.sub_container_logininfo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+div.container_info {
+  position: relative;
+  left: calc(100% / 10 * 2);
+  width: calc(100% / 10 * 7);
+  height: auto;
+  min-height: 100%;
+  padding-bottom: 50px;
+  background-color: $桜色;
+  opacity: 1;
+}
+
+div.container_info {
+
+  p.info {
+    box-sizing: border-box;
+    width: 70%;
+    height: 70px;
+    margin: 0 auto 80px;
+    padding-top: 20px;
+    background-color: $light-red;
+    color: $white;
+    font-size: $huge;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+  }
+
+  p.basic_logininfo {
+    box-sizing: border-box;
+    position: relative;
+    width: 70%;
+    height: auto;
+    margin: 0 auto 30px;
+    background-color: $藍鉄;
+    color: $white;
+    font-size: $large;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+  }
+
+  div.email,
+  div.password {
+    display: flex;
+    width: 70%;
+    height: auto;
+    margin: 5px auto;
+  }
+
+  p.chara {
+    box-sizing: border-box;
+    width: calc(100% / 10 * 3);
+    height: 35px;
+    margin: 0 auto 10px;
+    padding-top: 5px;
+    padding-left: 30px;
+    color: $gray;
+  }
+
+  p.content {
+    box-sizing: border-box;
+    width: calc(100% / 10 * 7);
+    height: 35px;
+    margin: 0 auto 10px;
+    padding-top: 5px;
+    font-weight: bold;
+  }
+
+  p.edit {
+    box-sizing: border-box;
+    width: 100px;
+    height: 40px;
+    margin: 30px auto 50px;
+    padding-top: 7px;
+    background-color: $green;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  p.edit a {
+    color: $white;
+  }
+
+    p.edit a:hover {
+    border-bottom: 1px solid $white;
+    }
+
+  p.back_to_top {
+    box-sizing: border-box;
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 30px;
+    text-align: center;
+    border-top: 1px solid $黒紅;
+  }
+
+  p.back_to_top a:hover {
+    border-bottom: 1px solid $gray;
+  }
+
+}
+
+
+
+
+div.container_info {
+
+  p.input {
+    width: calc(100% / 10 * 7);
+    height: 35px;
+  }
+
+  input#user_email,
+  input#user_email_confirmation,
+  input#user_password,
+  input#user_password_confirmation {
+    box-sizing: border-box;
+    width: 90%;
+    height: 35px;
+    padding-left: 10px;
+    border-color: $gray;
+    border-radius: 5px;
+  }
+
+  div.submit_logininfo {
+    width: 100px;
+    height: 40px;
+    margin: 30px auto 50px;
+    text-align: center;
+  }
+
+  div.submit_logininfo input {
+    width: 100px;
+    height: 40px;
+    background-color: $蜜柑色;
+    color: $white;
+    font-size: $normal;
+    border: none;
+    border-radius: 10px;
+  }
+
+    div.submit_logininfo input:hover {
+      background-color: $light-red;
+    }
+
+  p.back_to_prev {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+
+  p.caution {
+    box-sizing: border-box;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 30px;
+    text-align: center;
+    font-size: $small;
+  }
+
+}
