@@ -1,20 +1,39 @@
-<p><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></p>
+<div id="wrapper_my_content">
 
-<p><%= @user.family_name %>さんのブログ</p>
-  <p>New blog</p>
-  <%= form_with model: @blog, url: blogs_my_content_index_path do |f| %>
-    <p>タイトル：
-      <%= f.text_field :title, placeholder: '20字以内' %>
-    </p>
-    <p>見出しイメージ：
-      <%= f.file_field :caption_image, placeholder: '写真・絵など' %>
-    </p>
-    <p>内容：
-      <%= f.rich_text_area :content %>
-    </p>
-    <p>
-    <%= f.submit %>
-    </p>
-  <% end %>
+  <div id="blog_background">
+    <% if @user.background.attached? %>
+    <%= image_tag(@user.background.variant(resize_to_limit:[200,200])) %>
+    <% end %>
+  </div>
 
-<p><%= link_to "TOPに戻る", root_path %></p>
+    <div id="container_blog_load">
+      <div id="blog_load">
+
+        <p><%= @user.family_name %>さんのブログ</p>
+          <p>New blog</p>
+          <%= form_with model: @blog, url: blogs_my_content_index_path do |f| %>
+            <p>タイトル：
+              <%= f.text_field :title, placeholder: '20字以内' %>
+            </p>
+            <p>見出しイメージ：
+              <%= f.file_field :caption_image, placeholder: '写真・絵など' %>
+            </p>
+            <p>内容：
+              <%= f.rich_text_area :content %>
+            </p>
+            <p>
+            <%= f.submit %>
+            </p>
+          <% end %>
+
+        <p><%= link_to "Topに戻る", root_path %></p>
+      </div>
+
+    </div>
+  </div>
+
+
+  <p><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></p>
+
+
+</div>

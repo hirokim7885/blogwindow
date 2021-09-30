@@ -1,19 +1,48 @@
-<p><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></p>
+<div id="wrapper_my_profile">
+  <div class="main_container_my_profile">
+    <p class="name_my_profile">
+      <%= "#{@user.family_name} #{@user.given_name}さんのページ" %>
+    </p>
 
-<p><%= @user.family_name %>さんのプロフィール</p>
-  <p>写真／似顔絵：
-    <% if @user.portrait.attached? %>
-    <%= image_tag @user.portrait.variant(resize_to_limit:[150,150]) %>
-    <% else %>
-    <%= "画像がありません" %>
-    <% end %>
-  </p>
-  <p>名字：<%= @user.family_name %></p>
-  <p>名前：<%= @user.given_name %></p>
-  <p>みょうじ：<%= @user.family_name_kana %></p>
-  <p>なまえ：<%= @user.given_name_kana %></p>
-  <p>経歴：<%= @user.life_history %></p>
-<p><%= link_to "編集する", edit_users_my_profile_path(@user) %></p>
-<p><%= link_to "TOPに戻る", root_path %></p>
+    <div class="dummy_my_profile">
+    </div>
+
+    <div id="header_logout">
+      <p class="image"><%= link_to image_tag("logout_white_24dp.svg", class:"image_logout"), destroy_user_session_path, method: :delete %></p>
+      <p class="chara"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></p>
+    </div>
+  </div>
+
+  <div class="sub_container_my_profile">
+    <div class="container_info">
+
+      <p class="title_profile">Profile</p>
+
+        <p class="portrait_profile">
+          <% if @user.portrait.attached? %>
+            <%= image_tag @user.portrait.variant(resize_to_limit:[150,150]) %>
+          <% else %>
+            <%= "画像がありません" %>
+          <% end %>
+        </p>
+        <p class="chara_profile">Portrait（写真／似顔絵など）</p>
+        <p class="tab_name">氏　名</p>
+          <p class="name"><%= "#{@user.family_name}　#{@user.given_name}" %></p>
+        <p class="tab_name">ふりがな</p>
+          <p class="name_kana"><%= "#{@user.family_name_kana}　#{@user.given_name_kana}" %></p>
+        <p class="tab_life_history">経歴</p>
+        <% if @user.life_history? %>
+          <%= @user.life_history %>
+        <% else %>
+          <div class="text"><%= "記載がありません" %></div>
+        <% end %>
+
+        <p class="edit"><%= link_to "編集する", edit_users_my_profile_path(@user) %></p>
+        <p class="back_to_top"><%= link_to "Topに戻る", root_path %></p>
+
+    </div>
+  </div>
+
+</div>
 
 

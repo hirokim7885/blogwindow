@@ -196,9 +196,7 @@ div#container_blog_load {
 
   div#container_ex
     div.field_with_errors {
-      position: relative;
-      width: 360px;
-      height: auto;
+      display: contents;
     }
   
   p.error {

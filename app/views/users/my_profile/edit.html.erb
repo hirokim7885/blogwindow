@@ -1,28 +1,56 @@
-<p><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></p>
+<div id="wrapper_my_profile">
+  <div class="main_container_my_profile">
+    <p class="name_my_profile">
+      <%= "#{@user.family_name} #{@user.given_name}さんのページ" %>
+    </p>
 
-<p><%= @user.family_name %>さんのプロフィール</P>
-<%= form_with model: @user, url: users_my_profile_path(@user) do |f| %>
-  <p>写真／似顔絵：
-    <%= f.file_field :portrait, placeholder: '写真／似顔絵' %>
-  </p>
-  <p>名字：
-    <%= f.text_field :family_name, placeholder: '名字' %>
-  </p>
-  <p>名前：
-    <%= f.text_field :given_name, placeholder: '名前' %>
-  </p>
-  <p>みょうじ：
-    <%= f.text_field :family_name_kana, placeholder: 'みょうじ' %>
-  </p>
-  <p>なまえ：
-    <%= f.text_field :given_name_kana, placeholder: 'なまえ' %>
-  </p>
-  <p>経歴：
-    <%= f.rich_text_area :life_history, placeholder: '経歴' %>
-  </P>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+    <div class="dummy_my_profile">
+    </div>
 
-<p><%= link_to "前に戻る", users_my_profile_path(@user) %></p>
+    <div id="header_logout">
+      <p class="image"><%= link_to image_tag("logout_white_24dp.svg", class:"image_logout"), destroy_user_session_path, method: :delete %></p>
+      <p class="chara"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></p>
+    </div>
+  </div>
+
+  <div class="sub_container_my_profile">
+    <div class="container_info">
+
+      <p class="title_profile">Profile</p>
+
+        <div class="container_edit">
+          <%= form_with model: @user, url: users_my_profile_path(@user) do |f| %>
+            <p class="portrait_profile_edit">
+              <%= f.file_field :portrait, placeholder: '写真／似顔絵など' %>
+            </p>
+            <p class="chara_profile">Portrait（写真／似顔絵など）</p>
+
+            <p class="tab_name">氏　名</p>
+              <div class="container_name">
+                <p class="tag">名字</p>
+                <%= f.text_field :family_name, placeholder: '名字' %>
+                <p class="tag">名前</p>
+                <%= f.text_field :given_name, placeholder: '名前' %>
+              </div>
+            <p class="tab_name">ふりがな</p>
+              <div class="container_name_kana">
+                <p class="tag">みょうじ</p>
+                <%= f.text_field :family_name_kana, placeholder: 'みょうじ' %>
+                <p class="tag">なまえ</p>
+                <%= f.text_field :given_name_kana, placeholder: 'なまえ' %>
+              </div>
+            <p class="tab_life_history">経歴</p>
+              <div class="text_edit"><%= f.rich_text_area :life_history  %></p>
+            </P>
+            <div class="submit_profile">
+              <%= f.submit %>
+            </p>
+          <% end %>
+        </div>
+
+      <p class="back_to_prev"><%= link_to "前に戻る", users_my_profile_path(@user) %></p>
+
+    </div>
+  </div>
+
+</div>

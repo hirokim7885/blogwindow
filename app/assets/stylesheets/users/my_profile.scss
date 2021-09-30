@@ -1,3 +1,282 @@
-// Place all the styles related to the users::MyProfile controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+@import "colors";
+@import "dimensions";
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: gray;
+}
+
+div#wrapper_my_profile {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  opacity: 0.9;
+}
+
+div.main_container_my_profile  {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: $yellow;
+}
+
+div.main_container_my_profile  {
+
+  p.name_my_profile  {
+    box-sizing: border-box;
+    width: calc(100% / 10 * 2);
+    height: 70px;
+    padding-top: 30px;
+    background-color: $green;
+    color: $white;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  div.dummy_my_profile  {
+    width: calc(100% / 10 * 7);
+    height: 100%;
+  }
+
+}
+
+div.sub_container_my_profile {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+div.container_info {
+  position: relative;
+  left: calc(100% / 10 * 2);
+  width: calc(100% / 10 * 7);
+  height: auto;
+  min-height: 100%;
+  padding-bottom: 50px;
+  background-color: $桜色;
+  opacity: 1;
+}
+
+div.container_info {
+
+  p.title_profile {
+    box-sizing: border-box;
+    width: 80%;
+    height: 70px;
+    margin: 0 auto 80px;
+    padding-top: 20px;
+    background-color: $天色;
+    text-align: center;
+    color: $white;
+    font-size: $huge;
+    font-weight: bold;
+    border-radius: 0 0 10px 10px;
+  }
+
+  p.portrait_profile {
+    box-sizing: border-box;
+    width: 100%;
+    height: 300px;
+    margin: 30px auto 20px;
+    text-align: center;
+  }
+
+  p.portrait_profile img {
+    width: auto;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+
+  p.chara_profile {
+    box-sizing: border-box;
+    width: auto;
+    height: auto;
+    margin: 0 auto 50px;
+    text-align: center;
+  }
+
+  p.tab_name {
+    box-sizing: border-box;
+    width: 60%;
+    height: auto;
+    margin: 0 auto 30px;
+    background-color: $蜜柑色;
+    color: $white;
+    font-size: $large;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+  }
+
+  p.name,
+  p.name_kana {
+    box-sizing: border-box;
+    width: 60%;
+    height: 35px;;
+    margin: 0 auto 50px;
+    color: $黒紅;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  p.tab_life_history {
+    box-sizing: border-box;
+    width: 60%;
+    height: auto;
+    margin: 0 auto 30px;
+    background-color: $小豆色;
+    color: $white;
+    font-size: $large;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+  }
+
+  p.life_history {
+    box-sizing: border-box;
+    width: 50%;
+    height: auto;
+    min-height: 100px;
+    margin: 0 auto 30px;
+    color: $黒紅;
+    text-align: left;
+  }
+
+  p.edit {
+    box-sizing: border-box;
+    width: 100px;
+    height: 40px;
+    margin: 30px auto 50px;
+    padding-top: 7px;
+    background-color: $green;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  p.edit a {
+    color: $white;
+  }
+
+    p.edit a:hover {
+    border-bottom: 1px solid $white;
+    }
+
+  p.back_to_top {
+    box-sizing: border-box;
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 30px;
+    text-align: center;
+    border-top: 1px solid $黒紅;
+  }
+
+  p.back_to_top a:hover {
+    border-bottom: 1px solid $gray;
+  }
+
+}
+
+/* edit */
+div.container_info {
+
+  div.container_edit {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  p.portrait_profile_edit {
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  div.container_name,
+  div.container_name_kana {
+    display: flex;
+    width: 55%;
+    height: 35px;
+    margin: 0 auto 50px;
+    text-align: center;
+  }
+
+  p.tag {
+    box-sizing: border-box;
+    width: calc(100% / 10 * 1.5);
+    height: 35px;
+    padding-top: 7px;
+    padding-left: 10px;
+    text-align: left;
+    color: $gray;
+    font-size: $normal;
+  }
+
+  input#user_family_name,
+  input#user_given_name,
+  input#user_family_name_kana,
+  input#user_given_name_kana {
+    width: calc(100% / 10 * 3.5);
+  }
+
+  div.text_edit {
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  div.trix-content,
+  div.text {
+    width: 55%;
+    height: auto;
+    margin: 0 auto 100px;
+  }
+
+  trix-editor {
+    height: auto;
+    min-height: 300px;
+    margin: 0 auto;
+  }
+
+  div.submit_profile {
+    width: 100px;
+    height: 40px;
+    margin: 30px auto 50px;
+    text-align: center;
+  }
+
+  div.submit_profile input {
+    width: 100px;
+    height: 40px;
+    background-color: $蜜柑色;
+    color: $white;
+    font-size: $normal;
+    border: none;
+    border-radius: 10px;
+  }
+
+    div.submit_profile input:hover {
+      background-color: $light-red;
+    }
+
+    p.back_to_prev {
+      box-sizing: border-box;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      padding-bottom: 30px;
+      text-align: center;
+    }
+    
+}

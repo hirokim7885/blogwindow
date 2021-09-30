@@ -83,6 +83,7 @@
             <p class="time">
               <%= link_to blog.created_at.strftime("%Y/%m/%d %H:%m 更新"), blogs_my_content_path(blog.id) %>
             </p>
+            <p class="messages">メッセージ <%= blog.good_count %>件</p>
             <p class="delete">
               <%= link_to image_tag("delete_outline_black_24dp.png", class:"image_trash"), blogs_my_content_path(blog.id), method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } %>
             </p>

@@ -399,7 +399,7 @@ div.container_blog_load {
 
   p.time {
     box-sizing: border-box;
-    width: calc(100% / 10 * 9);
+    width: calc(100% / 10 * 5);
     padding-top: 10px;
     text-align: left;
     font-size: $small;
@@ -408,6 +408,14 @@ div.container_blog_load {
     p.time a:hover {
       border-bottom: 1px solid $gray;
     }
+  
+  p.messages {
+    box-sizing: border-box;
+    width: calc(100% / 10 * 4);
+    padding-top: 10px;
+    text-align: center;
+    font-size: $small;
+  }
 
   p.delete {
     margin: 10px 0;
@@ -474,4 +482,5 @@ nav.pagination  {
 }
 
 }
+
 

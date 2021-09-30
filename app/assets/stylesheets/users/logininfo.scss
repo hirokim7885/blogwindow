@@ -148,7 +148,7 @@ div.container_info {
   div.email,
   div.password {
     display: flex;
-    width: 70%;
+    width: 60%;
     height: auto;
     margin: 5px auto;
   }
@@ -212,17 +212,12 @@ div.container_info {
 
 div.container_info {
 
-  p.input {
-    width: calc(100% / 10 * 7);
-    height: 35px;
-  }
-
   input#user_email,
   input#user_email_confirmation,
   input#user_password,
   input#user_password_confirmation {
     box-sizing: border-box;
-    width: 90%;
+    width: calc(100% / 10 * 7);
     height: 35px;
     padding-left: 10px;
     border-color: $gray;
@@ -267,6 +262,18 @@ div.container_info {
     padding-top: 30px;
     text-align: center;
     font-size: $small;
+  }
+
+  p.error {
+    width: 100%;
+    height: auto;
+    margin: 0 auto 20px;
+    text-align: center;
+    color: $light-red;
+  }
+
+  div.field_with_errors {
+    display: contents;
   }
 
 }

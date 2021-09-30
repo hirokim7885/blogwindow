@@ -28,7 +28,7 @@
                 <p id="necessary"><%= "必須" %></p>
               </div>
                 <% if @review.errors.messages[:name].any? %>
-                  <p class="error"><%= "名前を入力して下さい。" %></p>
+                <p class="error"><%= "名前を入力して下さい。" %></p>
                 <% end %>
               <div class="sub_container">
                 <p id="message">メッセージ</p>
@@ -36,7 +36,7 @@
                 <p id="necessary"><%= "必須" %></p>
               </div>
                 <%if @review.errors.messages[:comment].any? %>
-                  <p class="error"><%= "メッセージを入力して下さい。または入力文字数を50字以下として下さい。" %></p>
+                <p class="error"><%= "メッセージを入力して下さい。または入力文字数を50字以下として下さい。" %></p>
                 <% end %>
               <div id="container_submit">
                 <p id="submit">
