@@ -503,6 +503,9 @@ div#blog_load {
 
   p.new_blog {
     box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 25%;
     width: 50%;
     height: 70px;
     margin: 0 auto;
@@ -578,9 +581,15 @@ div#blog_load {
       text-align: left;
     }
 
+    div.submit {
+      width: 100%;
+      height: auto;
+      text-align: center;
+    }
+
     div.submit input {
       width: 100px;
-      height: 30px;
+      height: 35px;
       margin: 30px 0;
       background-color: $藍鉄;
       color: $white;
@@ -599,12 +608,122 @@ div#blog_load {
     height: auto;
     margin: 30px auto 50px;
     padding-top: 50px;
+    text-align: center;
     border-top: 1px solid $黒紅;
   }
 
     div.back_to_top a:hover {
       border-bottom: 1px solid $gray;
     }
+
+  /* edit */
+  div.container_edit_blog form {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  div.container_edit_blog form {
+
+    div.title_edit_blog,
+    div.caption_edit_blog {
+      display: flex;
+      width: 100%;
+      height: auto;
+      margin: 20px 0;
+    }
+
+    p.chara {
+      box-sizing: border-box;
+      width: calc(100% / 10 * 3);
+      height: 35px;
+      padding-top: 7px;
+      text-align: left;
+      color: $gray;
+      font-size: $normal;
+    }
+
+    input#blog_title {
+      box-sizing: border-box;
+      width: calc(100% / 10 * 7);
+      height: inherit;
+      padding-left: 10px;
+    }
+
+    input#blog_caption_image {
+      box-sizing: border-box;
+      width: calc(100% / 10 * 7);
+      height: inherit;
+      padding-top: 5px;
+    }
+
+    trix-editor {
+      height: auto;
+      min-height: 300px;
+      text-align: left;
+    }
+
+    div.submit {
+      width: 100%;
+      height: auto;
+      text-align: center;
+    }
+
+    div.submit input {
+      width: 100px;
+      height: 35px;
+      margin: 30px 0;
+      background-color: $藍鉄;
+      color: $white;
+      border: none;
+      border-radius: 5px;
+    }
+
+      div.submit input:hover {
+        background-color: $light-red;
+      }
+
+    p.delete {
+      box-sizing: border-box;
+      width: 100px;
+      height: 35px;
+      margin: 0 auto 30px;
+      padding-top: 5px;
+      background-color: $green;
+      text-align: center;
+      border-radius: 5px;
+    }
+    
+    p.delete {
+      background-color: $light-red;
+      margin-bottom: 50px;
+    }
+    
+    p.delete a {
+      color: $white;
+    }
+    
+      p.delete a:hover {
+        border-bottom: 1px solid $white;
+      }
+
+  }
+
+  div.container_edit_blog {
+
+  div.back_to_prev {
+    width: 70%;
+    height: auto;
+    margin: 30px auto 50px;
+    padding-top: 30px;
+    text-align: center;
+  }
+  
+    div.back_to_prev a:hover {
+      border-bottom: 1px solid $gray;
+    }
+
+  }
 
 
 }
@@ -698,7 +817,7 @@ div.container_article {
     padding-top: 5px;
     background-color: $green;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 5px;
   }
 
   p.delete {

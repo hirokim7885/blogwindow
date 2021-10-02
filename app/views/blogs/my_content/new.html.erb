@@ -21,30 +21,30 @@
               <%= "" %>
             <% end %>
           </div>
-
-      <div class="container_new_blog">
-        <%= form_with model: @blog, url: blogs_my_content_index_path do |f| %>
-          <div class="title_new_blog">
-            <p class="chara">タイトル</p>
-            <%= f.text_field :title, placeholder: '20字以内' %>
-          </div>
-          <div class="caption_new_blog">
-            <p class="chara">見出しイメージ</p>
-            <%= f.file_field :caption_image, placeholder: '写真・絵など' %>
-          </div>
-          <div class="content_new_blog">
-            <p class="chara">内容</p>
-            <%= f.rich_text_area :content %>
-          </div>
-          <div class="submit">
-            <%= f.submit %>
-          </div>
-        <% end %>
       </div>
 
-      <div class="back_to_top"><%= link_to "Topに戻る", root_path %></div>
+        <div class="container_new_blog">
+          <%= form_with model: @blog, url: blogs_my_content_index_path do |f| %>
+            <div class="title_new_blog">
+              <p class="chara">タイトル</p>
+              <%= f.text_field :title, placeholder: '20字以内' %>
+            </div>
+            <div class="caption_new_blog">
+              <p class="chara">見出しイメージ</p>
+              <%= f.file_field :caption_image, placeholder: '写真・絵など' %>
+            </div>
+            <div class="content_new_blog">
+              <p class="chara">内容</p>
+              <%= f.rich_text_area :content %>
+            </div>
+            <div class="submit">
+              <%= f.submit %>
+            </div>
+          <% end %>
+        </div>
 
+        <div class="back_to_top"><%= link_to "Topに戻る", root_path %></div>
+      
     </div>
   </div>
-
 </div>
