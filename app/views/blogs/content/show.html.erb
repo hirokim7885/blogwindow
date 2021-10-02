@@ -41,7 +41,7 @@
 
         <div id="updated_at" >
           <p id="update">最終更新日：<%= @blog.updated_at.strftime("%Y/%m/%d %H:%m 更新") %></p>
-          <p id="create">投稿日：<%= @blog.updated_at.strftime("%Y/%m/%d %H:%m 更新") %></p>
+          <p id="create">投稿日：<%= @blog.updated_at.strftime("%Y/%m/%d %H:%m 作成") %></p>
 
           <div id="move">
             <% if @blog.privious.present? %>
@@ -58,12 +58,12 @@
           <% if @blog.reviews.any? %>
           <ul>
             <% @blog.reviews.each do |review| %>
-                <li>
-                  <div id="reviews">
-                    <p id="name"><%= "#{review.name}" %></p>
-                    <p id="chara"><%= review.comment %></p>
-                  </div>
-                </li>
+              <li>
+                <div id="reviews">
+                  <p id="name"><%= review.name %></p>
+                  <p id="chara"><%= review.comment %></p>
+                </div>
+              </li>
             <% end %>
           </ul>
           <% end %>

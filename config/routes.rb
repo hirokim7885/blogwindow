@@ -24,7 +24,9 @@ Rails.application.routes.draw do
     resources :content, only: [:show] do
       resources :review, only: [:index, :new, :create]
     end
-    resources :my_content
+    resources :my_content do
+      resources :message, only: [:index]
+    end
     resources :admin_window, only: [:index]
     resources :admin_content
     resources :admin_article, only: [:show, :destroy] do

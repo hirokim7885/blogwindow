@@ -1,0 +1,16 @@
+<div class="container_messages">
+
+  <%= @blog.title %>  
+
+   <ul>
+    <% @blog.reviews.each do |review| %>
+      <li>
+        <div class="messages">
+          <%= review.name %>
+          <%= review.comment %>
+        </div>
+      </li>
+    <% end %>
+   </ul>
+
+</div>

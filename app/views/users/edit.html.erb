@@ -23,39 +23,25 @@
         <%= form_with model: @user, url: user_path(@user) do |f| %>
           <div class="name">
             <p class="chara">氏名</p>
-            <p class="input_name">
-              <%= f.text_field :family_name, placeholder: '名字' %>
-            </p>
-            <p class="input_name">
-              <%= f.text_field :given_name, placeholder: '名前' %>
-            </p>
+            <%= f.text_field :family_name, placeholder: '名字' %>
+            <%= f.text_field :given_name, placeholder: '名前' %>
           </div>
           <div class="name_kana">
             <p class="chara">ふりがな</p>
-            <p class="input_name">
-              <%= f.text_field :family_name_kana, placeholder: 'みょうじ' %>
-            </p>
-            <p class="input_name">
-              <%= f.text_field :given_name_kana, placeholder: 'なまえ' %>
-            </p>
+            <%= f.text_field :family_name_kana, placeholder: 'みょうじ' %>
+            <%= f.text_field :given_name_kana, placeholder: 'なまえ' %>
           </div>
           <div class="zipcode">
             <p class="chara">郵便番号</p>
-            <p class="input">
-              <%= f.text_field :zipcode, placeholder: '郵便番号' %>
-            </p>
+            <%= f.text_field :zipcode, placeholder: '郵便番号' %>
           </div>
           <div class="address">
             <p class="chara">住所</p>
-            <p class="input">
-              <%= f.text_field :address, placeholder: '住所' %>
-            </p>
+            <%= f.text_field :address, placeholder: '住所' %>
           </div>
           <div class="telephone">
             <p class="chara">電話番号</p>
-            <p class="input">
-              <%= f.telephone_field :telephone, placeholder: '電話番号' %>
-            </p>
+            <%= f.telephone_field :telephone, placeholder: '電話番号' %>
           </div>
           <div class="submit_user">
             <%= f.submit %>

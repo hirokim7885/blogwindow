@@ -105,7 +105,7 @@ div.container_info {
   div.email,
   div.password {
     display: flex;
-    width: 70%;
+    width: 65%;
     height: auto;
     margin: 5px auto;
   }
@@ -116,7 +116,7 @@ div.container_info {
     height: 35px;
     margin: 0 auto 10px;
     padding-top: 5px;
-    padding-left: 30px;
+    padding-left: 20px;
     color: $gray;
   }
 
@@ -219,16 +219,6 @@ div.main_container_user {
 
 div.container_info {
 
-  p.input_name {
-    width: calc(100% / 10 * 3.5);
-    height: 35px;
-  }
-
-  p.input {
-    width: calc(100% / 10 * 7);
-    height: 35px;
-  }
-
   input#user_family_name,
   input#user_given_name,
   input#user_family_name_kana,
@@ -237,7 +227,9 @@ div.container_info {
   input#user_address,
   input#user_telephone {
     box-sizing: border-box;
+    width: calc(100% / 10 * 3.5);
     height: 35px;
+    margin-right: 10px;
     padding-left: 10px;
     border-color: $gray;
     border-radius: 5px;
@@ -246,7 +238,8 @@ div.container_info {
   input#user_zipcode,
   input#user_address,
   input#user_telephone {
-    width: 93%;
+    width: calc(100% / 10 * 7);
+    height: 35px;
   }
 
   div.submit_user {
