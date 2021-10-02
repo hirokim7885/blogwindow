@@ -1,13 +1,13 @@
 <div id="wrapper_my_content">
 
-  <div id="blog_background">
+  <div class="blog_background">
     <% if @user.background.attached? %>
     <%= image_tag(@user.background.variant(resize_to_limit:[200,200])) %>
     <% end %>
   </div>
 
-  <div id="container_blog_load">
-    <div id="blog_load">
+  <div class="container_blog_load">
+    <div class="blog_load">
       <div class="container_blog_name">
         <p class="new_blog">New blog</p>
           <p class="corp_name">minato no-en presents</p>
@@ -23,20 +23,26 @@
           </div>
       </div>
 
-        <div class="container_new_blog">
+        <div class="container_blog_f">
           <%= form_with model: @blog, url: blogs_my_content_index_path do |f| %>
-            <div class="title_new_blog">
-              <p class="chara">タイトル</p>
+            <div class="title_blog">
+              <p class="chara">タイトル（必須）</p>
               <%= f.text_field :title, placeholder: '20字以内' %>
             </div>
-            <div class="caption_new_blog">
+            <% if @blog.errors.messages[:title].any? %>
+              <p class="error"><%= "タイトルを入力して下さい。" %></p>
+            <% end %>
+            <div class="caption_blog">
               <p class="chara">見出しイメージ</p>
               <%= f.file_field :caption_image, placeholder: '写真・絵など' %>
             </div>
-            <div class="content_new_blog">
-              <p class="chara">内容</p>
+            <div class="content_blog">
+              <p class="chara">内容（必須）</p>
               <%= f.rich_text_area :content %>
             </div>
+            <% if @blog.errors.messages[:content].any? %>
+              <p class="error"><%= "内容を入力して下さい。" %></p>
+            <% end %>
             <div class="submit">
               <%= f.submit %>
             </div>

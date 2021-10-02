@@ -1,14 +1,13 @@
 <div id="wrapper_my_content">
 
-  <div id="blog_background">
+  <div class="blog_background">
     <% if @user.background.attached? %>
     <%= image_tag(@user.background.variant(resize_to_limit:[200,200])) %>
     <% end %>
   </div>
 
-  <div id="container_blog_load">
-    <div id="blog_load">
-
+  <div class="container_blog_load">
+    <div class="blog_load">
       <div class="container_blog_name">
         <p class="corp_name">minato no-en presents</p>
         <h1 class="blog_name"><%= @user.blog_name %></h1>
@@ -30,7 +29,6 @@
       </div>
 
       <div class="container_article" >
-
         <h2 class="title"><%= @blog.title %></h2>
         <div class="content">
           <%= @blog.content %>
@@ -55,9 +53,7 @@
         </div>
 
         <div class="back_to_top"><%= link_to "Topに戻る", root_path %></div>
-
       </div>
-
     </div>
   </div>
 

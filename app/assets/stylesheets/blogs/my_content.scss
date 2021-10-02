@@ -2,511 +2,518 @@
 @import "dimensions";
 
 div#wrapper_my_content {
-  position: absolute;
   width: 100%;
-  height: 100%;
-}
-
-div.main_container {
-  position: fixed;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  background-color: $yellow;
-  opacity: 0.9;
-  z-index: 1;
-}
-
-div.container_setting {
-  width: calc(100% / 10 * 3);
   height: auto;
 }
 
-div.container_setting {
+/* index */
+div#wrapper_my_content {
 
-  div.owner {
+  div.main_container {
+    position: fixed;
+    display: flex;
     width: 100%;
-    height: auto;
-  }
-
-  p.name {
-    box-sizing: border-box;
-    width: 100%;
-    height: 70px;
-    margin: 0 auto;
-    padding-top: 30px;
-    background-color: $green;
-    color: $white;
-    font-size: $large;
-    font-weight: bold;
-    text-align: center;
-  }
-
-  div.account {
-    width: 100%;
-    height: auto;
-    margin: 30px 0;
-    margin-top: 50px;
-  }
-
-  div.account p.image,
-  div.account p.chara_account {
-    box-sizing: border-box;
-    width: 50%;
-    height: 70px;
-    margin:0 auto;
-    padding-top: 20px;
-    background-color: $light-red;
-    text-align: center;
-  }
-
-  div.account p.image {
-    border-radius: 10px 10px 0 0;
-  }
-
-  div.account p.chara_account {
-    border-radius:0 0 10px 10px ;
-  }
-
-  div.account a {
-    color: $white;
-    font-weight: bold;
-  }
-
-    div.account 
-      p.chara_account a:hover {
-      border-bottom: 1px solid $white;
-    }
-
-  div.profile {
-    width: 100%;
-    height: auto;
-    margin: 30px auto;
-  }
-
-  p.portrait {
-    box-sizing: border-box;
-    width: 50%;
-    height: auto;
-    min-height: 120px;
-    margin: 0 auto;
-    background-color: $天色;
-    text-align: center;
-    border-radius: 10px 10px 0 0;
-  }
-
-    p.portrait img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px 10px 0 0;
-    }
-
-      p.portrait img:hover {
-        opacity: 0.8;
-      }
-
-  p.chara_profile {
-    width: 50%;
-    height: auto;
-    margin: 0 auto;
-    padding-bottom: 5px;
-    background-color: $天色;
-    text-align: center;
-    border-radius:0 0 10px 10px;
-  }
-
-  p.chara_profile a {
-    color: $white;
-    font-weight: bold;
-  }
-
-    p.chara_profile a:hover {
-      border-bottom: 1px solid $white;
-    }
-  
-  div.background-color {
-    width: 100%;
-    height: auto;
-  }
-
-  p.background_image {
-    box-sizing: border-box;
-    width: 50%;
-    height: auto;
-    min-height: 120px;
-    margin: 0 auto;
-    background-color: $紅紫;
-    border-radius: 10px 10px 0 0;
-  }
-
-    p.background_image img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px 10px 0 0;
-    }
-
-    p.chara_background_image {
-      width: 50%;
-      height: auto;
-      margin: 0 auto;
-      padding-bottom: 10px;
-      background-color: $紅紫;
-      text-align: center;
-      border-radius:0 0 10px 10px;
-    }
-
-    p.chara_background_image a {
-      color: $white;
-      font-weight: bold;
-    }
-
-      p.chara_background_image a:hover {
-        border-bottom: 1px solid $white;
-      }
-
-      p.background_image img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px 10px 0 0;
-      }
-  
-        p.background_image img:hover {
-          opacity: 0.8;
-        }
-
-}
-
-div.dummy {
-  width: calc(100% / 10 * 6);
-  height: 100%;
-}
-
-div#header_logout {
-  width: calc(100% / 10);
-  height: auto;
-}
-
-div#header_logout {
-
-  p.image {
-    box-sizing: border-box;
-    position: absolute;
-    bottom: 30px;
-    width: calc(100% / 9);
-    height: 40px;
-    padding-right: 10px;
-    text-align: center;
-    background-color: $葡萄色;
-  }
-
-  p.image img {
-    width: auto;
-    height: 20px;
-    margin-top: 15px;
-  }
-
-  p.chara {
-    box-sizing: border-box;
-    position: absolute;
-    bottom: 0;
-    width: calc(100% / 9);
-    height: 30px;
-    padding-right: 10px;
-    text-align: center;
-    background-color: $葡萄色;
-  }
-
-  p.chara a {
-    color: $white;
-    font-size: $small;
-    font-weight: bold;
-  }
-
-    p.chara a:hover {
-      border-bottom: 1px solid $white;
-    }
-
-}
-
-div.container_blog_load {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-div.container_blog_load {
-
-  div.blog_load {
-    position: relative;
-    left: calc(100% / 10 * 3);
-    width: calc(100% / 10 * 6);
-    height: auto;
-    min-height: 100%;
-    background-color: $桜色;
+    height: 100%;
+    background-color: $yellow;
+    opacity: 0.9;
     z-index: 1;
   }
 
-  div.blog_load {
+  div.container_setting {
+    width: calc(100% / 10 * 3);
+    height: auto;
+  }
 
-    div.blog_name {
-      box-sizing: border-box;
+  div.container_setting {
+
+    div.owner {
       width: 100%;
       height: auto;
     }
 
     p.name {
       box-sizing: border-box;
-      width: 80%;
+      width: 100%;
       height: 70px;
       margin: 0 auto;
-      padding-top: 20px;
-      text-align: center;
+      padding-top: 30px;
+      background-color: $green;
       color: $white;
-      font-size: large;
+      font-size: $large;
       font-weight: bold;
-      background-color: $藍鉄;
-      border-radius: 0 0 10px 10px;
-    }
-
-    div.blog_container_title {
-      width: 100%;
-      height: auto;
-      margin: 30px 0 10px;
-    }
-
-    div.blog_container_title p {
-      width: 70%;
-      height: auto;
-      margin: 0 auto;
       text-align: center;
     }
 
-    div.blog_new {
+    div.account {
       width: 100%;
       height: auto;
+      margin: 30px 0;
+      margin-top: 50px;
     }
 
-    div.blog_new p {
+    div.account p.image,
+    div.account p.chara_account {
       box-sizing: border-box;
-      width: 80%;
-      height: auto;
-      margin: 0 auto;
-      padding-right: 20px;
-      padding-bottom: 5px;
-      text-align: right;
-      border-bottom: 1px solid $黒紅;
+      width: 50%;
+      height: 70px;
+      margin:0 auto;
+      padding-top: 20px;
+      background-color: $light-red;
+      text-align: center;
     }
 
-    div.blog_new a {
-      color: $黒紅;
+    div.account p.image {
+      border-radius: 10px 10px 0 0;
+    }
+
+    div.account p.chara_account {
+      border-radius:0 0 10px 10px ;
+    }
+
+    div.account a {
+      color: $white;
       font-weight: bold;
     }
 
-      div.blog_new a:hover {
-        color: $蜜柑色;
+      div.account 
+        p.chara_account a:hover {
+        border-bottom: 1px solid $white;
       }
 
-    div.blogs {
+    div.profile {
       width: 100%;
       height: auto;
-      margin: o auto;
+      margin: 30px auto;
     }
 
-    div.blogs {
+    p.portrait {
+      box-sizing: border-box;
+      width: 50%;
+      height: auto;
+      min-height: 120px;
+      margin: 0 auto;
+      background-color: $天色;
+      text-align: center;
+      border-radius: 10px 10px 0 0;
+    }
 
-      ul {
+      p.portrait img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px 10px 0 0;
+      }
+
+        p.portrait img:hover {
+          opacity: 0.8;
+        }
+
+    p.chara_profile {
+      width: 50%;
+      height: auto;
+      margin: 0 auto;
+      padding-bottom: 5px;
+      background-color: $天色;
+      text-align: center;
+      border-radius:0 0 10px 10px;
+    }
+
+    p.chara_profile a {
+      color: $white;
+      font-weight: bold;
+    }
+
+      p.chara_profile a:hover {
+        border-bottom: 1px solid $white;
+      }
+    
+    div.blog_design {
+      width: 100%;
+      height: auto;
+      margin: 30px auto;
+    }
+
+    p.design_image {
+      box-sizing: border-box;
+      width: 50%;
+      height: auto;
+      min-height: 120px;
+      margin: 0 auto;
+      background-color: $紅紫;
+      border-radius: 10px 10px 0 0;
+    }
+
+      p.design_image img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px 10px 0 0;
+      }
+
+        p.design_image img:hover {
+          opacity: 0.8;
+        }
+
+      p.chara_design_image {
+        width: 50%;
+        height: auto;
+        margin: 0 auto;
+        padding-bottom: 10px;
+        background-color: $紅紫;
+        text-align: center;
+        border-radius:0 0 10px 10px;
+      }
+
+      p.chara_design_image a {
+        color: $white;
+        font-weight: bold;
+      }
+
+        p.chara_design_image a:hover {
+          border-bottom: 1px solid $white;
+        }
+
+  }
+
+  div.dummy {
+    width: calc(100% / 10 * 6);
+    height: 100%;
+  }
+
+  div#header_logout {
+    width: calc(100% / 10);
+    height: auto;
+  }
+
+  div#header_logout {
+
+    p.image {
+      box-sizing: border-box;
+      position: absolute;
+      bottom: 30px;
+      width: calc(100% / 9);
+      height: 40px;
+      padding-right: 10px;
+      text-align: center;
+      background-color: $葡萄色;
+    }
+
+    p.image img {
+      width: auto;
+      height: 20px;
+      margin-top: 15px;
+    }
+
+    p.chara {
+      box-sizing: border-box;
+      position: absolute;
+      bottom: 0;
+      width: calc(100% / 9);
+      height: 30px;
+      padding-right: 10px;
+      text-align: center;
+      background-color: $葡萄色;
+    }
+
+    p.chara a {
+      color: $white;
+      font-size: $small;
+      font-weight: bold;
+    }
+
+      p.chara a:hover {
+        border-bottom: 1px solid $white;
+      }
+
+  }
+
+  div.container_blog_load_index {
+    position: relative;
+      left: calc(100% / 10 * 3);
+      width: calc(100% / 10 * 6);
+      height: auto;
+      min-height: 100%;
+      background-color: $桜色;
+      z-index: 1;
+  }
+
+    div.container_blog_load_index {
+
+      div.blog_name {
+        box-sizing: border-box;
+        width: 100%;
+        height: auto;
+      }
+
+      p.name {
+        box-sizing: border-box;
+        width: 80%;
+        height: 70px;
+        margin: 0 auto;
+        padding-top: 20px;
+        text-align: center;
+        color: $white;
+        font-size: large;
+        font-weight: bold;
+        background-color: $藍鉄;
+        border-radius: 0 0 10px 10px;
+      }
+
+      div.blog_container_title {
+        width: 100%;
+        height: auto;
+        margin: 30px 0 10px;
+      }
+
+      div.blog_container_title p {
+        width: 70%;
+        height: auto;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      div.blog_new {
+        width: 100%;
+        height: auto;
+      }
+
+      div.blog_new p {
+        box-sizing: border-box;
         width: 80%;
         height: auto;
         margin: 0 auto;
+        padding-right: 20px;
+        padding-bottom: 5px;
+        text-align: right;
+        border-bottom: 1px solid $黒紅;
       }
 
-      li {
-        display: flex;
-        width:  100%;
+      div.blog_new a {
+        color: $黒紅;
+        font-weight: bold;
+      }
+
+        div.blog_new a:hover {
+          color: $蜜柑色;
+        }
+
+      div.blogs {
+        width: 100%;
         height: auto;
-        margin: 10px 0;
-        border-bottom: 1px solid $蜜柑色;
+        margin: o auto;
+      }
+
+      div.blogs {
+
+        ul {
+          width: 80%;
+          height: auto;
+          margin: 0 auto;
+        }
+
+        li {
+          display: flex;
+          width:  100%;
+          height: auto;
+          margin: 10px 0;
+          border-bottom: 1px solid $蜜柑色;
+        }
+
       }
 
     }
 
-  }
-
-  div.container_caption {
-    box-sizing: border-box;
-    width: calc(100% / 10 * 3);
-    height: auto;
-    padding: 20px 0;
-    text-align: center;
-  }
-
-  p.image img {
-    width: auto;
-    height: 110px;
-  }
-
-    p.image img:hover {
-      opacity: 0.8;
+    div.container_caption {
+      box-sizing: border-box;
+      width: calc(100% / 10 * 3);
+      height: auto;
+      padding: 20px 0;
+      text-align: center;
     }
 
-  div.container_content {
-    box-sizing: border-box;
-    width: calc(100% / 10 * 7);
-    height: 150;
-  }
-
-  div.container_delete {
-    box-sizing: border-box;
-    display: flex;
-    width: 100%;
-    height:auto;
-  }
-
-  p.image {
-    color: $gray;
-    font-size: $small;
-  }
-
-  p.title {
-    margin: 10px 0;
-  }
-
-  p.title a {
-    color: $黒紅;
-    font-size: $large;
-    font-weight: bold;
-  }
-
-    p.title a:hover {
-      border-bottom: 1px solid $黒紅;
+    p.image img {
+      width: auto;
+      height: auto;
     }
 
-  p.content {
-    width: 95%;
-    height: auto;
-    min-height: 30px;
-    margin: 10px 0;
-  }
+      p.image img:hover {
+        opacity: 0.8;
+      }
 
-  p.content a {
-    color: $黒紅;
-    font-size: $normal;
-  }
-
-    p.content a:hover {
-      border-bottom: 1px solid $黒紅;
+    div.container_content {
+      box-sizing: border-box;
+      width: calc(100% / 10 * 7);
+      height: 150;
     }
 
-  p.time {
-    box-sizing: border-box;
-    width: calc(100% / 10 * 5);
-    padding-top: 10px;
-    text-align: left;
-    font-size: $small;
-  }
-
-    p.time a:hover {
-      border-bottom: 1px solid $gray;
-    }
-  
-  p.messages {
-    box-sizing: border-box;
-    width: calc(100% / 10 * 4);
-    padding-top: 10px;
-    text-align: center;
-    color: $gray;
-    font-size: $small;
-  }
-
-  p.delete {
-    margin: 10px 0;
-    text-align: right;
-  }
-
-  p.delete img {
-    width: 25px;
-    height: auto;
-  }
-
-  div.pagination {
-    width: 100%;
-    height: auto;
-  }
-
-  nav.pagination {
-    box-sizing: border-box;
-    width: 50%;
-    height: auto;
-    margin: 0 auto;
-    padding: 30px 0;
-    text-align: center;
-  }
-
-  nav.pagination  {
-
-    span.first,
-    span.prev,
-    span.page.current,
-    span.page.gap,
-    span.page,
-    span.next {
-    box-sizing: border-box;
-    width: 20px;
-    height: 20px;
-    padding: 0 5px;
-    border-right: 1px solid $gray;
-    color: $gray;
+    div.container_delete {
+      box-sizing: border-box;
+      display: flex;
+      width: 100%;
+      height:auto;
     }
 
-    span.last {
-    box-sizing: border-box;
-    width: 20px;
-    height: 20px;
-    padding: 0 5px;
-    color: $gray;
+    p.image {
+      color: $gray;
+      font-size: $small;
     }
 
-    span.page.current {
+    p.title {
+      margin: 10px 0;
+    }
+
+    p.title a {
       color: $黒紅;
+      font-size: $large;
       font-weight: bold;
-      font-size: $huge;
     }
 
-    span.first a:hover,
-    span.prev a:hover,
-    span.page a:hover,
-    span.next a:hover,
-    span.last a:hover {
-    color: $蜜柑色;
+      p.title a:hover {
+        border-bottom: 1px solid $黒紅;
+      }
+
+    p.content {
+      width: 95%;
+      height: auto;
+      min-height: 30px;
+      margin: 10px 0;
     }
 
-  }
+    p.content a {
+      color: $黒紅;
+      font-size: $normal;
+    }
+
+      p.content a:hover {
+        border-bottom: 1px solid $黒紅;
+      }
+
+    p.time {
+      box-sizing: border-box;
+      width: calc(100% / 10 * 5);
+      padding-top: 10px;
+      text-align: left;
+      font-size: $small;
+    }
+
+      p.time a:hover {
+        border-bottom: 1px solid $gray;
+      }
+    
+    p.messages_index {
+      box-sizing: border-box;
+      width: calc(100% / 10 * 4);
+      padding-top: 10px;
+      text-align: center;
+      color: $gray;
+      font-size: $small;
+    }
+
+    p.delete {
+      margin: 10px 0;
+      text-align: right;
+    }
+
+    p.delete img {
+      width: 25px;
+      height: auto;
+    }
+
+    div.pagination {
+      width: 100%;
+      height: auto;
+    }
+
+    nav.pagination {
+      box-sizing: border-box;
+      width: 50%;
+      height: auto;
+      margin: 0 auto;
+      padding: 30px 0;
+      text-align: center;
+    }
+
+    nav.pagination  {
+
+      span.first,
+      span.prev,
+      span.page.current,
+      span.page.gap,
+      span.page,
+      span.next {
+      box-sizing: border-box;
+      width: 20px;
+      height: 20px;
+      padding: 0 5px;
+      border-right: 1px solid $gray;
+      color: $gray;
+      }
+
+      span.last {
+      box-sizing: border-box;
+      width: 20px;
+      height: 20px;
+      padding: 0 5px;
+      color: $gray;
+      }
+
+      span.page.current {
+        color: $黒紅;
+        font-weight: bold;
+        font-size: $huge;
+      }
+
+      span.first a:hover,
+      span.prev a:hover,
+      span.page a:hover,
+      span.next a:hover,
+      span.last a:hover {
+      color: $蜜柑色;
+      }
+
+    }
 
 }
 
-/* new */
-div#blog_background img {
+/* new, show, edit */
+div#wrapper_my_content {
+
+div.blog_background img {
   position: fixed;
   width: 100%;
   height: 100%;
-  z-index: 1;
 }
 
-div#blog_load {
+div.container_blog_load {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+div.blog_load {
+  box-sizing: border-box;
+  width: 60%;
+  height: auto;
+  min-height: 100%;
+  margin: 0 auto;
+  background-color: $桜色;
+}
+
+div.blog_load {
 
   div.container_blog_name {
     width: 100%;
     height: auto;
-    padding: 80px 0;
+    padding: 80px 0 50px;
     text-align: center;
   }
 
-  p.new_blog {
+  /* new, edit */
+  p.new_blog,
+  p.edit_blog {
     box-sizing: border-box;
     position: absolute;
     top: 0;
-    left: 25%;
-    width: 50%;
+    left: calc((100% - 25%) / 2);
+    width: 25%;
     height: 70px;
     margin: 0 auto;
     padding-top: 20px;
@@ -516,6 +523,8 @@ div#blog_load {
     font-weight: bold;
     border-bottom: 1px solid $藍鉄;
   }
+  /* new, edit */
+
 
   p.corp_name {
     margin: 20px 0;
@@ -535,16 +544,17 @@ div#blog_load {
     padding: 0 2px
   }
 
-  div.container_new_blog form {
+  /* new, edit */
+  div.container_blog_f form {
     width: 70%;
     height: auto;
     margin: 0 auto;
   }
 
-  div.container_new_blog form {
+  div.container_blog_f form {
 
-    div.title_new_blog,
-    div.caption_new_blog {
+    div.title_blog,
+    div.caption_blog {
       display: flex;
       width: 100%;
       height: auto;
@@ -601,13 +611,25 @@ div#blog_load {
         background-color: $light-red;
       }
   
+    div.field_with_errors {
+      display: contents;
+    }
+
+    p.error {
+      margin-top: 10px;
+      color: $light-red;
+      font-weight: bold;
+    }
+
   }
+  /* new */
+
 
   div.back_to_top {
     width: 70%;
     height: auto;
-    margin: 30px auto 50px;
-    padding-top: 50px;
+    margin: 30px auto 0;
+    padding: 50px 0;
     text-align: center;
     border-top: 1px solid $黒紅;
   }
@@ -615,74 +637,27 @@ div#blog_load {
     div.back_to_top a:hover {
       border-bottom: 1px solid $gray;
     }
-
-  /* edit */
-  div.container_edit_blog form {
-    width: 70%;
-    height: auto;
-    margin: 0 auto;
-  }
-
-  div.container_edit_blog form {
-
-    div.title_edit_blog,
-    div.caption_edit_blog {
-      display: flex;
-      width: 100%;
-      height: auto;
-      margin: 20px 0;
-    }
-
-    p.chara {
+  
+    p.messages {
       box-sizing: border-box;
-      width: calc(100% / 10 * 3);
+      width: 150px;
       height: 35px;
-      padding-top: 7px;
-      text-align: left;
-      color: $gray;
-      font-size: $normal;
-    }
-
-    input#blog_title {
-      box-sizing: border-box;
-      width: calc(100% / 10 * 7);
-      height: inherit;
-      padding-left: 10px;
-    }
-
-    input#blog_caption_image {
-      box-sizing: border-box;
-      width: calc(100% / 10 * 7);
-      height: inherit;
+      margin: 0 auto;
       padding-top: 5px;
+      background-color: $蜜柑色;
+      border-radius: 10px;
     }
-
-    trix-editor {
-      height: auto;
-      min-height: 300px;
-      text-align: left;
-    }
-
-    div.submit {
-      width: 100%;
-      height: auto;
-      text-align: center;
-    }
-
-    div.submit input {
-      width: 100px;
-      height: 35px;
-      margin: 30px 0;
-      background-color: $藍鉄;
+  
+    p.messages a {
       color: $white;
-      border: none;
-      border-radius: 5px;
     }
-
-      div.submit input:hover {
-        background-color: $light-red;
+  
+      p.messages a:hover {
+        border-bottom: 1px solid $white;
       }
 
+
+  /* show,edit */
     p.delete {
       box-sizing: border-box;
       width: 100px;
@@ -707,10 +682,6 @@ div#blog_load {
         border-bottom: 1px solid $white;
       }
 
-  }
-
-  div.container_edit_blog {
-
   div.back_to_prev {
     width: 70%;
     height: auto;
@@ -724,9 +695,7 @@ div#blog_load {
     }
 
   }
-
-
-}
+  /* show, edit */
 
 /* show */
 div.container_blog_name {
@@ -739,24 +708,6 @@ div.container_blog_name {
     padding-top: 50px;
     border-bottom: 1px solid $黒紅;
   }
-
-  p.messages {
-    box-sizing: border-box;
-    width: 150px;
-    height: 35px;
-    margin: 0 auto;
-    padding-top: 5px;
-    background-color: $蜜柑色;
-    border-radius: 10px;
-  }
-
-  p.messages a {
-    color: $white;
-  }
-
-    p.messages a:hover {
-      border-bottom: 1px solid $white;
-    }
 
 }
 
@@ -835,13 +786,8 @@ div.container_article {
       border-bottom: 1px solid $white;
     }
 
-  div.back_to_top {
-    width: 100%;
-    height: auto;
-    margin: 30px 0;
-    text-align: center;
-  }
-
 }
 
+}
+/* show */
 

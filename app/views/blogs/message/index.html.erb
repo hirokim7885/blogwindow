@@ -1,16 +1,44 @@
-<div class="container_messages">
+<div id="wrapper_messages">
 
-  <%= @blog.title %>  
-
-   <ul>
-    <% @blog.reviews.each do |review| %>
-      <li>
-        <div class="messages">
-          <%= review.name %>
-          <%= review.comment %>
-        </div>
-      </li>
+  <div class="blog_background">
+    <% if @user.background.attached? %>
+    <%= image_tag(@user.background.variant(resize_to_limit:[200,200])) %>
     <% end %>
-   </ul>
+  </div>
+
+  <div class="container_message_load">
+    <div class="message_load">
+
+      <div class="container_blog_name">
+        <p class="messages">Messages</p>
+        <h2 class="title"><%= @blog.title %></h2>
+        <div class="update">最終更新日：<%= @blog.updated_at.strftime("%Y/%m/%d %H:%m 更新") %></div>
+        <div class="create">投稿日：<%= @blog.created_at.strftime("%Y/%m/%d %H:%m 作成") %></div>
+      </div>
+
+
+      <ul class="container_review">
+        <% @reviews.each do |review| %>
+          <li class="subcontainer_review">
+            <div class="tag_messages">
+              <p class="name"><%= review.name %></p>
+            <div class="tag_comment">
+              <p class="comment"><%= review.comment %></p>
+              <p class="created_at"><%= review.created_at.strftime("%Y/%m/%d %H:%m 投稿") %></p>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+
+      <div class="pagination">
+        <%= paginate @reviews %>
+      </div>
+
+      <div class="back_to_prev"><%= link_to '前に戻る', blogs_my_content_path(@blog) %></div>
+
+      <div class="back_to_top"><%= link_to "Topに戻る", root_path %></div>
+
+    </div>
+  </div>
 
 </div>

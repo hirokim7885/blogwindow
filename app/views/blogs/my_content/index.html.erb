@@ -22,15 +22,15 @@
         <p class="chara_profile"><%= link_to "Profile", users_my_profile_path(@user) %></p>
       </div>
 
-      <div class="blog_background">
-        <p class="background_image">
+      <div class="blog_design">
+        <p class="design_image">
           <% if @user.background.attached? %>
             <%= link_to image_tag(@user.background.variant(resize_to_limit:[200,200])), users_blog_design_path(@user) %>
           <% else %>
             <%= "" %>
           <% end %>
         </p>
-        <p class="chara_background_image"><%= link_to "ブログのデザイン", users_blog_design_path(@user) %></p>
+        <p class="chara_design_image"><%= link_to "ブログのデザイン", users_blog_design_path(@user) %></p>
       </div>
 
     </div>
@@ -45,8 +45,7 @@
 
   </div>  
   
-  <div class="container_blog_load">
-    <div class="blog_load">
+    <div class="container_blog_load_index">
       <div class="blog_name">
         <p class="name">
           <% if @user.blog_name? %>
@@ -83,7 +82,7 @@
             <p class="time">
               <%= link_to blog.created_at.strftime("%Y/%m/%d %H:%m 更新"), blogs_my_content_path(blog.id) %>
             </p>
-            <p class="messages"><%= link_to "メッセージ #{blog.good_count}件", blogs_my_content_message_index_path(blog.id) %></p>
+            <p class="messages_index"><%= link_to "メッセージ #{blog.good_count}件", blogs_my_content_message_index_path(blog.id) %></p>
             <p class="delete">
               <%= link_to image_tag("delete_outline_black_24dp.png", class:"image_trash"), blogs_my_content_path(blog.id), method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } %>
             </p>
@@ -98,6 +97,5 @@
         <%= paginate @blogs %>
       </div>
     </div> 
-  </div> 
 
 </div>
