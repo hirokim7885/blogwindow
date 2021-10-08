@@ -4,9 +4,8 @@
 div#wrapper_blog_designs {
   position: absolute;
   width: 100%;
-  height: calc(100% + (80px * 2));
-  background-color: $yellow;
-  z-index: 1;
+  height: auto;
+  min-height: 100%;
 }  
 
 div#wrapper_blog_designs {
@@ -34,181 +33,172 @@ div#wrapper_blog_designs {
       color: $gray;
     }
 
-  div#blog_background img {
-    position: fixed;
+    div.main_container  {
+      position: fixed;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      background-color: $yellow;
+      opacity: 0.9;
+    }
+
+    div.main_container  {
+
+      p.name  {
+        box-sizing: border-box;
+        width: calc(100% / 10 * 2.5);
+        height: 70px;
+        padding-top: 30px;
+        background-color: $green;
+        color: $white;
+        font-weight: bold;
+        text-align: center;
+      }
+    
+      div.dummy  {
+        width: calc(100% / 10 * 6);
+        height: 100%;
+      }
+
+      div.header_logout {
+        width: calc(100% / 10 * 1.5);
+        height: auto;
+      }
+    
+      div.header_logout {
+    
+        p.image {
+          box-sizing: border-box;
+          position: absolute;
+          width: calc(100% / 10 * 1.5);
+          height: 40px;
+          padding-left: 10px;
+          text-align: center;
+          background-color: $葡萄色;
+        }
+    
+        p.image img {
+          width: auto;
+          height: 20px;
+          margin-top: 15px;
+        }
+    
+        p.chara {
+          box-sizing: border-box;
+          position: absolute;
+          top: 40px;
+          width: calc(100% / 10 * 1.5);
+          height: 30px;
+          padding-left: 10px;
+          text-align: center;
+          background-color: $葡萄色;
+        }
+    
+        p.chara a {
+          color: $white;
+          font-size: $small;
+          font-weight: bold;
+        }
+    
+          p.chara a:hover {
+            border-bottom: 1px solid $white;
+          }
+    
+      }
+    
+    }  
+
+  div.sub_container {
+    position: absolute;
     width: 100%;
     height: 100%;
-    z-index: 2;
   }
 
-  div#main_container {
+  div.container_load {
     position: absolute;
-    top: 100px;
-    width: 100%;
+    left: calc(100% / 10 * 2.5);
+    width: calc(100% / 10 * 6);
     height: auto;
-    z-index: 2;
+    min-height: 100%;
+    background-color: $桜色;
   }
 
-  div#setting_blog_name {
-    box-sizing: border-box;
-    display: flex;
-    position: fixed;
-    width: 100%;
-    height: 70px;
-    margin: 0 auto;
-    z-index: 4;
-  }
-
-    div#setting_blog_name h2 {
-      box-sizing: border-box;
-      position: relative;
-      width: 80%;
-      height: 70px;
-      padding-top: 20px;
-      margin: 0 auto;
-      background-color: $yellow;
-      text-align: center;
-      border-radius: 0 0 10px 10px;
-      z-index: 4;
-    }
-
-  div#custom {
-    position: absolute;
-    width:100%;
-    height: 70px;
-    text-align: center;
-    z-index: 3;
-  }
-
-    div#custom
-      p#title {
-      box-sizing: border-box;
-      width: 80%;
-      height: 70px;
-      margin: 0 auto;
-      padding-top: 20px;
-      background-color: $chocolate;
-      color: $white;
-      font-size: $huge;
-      font-weight: bold;
-      border-radius: 0 0 10px 10px;
-    }
-
-  div#container_setting_title {
+  div.container_setting_title {
     position: relative;
     width: 100%;
     height: auto;
   } 
 
-  div#container_setting_title
-    div.dummy {
-      width: 55%;
-      height: auto;
-      margin: 0 auto;
-      margin-top: 50px;
-      background-color: $chocolate;
-      text-align: center;
-      border-radius: 0 0 20px 20px;
-    }
-
-  div#container_setting_title {
+  div.container_setting_title {
 
     h2 {
-      width: 70%;
-      margin: 0 auto;
       box-sizing: border-box;
-      padding: 50px 0 30px;
-      color: $white;
-      border-bottom: 1px solid $white;
-    }
-
-    div#setting_background {
-      display: flex;
-      width: 70%;
+      width: 100%;
+      height: 70px;
       margin: 0 auto;
+      padding-top: 20px;
+      background-color: $紅紫;
+      text-align: center;
+      color: $white;
     }
 
-      div#setting_background p {
-        width: 70%;
+      div.setting_background_text p {
+        width: 60%;
+        padding: 100px 0 50px;
         margin: 0 auto;
-        padding: 20px;
-        border-bottom: none;
-        color: gray;
-        font-size: $small;
-      }
-
-      div#setting_background a {
-        color: $white;
-        font-weight: bold;
-        text-decoration: none;
-        font-size: large;
-      }
-
-      div#setting_background a:hover {
-        color: $yellow;
-      }
-
-      div#setting_background
-        p.image_highlight {
-        width: calc((100% - 10px) / 3);
-        text-align: right;
-      }
-
-      div#setting_background
-        p.setting_title {
-        width: calc((100% - 10px) / 3 * 2);
         text-align: left;
-      }
-
-      div#setting_background_text p {
-        width: 70%;
-        padding-bottom: 30px;
-        margin: 0 auto;
-        border-bottom: 1px solid $red;
-        text-align: left;
-        color: $white;
+        color: $黒紅;
       }
 
   }
 
-  div#setting_container {
+  p.title {
+    box-sizing: border-box;
+    width: 50%;
+    height: 70px;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+    color: $藍鉄;
+    font-weight: bold;
+    border-bottom: 1px solid $黒紅;
+  }
+
+  div.setting_container {
     box-sizing: border-box;
     position: relative;
-    width: 55%;
+    width: 80%;
     height: auto;
     min-height: 500px;
-    margin: 50px auto 50px;
+    margin: 30px auto 0;
     padding: 5px 20px 20px;
-    background-color: $white;
-    border-radius: 20px 20px 20px 20px;
     text-align: center;
-    z-index: 3;
   }
 
-    div#setting_container h2 {
+    div.setting_container h2 {
       width: 70%;
       padding: 50px;
       margin: 0 auto;
       border-bottom: 1px solid gray;
     }
 
-  div#setting_container {
+  div.setting_container {
 
-    div#container_blog_name,
-    div#container_title_image,
-    div#container_background,
-    div#container_blog_caption,
-    div#container_self_introduction {
+    div.container_blog_name,
+    div.container_title_image,
+    div.container_background,
+    div.container_blog_caption,
+    div.container_self_introduction {
       display: flex;
       width: 100%;
       height: auto;
     }
 
-    div#chara,
-    div#image,
-    div#background,
-    div#caption,
-    div#introduction {
+    div.chara,
+    div.image,
+    div.background,
+    div.caption,
+    div.introduction {
       width: calc(100% / 2.5);
       height: auto;
       margin-left: 45px;
@@ -228,6 +218,7 @@ div#wrapper_blog_designs {
       color: $黒紅;
       font-size: $small;
       border: 1px solid $黒紅;
+      border-radius: 5px;
     }
 
     div.dummy_introduction {
@@ -245,71 +236,71 @@ div#wrapper_blog_designs {
       text-align: left;
     }
 
-    div#shelter {
+    div.shelter {
       width: 100%;
       height: auto;
       color: $蜜柑色;
     }
 
     p {
-      width: 70%;
-      height: 70px;
+      width: 100%;
+      height: 50px;
       margin: 60px auto 35px;
-      padding-top: 20px;
+      padding-top: 10px;
       color: $黒紅;
       font-weight: bold;
       border-bottom: 1px solid $黒紅;
     }
 
-    p#head {
+    p.head {
       margin-top: 30px;
     }
 
-    p#submit {
+    p.submit {
       border: none;
     }
 
-    p#submit input {
-      width: 150px;
+    p.submit input {
+      width: 120px;
       height: 45px;
-      background-color: $green;
+      background-color: $藍鉄;
       color: $white;
-      border: 1px solid $green;
       border-radius: 5px;
     }
 
-      p#submit input:hover {
+      p.submit input:hover {
         background-color: $light-red;
         border: 1px solid $light-red;
       }
     
-    p#back_to_prev {
+    p.back_to_prev {
       margin-bottom: 25px;
       padding-top: 30px;
       border-top: 1px solid $黒紅;
+      font-weight: normal;
       border-bottom: none;
     }
 
-    p#back_to_prev a {
+    p.back_to_prev a {
       color: $gray;
     }
 
-      p#back_to_prev a:hover {
+      p.back_to_prev a:hover {
         border-bottom: 1px solid $gray;
     }
 
-    p#blog_name,
-    p#title_image,
-    p#background,
-    p#caption_short,
-    p#caption_long {
+    p.blog_name,
+    p.title_image,
+    p.background,
+    p.caption_short,
+    p.caption_long {
       height: auto;
-      color: $蜜柑色;
+      color: $黒紅;
       font-size: $huge;
       border: none;
     }
 
-      p#caption_short {
+      p.caption_short {
         width: 70%;
         height: auto;
         text-align: left;
@@ -319,50 +310,63 @@ div#wrapper_blog_designs {
     div.trix-content {
       width: 70%;
       height: auto;
-      margin: 50px auto;
+      margin: 50px auto 100px;
       text-align: center;
-      color: $蜜柑色;
+      color: $黒紅;
     }
 
-    div#shelter img {
+    div.blank {
+      width: 70%;
+      height: auto;
+      margin: 60px auto 100px;
+      text-align: center;
+      color: $黒紅;
+      font-weight: bold;
+    }
+
+    div.shelter img {
       width: 400px;
       height: auto;
     }
 
   }
 
-      div#back_to_top p {
-        width: 70%;
+      div.back_to_top p {
+        width: 100%;
         margin: 0 auto;
         padding: 50px; 
         border-bottom: none;
+        border-top: 1px solid $藍鉄;
       }
 
-      div#back_to_top a {
+      div.back_to_top a {
         color: gray;
-        font-size: $normal;
+        font-weight: normal;
         text-decoration: none;
       }
 
-      div#back_to_top a:hover {
+      div.back_to_top a:hover {
         border-bottom: 1px solid gray;
       }
 
+  div.edit p {
+    width: 120px;
+    height: 40px;
+    margin: 30px auto;
+    padding-top: 7px;
+    background-color: $green;
+    border: none;
+    border-radius: 5px;
+  }
+
+  div.edit p a {
+   color: $white;
+   font-weight: normal;
+  }
+
+    div.edit p a:hover {
+      border-bottom: 1px solid $white;
+    }
+
+
 }
-
-div#main_container
-  div#footer {
-    position: relative;
-    width: 100%;
-    height: 60px;
-  }
-
-div#main_container
-  div#footer p {
-    width: 80%;
-    height: 50px;
-    margin: 0 auto;
-    padding-top: 15px;
-    background-color: $yellow;
-    color: $white;
-  }

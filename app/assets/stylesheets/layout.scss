@@ -8,6 +8,20 @@ html, body {
   padding: 0;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: gray;
+}
+
 div#wrapper {
   position: absolute;
   box-sizing: border-box;

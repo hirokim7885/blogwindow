@@ -2,7 +2,9 @@
 
   <div id="blog_background">
     <% if @user.background.attached? %>
-    <%= image_tag(@user.background.variant(resize_to_limit:[200,200])) %>
+      <%= image_tag(@user.background.variant(resize_to_limit:[200,200])) %>
+    <% else %>
+      <%= "" %>
     <% end %>
   </div>
 
@@ -44,8 +46,8 @@
           <p id="create">投稿日：<%= @blog.updated_at.strftime("%Y/%m/%d %H:%m 作成") %></p>
 
           <div id="move">
-            <% if @blog.privious.present? %>
-            <%= link_to "<<前の記事　", blogs_content_path(@blog.privious) %>
+            <% if @blog.previous.present? %>
+            <%= link_to "<<前の記事　", blogs_content_path(@blog.previous) %>
             <% end %>
             <% if @blog.next.present? %>
             <%= link_to "　後の記事>>", blogs_content_path(@blog.next) %>
@@ -55,9 +57,8 @@
 
         <div id="support">
           <p id="message"><%= "応援メッセージが #{@blog.reviews.size} 件あります。" %></p>
-          <% if @blog.reviews.any? %>
           <ul>
-            <% @blog.reviews.each do |review| %>
+            <% @reviews.each do |review| %>
               <li>
                 <div id="reviews">
                   <p id="name"><%= review.name %></p>
@@ -66,7 +67,9 @@
               </li>
             <% end %>
           </ul>
-          <% end %>
+          <div class="pagination">
+            <%= paginate @reviews %>
+          </div>
         </div>
 
         <div id="container_comment">

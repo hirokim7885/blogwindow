@@ -1,0 +1,62 @@
+<div id="wrapper_reviews_admin">
+  <div class="wrapper_reviews">
+  </div>
+
+    <div class="container_reviews">
+      <div class="main_container">
+
+        <h2>Messages</h2>
+
+        <div class="container_tag">
+          <p class="tag_name">名前</p>
+          <div class="tag_comment">
+            <p class="tag_message">Message</p>
+            <p class="tag_create">投稿日時</p>
+          </div>
+          <p class="tag_blog_id">blog_ID</p>
+          <div class="blank"></div>
+        </div>
+
+          <ul>
+          <% @reviews.each do |review| %>
+            <li>
+              <div class="container_comments">
+                <div class="style_name">
+                  <p class="name"><%= review.name %></p>
+                </div>
+                <div class="style_comment">
+                  <p class="comment">
+                    <%= review.comment %>
+                  </p>
+                  <p class="time">
+                    <%= review.created_at.strftime("%Y/%m/%d %H:%m 投稿") %>
+                  </p>
+                </div>
+                <div class="style_move">
+                  <p class="foreign_key">
+                    <%= review.blog_id %>
+                  </p>
+                  <p class="move">
+                    <%= link_to "この記事を見る", blogs_admin_article_path(review.blog_id) %>
+                  </p>
+                </div>
+                <div class="style_delete">
+                  <p class="delete">
+                    <%= link_to "削除", reviews_admin_path(review.id), method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } %>
+                  </p>
+                </p>
+              </div>
+            </li>
+            <% end %>
+          </ul>
+
+          <div class="pagination">
+            <%= paginate @reviews %>
+          </div>
+
+          <div class="back_to_top"><%= link_to "Topに戻る", root_path %></div>
+
+      </div>
+    </div>
+
+</div>

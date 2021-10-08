@@ -1,46 +1,60 @@
-<p><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></p>
-<p>ユーザー登録情報管理</p>
+<div id="wrapper_admin">
+  <div class="container_admin">
 
-<p>ID</p>
-<p>氏名</p>
-<p>ふりがな</p>
-<p>メールアドレス</p>
-<p>郵便番号</p>
-<p>住所</p>
-<p>電話番号</p>
-<p>登録日</p>
-<p>最終更新日</p>
-<p>管理者フラグ</p>
-<p>使用停止フラグ</p>
+    <h2>ユーザー登録情報</h2>
 
-<ul>
-  <% @users.each do |user| %>
-    <% if user == current_user %>
-    <% next %>
-    <% puts user %>
-    <% end %>
-  <li>
-    <%= link_to user.id, users_admin_path(user.id) %>
-    <%= link_to user.family_name, users_admin_path(user.id) %>
-    <%= link_to user.given_name, users_admin_path(user.id) %>
-    <%= link_to user.family_name_kana, users_admin_path(user.id) %>
-    <%= link_to user.given_name_kana, users_admin_path(user.id) %>
-    <%= link_to user.email, users_admin_path(user.id) %>
-    <%= link_to user.zipcode, users_admin_path(user.id) %>
-    <%= link_to user.address, users_admin_path(user.id) %>
-    <%= link_to user.telephone, users_admin_path(user.id) %>
-    <%= link_to user.created_at, users_admin_path(user.id) %>
-    <%= link_to user.updated_at, users_admin_path(user.id) %>
-    <%= link_to user.admin_i18n, users_admin_path(user.id) %>
-    <%= link_to user.suspended_i18n, users_admin_path(user.id) %>
-    <%= link_to '編集', users_admin_path(user.id) %>
-    <%= link_to '削除', users_admin_path(user.id), method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } %>
-  </li>
-  <% end %>
-</ul>
+    <div class="container_table">
+      <table class="listing">
+        <tr>
+          <th>ID</th>
+          <th>氏名</th>
+          <th>ふりがな</th>
+          <th>メールアドレス</th>
+          <th>郵便番号</th>
+          <th>住所</th>
+          <th>電話番号</th>
+          <th>登録日</th>
+          <th>最終更新日</th>
+          <th>管理者フラグ</th>
+          <th>使用停止フラグ</th>
+          <th>編集</th>
+        </tr>
 
-<p><%= link_to '＋追加', new_users_admin_path %></p>
+        <% @users.each do |user| %>
+          <% if user == current_user %>
+          <% next %>
+          <% puts user %>
+          <% end %>
+        <tr>
+          <td class="id"><%= link_to user.id, users_admin_path(user.id) %></td>
+          <td class="name"><%= link_to "#{user.family_name} #{user.given_name}", users_admin_path(user.id) %></td>
+          <td class="kana"><%= link_to "#{user.family_name_kana} #{user.given_name_kana}", users_admin_path(user.id) %></td>
+          <td class="email"><%= link_to user.email, users_admin_path(user.id) %></td>
+          <td class="zipcode"><%= link_to user.zipcode, users_admin_path(user.id) %></td>
+          <td class="address"><%= link_to truncate(strip_tags(user.address.to_s), length: 5, omission: "…"), users_admin_path(user.id) %></td>
+          <td class="telephone"><%= link_to truncate(strip_tags(user.telephone.to_s), length: 5, omission: "…"), users_admin_path(user.id) %></td>
+          <td class="create"><%= link_to user.created_at.strftime("%Y/%m/%d %H:%m"), users_admin_path(user.id) %></td>
+          <td class="update"><%= link_to user.updated_at.strftime("%Y/%m/%d %H:%m"), users_admin_path(user.id) %></td>
+          <td class="admin_flag"><%= link_to user.admin_i18n, users_admin_path(user.id) %></td>
+          <td class="suspended"><%= link_to user.suspended_i18n, users_admin_path(user.id) %></td>
+          <td class="action">
+            <%= link_to '削除', users_admin_path(user.id), method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } %>
+          </td>
+        </tr>
+        <% end %>
+      </table>
+    </div>
 
-<p><%= link_to 'TOPに戻る', root_path %></p>
+    <div class="tag_add">
+    <p class="new"><%= link_to image_tag("person_add_black_24dp.svg", class:"add" ), new_users_admin_path %></p>
+    <p class="chara_new"><%= link_to "新規登録", new_users_admin_path %></p>
+    </div>
+    
+    <div class="back_to_top">
+    <p class="chara"><%= link_to 'Topに戻る', blogs_admin_content_index_path %></p>
+    </div>
+
+  </div>
+</div>
 
 

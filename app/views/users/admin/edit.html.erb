@@ -1,34 +1,62 @@
-<%= form_with model: @user, url: users_admin_path(@user) do |f| %>
-    <p>氏名：
-      <%= f.text_field :family_name, placeholder: '名字' %>
-    </p>
-      <p>
-        <%= f.text_field :given_name, placeholder: '名前' %>
-      </p>
-    <p>ふりがな：
-      <%= f.text_field :family_name_kana, placeholder: 'みょうじ' %>
-    </p>
-      <p>
-        <%= f.text_field :given_name_kana, placeholder: 'なまえ' %>
-      </p>
-    <p>郵便番号：
-      <%= f.text_field :zipcode, placeholder: '郵便番号' %>
-    </p>
-    <p>住所：
-      <%= f.text_field :address, placeholder: '住所' %>
-    </p>
-    <p>電話番号：
-      <%= f.telephone_field :telephone, placeholder: '電話番号' %>
-    </p>
-    <p>管理者フラグ：
-      <%= f.select :admin, [['一般ユーザー', 'user'], ['管理者ユーザー', 'administrator']] %>
-    </p>
-    <p>使用停止フラグ：
-      <%= f.select :suspended, [['使用中', 'under_use'], ['使用停止中', 'under_suspension']] %>
-    </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+<div id="wrapper_admin">
 
-<p><%= link_to '前に戻る', users_admin_path(@user) %></p>
+  <div class="main_container">
+    <p class="name">
+      <%= "#{@user.family_name} #{@user.given_name}さんのページ" %>
+    </p>
+
+    <div class="dummy">
+    </div>
+
+    <div id="header_logout">
+      <p class="image"><%= link_to image_tag("logout_white_24dp.svg", class:"image_logout"), destroy_user_session_path, method: :delete %></p>
+      <p class="chara"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></p>
+    </div>
+  </div>
+
+  <div class="sub_container">
+    <div class="container_info">
+      <p class="info">ユーザー情報</p>
+
+      <p class="basic_user">基本情報</p>
+      <%= form_with model: @user, url: users_admin_path(@user) do |f| %>
+        <div class="name">
+          <p class="chara">氏名</p>
+          <%= f.text_field :family_name, placeholder: '名字' %>
+          <%= f.text_field :given_name, placeholder: '名前' %>
+        </div>
+        <div class="name_kana">
+          <p class="chara">ふりがな</p>
+          <%= f.text_field :family_name_kana, placeholder: 'みょうじ' %>
+          <%= f.text_field :given_name_kana, placeholder: 'なまえ' %>
+        </div>
+        <div class="zipcode">
+          <p class="chara">郵便番号</p>
+          <%= f.text_field :zipcode, placeholder: '郵便番号' %>
+        </div>
+        <div class="address">
+          <p class="chara">住所</p>
+          <%= f.text_field :address, placeholder: '住所' %>
+        </div>
+        <div class="telephone">
+          <p class="chara">電話番号</p>
+          <%= f.telephone_field :telephone, placeholder: '電話番号' %>
+        </div>
+        <div class="admin_flag">
+          <p class="chara">管理者フラグ</p>
+          <div class="wrap"><%= f.select :admin, [['一般ユーザー', 'user'], ['管理者ユーザー', 'administrator']] %></div>
+        </div>
+        <div class="suspended">
+          <p class="chara">使用停止フラグ</p>
+          <div class="wrap"><%= f.select :suspended, [['使用中', 'under_use'], ['使用停止中', 'under_suspension']] %></div>
+        </div>
+        <div class="submit">
+          <%= f.submit %>
+        </div>
+      <% end %>
+
+      <p class="back_to_prev"><%= link_to '前に戻る', users_admin_path(@user) %></p>
+    
+    </div>
+  </div>
+</div>

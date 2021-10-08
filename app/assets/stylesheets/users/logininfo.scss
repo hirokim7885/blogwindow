@@ -1,20 +1,6 @@
 @import "colors";
 @import "dimensions";
 
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-}
-
-a {
-  text-decoration: none;
-  color: gray;
-}
-
 div#wrapper_logininfo {
   position: absolute;
   width: 100%;
@@ -22,6 +8,8 @@ div#wrapper_logininfo {
   min-height: 100%;
   opacity: 0.9;
 }
+
+div#wrapper_logininfo {
 
 div.main_container_logininfo {
   position: fixed;
@@ -36,7 +24,7 @@ div.main_container_logininfo {
 
   p.name_logininfo {
     box-sizing: border-box;
-    width: calc(100% / 10 * 2);
+    width: calc(100% / 10 * 2.5);
     height: 70px;
     padding-top: 30px;
     background-color: $green;
@@ -46,12 +34,12 @@ div.main_container_logininfo {
   }
 
   div.dummy_logininfo {
-    width: calc(100% / 10 * 7);
+    width: calc(100% / 10 * 6);
     height: 100%;
   }
 
   div#header_logout {
-    width: calc(100% / 10);
+    width: calc(100% / 10 * 1.5);
     height: auto;
   }
   
@@ -60,10 +48,8 @@ div.main_container_logininfo {
     p.image {
       box-sizing: border-box;
       position: absolute;
-      bottom: 30px;
-      width: calc(100% / 9);
+      width: calc(100% / 10 * 1.5);
       height: 40px;
-      padding-right: 10px;
       text-align: center;
       background-color: $葡萄色;
     }
@@ -77,10 +63,9 @@ div.main_container_logininfo {
     p.chara {
       box-sizing: border-box;
       position: absolute;
-      bottom: 0;
-      width: calc(100% / 9);
+      top: 40px;
+      width: calc(100% / 10 * 1.5);
       height: 30px;
-      padding-right: 10px;
       text-align: center;
       background-color: $葡萄色;
     }
@@ -107,8 +92,8 @@ div.sub_container_logininfo {
 
 div.container_info {
   position: relative;
-  left: calc(100% / 10 * 2);
-  width: calc(100% / 10 * 7);
+  left: calc(100% / 10 * 2.5);
+  width: calc(100% / 10 * 6);
   height: auto;
   min-height: 100%;
   padding-bottom: 50px;
@@ -120,7 +105,7 @@ div.container_info {
 
   p.info {
     box-sizing: border-box;
-    width: 70%;
+    width: 100%;
     height: 70px;
     margin: 0 auto 80px;
     padding-top: 20px;
@@ -129,20 +114,19 @@ div.container_info {
     font-size: $huge;
     font-weight: bold;
     text-align: center;
-    border-radius: 0 0 20px 20px;
   }
 
   p.basic_logininfo {
     box-sizing: border-box;
     position: relative;
     width: 70%;
-    height: auto;
-    margin: 0 auto 30px;
-    background-color: $藍鉄;
-    color: $white;
-    font-size: $large;
+    height: 50px;
+    margin: 60px auto 35px;
+    padding-top: 10px;
     text-align: center;
-    border-radius: 0 0 10px 10px;
+    color: $黒紅;
+    font-weight: bold;
+    border-bottom: 1px solid $黒紅;
   }
 
   div.email,
@@ -275,5 +259,7 @@ div.container_info {
   div.field_with_errors {
     display: contents;
   }
+
+}
 
 }

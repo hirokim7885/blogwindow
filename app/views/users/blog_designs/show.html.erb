@@ -1,41 +1,32 @@
 <div id="wrapper_blog_designs">
+  <div class="main_container">
+    <p class="name">
+      <%= "#{@user.family_name} #{@user.given_name}さんのページ" %>
+    </p>
 
-  <div id="setting_blog_name">
-    <h2>
-      <% if @user.blog_name? %>
-      <%= @user.blog_name %>
-      <% else %>
-      <%= "#{@user.family_name}さんのブログ" %>
-      <% end %>
-    </h2>
-  </div>
-
-  <div id="blog_background">
-    <% if @user.background.attached? %>
-      <%= image_tag(@user.background.variant(resize_to_limit:[200,200])) %>
-    <% else %>
-      <%= "" %>
-    <% end %>
-  </div>
-
-  <div id="main_container">
-    <div id="container_setting_title">
-      <div class="dummy">
-        <h2>ブログのデザイン</h2>
-        <div id="setting_background">
-          <p class="image_highlight"><%= image_tag("highlight_alt_white_24dp.svg", class: "image_highlight") %></p>
-          <p class="setting_title"><%= link_to "デザインの設定", edit_users_blog_design_path(@user) %></p>
-        </div>
-        <div id="setting_background_text">
-          <p>お客様のブログ画面のタイトル／背景などを、お好きなイメージでカスタマイズすることができます。</br>現在の設定状況は、以下でご確認頂けます。</p>
-        </div>
-      </div>
+    <div class="dummy">
     </div>
+    
+    <div class="header_logout">
+      <p class="image"><%= link_to image_tag("logout_white_24dp.svg", class:"image_logout"), destroy_user_session_path, method: :delete %></p>
+      <p class="chara"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></p>
+    </div>  
+  </div>
 
-      <div id="setting_container">
-        <div id="shelter">
-          <p id="head">ブログの屋号</p>
-          <p id="blog_name">
+  <div class="sub_container">
+    <div class="container_load">
+
+      <div class="container_setting_title">
+          <h2>ブログのデザイン</h2>
+          <div class="setting_background_text">
+            <p>お客様のブログ画面のタイトル／背景などを、お好きなイメージでカスタマイズすることができます。現在の設定状況は、以下でご確認頂けます。</p>
+          </div>
+      </div>
+
+      <div class="setting_container">
+        <div class="shelter">
+          <p class="head">ブログの屋号</p>
+          <p class="blog_name">
             <% if @user.blog_name? %>
               <%= @user.blog_name %>
             <% else %>
@@ -43,9 +34,9 @@
             <% end %>
           </p>
         </div>
-        <div id="shelter">
+        <div class="shelter">
           <p>ブログの屋号（イメージ）</p>
-          <p id="title_image">
+          <p class="title_image">
             <% if @user.title_image.attached? %>
               <%= image_tag(@user.title_image.variant(resize_to_limit:[150,150])) %>
             <% else %>
@@ -53,9 +44,9 @@
             <% end %>
           </p>
         </div>
-        <div id="shelter">
+        <div class="shelter">
           <p>背景</p>
-          <p id="background">
+          <p class="background">
             <% if @user.background.attached? %>
               <%= image_tag(@user.background.variant(resize_to_limit:[150,150])) %>
             <% else %>
@@ -63,9 +54,9 @@
             <% end %>
           </p>
         </div>
-        <div id="shelter">
+        <div class="shelter">
           <p>ブログの見出し（短め）</p>
-          <p id="caption_short">
+          <p class="caption_short">
             <% if @user.blog_caption? %>
               <%= @user.blog_caption %>
             <% else %>
@@ -73,21 +64,24 @@
             <% end %>
           </p>
         </div>
-        <div id="shelter">
+        <div class="shelter">
           <p>ブログの見出し（長め）</p>
           <% if @user.self_introduction? %>
             <%= @user.self_introduction %>
           <% else %>
-            <%= "設定されていません" %>
+            <div class"blank"><%= "設定されていません" %></div>
           <% end %>
         </div>
 
-        <div id="back_to_top">
+        <div class="edit">
+          <p><%= link_to "設定する", edit_users_blog_design_path(@user) %></p>
+        </div>
+
+        <div class="back_to_top">
           <p><%= link_to "Topに戻る", blogs_my_content_index_path %></p>
         </div>
       </div>
-    <div id="footer">
-      <%= render "blogs/shared/footer" %>
+
     </div>
   </div>
   

@@ -1,3 +1,511 @@
-// Place all the styles related to the users::admin controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+@import "colors";
+@import "dimensions";
+
+div#wrapper_admin {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  opacity: 0.9;
+}
+
+div#wrapper_admin {
+
+  a {
+    color: $黒紅;
+  }
+
+  div.main_container {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: $yellow;
+  }
+
+  p.name {
+    box-sizing: border-box;
+    width: calc(100% / 10 * 2.5);
+    height: 70px;
+    padding-top: 30px;
+    background-color: $green;
+    color: $white;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  div.dummy {
+    width: calc(100% / 10 * 6);
+    height: 100%;
+  }
+
+  div#header_logout {
+    width: calc(100% / 10 * 1.5);
+    height: auto;
+  }
+  
+  div#header_logout {
+  
+    p.image {
+      box-sizing: border-box;
+      position: absolute;
+      width: calc(100% / 10 * 1.5);
+      height: 40px;
+      padding-left: 10px;
+      text-align: center;
+      background-color: $葡萄色;
+    }
+  
+    p.image img {
+      width: auto;
+      height: 20px;
+      margin-top: 15px;
+    }
+  
+    p.chara {
+      box-sizing: border-box;
+      position: absolute;
+      top: 40px;
+      width: calc(100% / 10 * 1.5);
+      height: 30px;
+      padding-left: 10px;
+      text-align: center;
+      background-color: $葡萄色;
+    }
+  
+    p.chara a {
+      color: $white;
+      font-size: $small;
+      font-weight: bold;
+    }
+  
+      p.chara a:hover {
+        border-bottom: 1px solid $white;
+      }
+  
+  }
+
+  div.sub_container {
+    position: absolute;
+    width: 100%;
+    height: auto;
+  }
+
+  div.container_info {
+    position: relative;
+    left: calc(100% / 10 * 2.5);
+    width: calc(100% / 10 * 6);
+    height: auto;
+    min-height: 100%;
+    background-color: $桜色;
+    opacity: 1;
+  }
+
+  div.container_info {
+
+    p.info {
+      box-sizing: border-box;
+      width: 100%;
+      height: 70px;
+      margin: 0 auto 80px;
+      padding-top: 20px;
+      background-color: $light-red;
+      color: $white;
+      font-size: $huge;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    p.basic_user {
+      box-sizing: border-box;
+      position: relative;
+      width: 70%;
+      height: 50px;
+      margin: 60px auto 50px;
+      padding-top: 10px;
+      color: $黒紅;
+      font-weight: bold;
+      text-align: center;
+      border-bottom: 1px solid $黒紅;
+    }
+
+    div.name,
+    div.name_kana,
+    div.zipcode,
+    div.address,
+    div.telephone,
+    div.email,
+    div.password,
+    div.admin_flag,
+    div.suspended {
+      display: flex;
+      width: 65%;
+      height: auto;
+      margin: 20px auto;
+    }
+
+    p.chara {
+      box-sizing: border-box;
+      width: calc(100% / 10 * 3);
+      height: 35px;
+      margin: 0 auto 10px;
+      padding-top: 5px;
+      padding-left: 20px;
+      color: $gray;
+    }
+
+    p.content {
+      box-sizing: border-box;
+      width: calc(100% / 10 * 7);
+      height: 35px;
+      margin: 0 auto 10px;
+      padding-top: 5px;
+      font-weight: bold;
+    }
+
+    p.edit {
+      box-sizing: border-box;
+      width: 100px;
+      height: 40px;
+      margin: 30px auto 50px;
+      padding-top: 7px;
+      background-color: $green;
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    p.edit a {
+      color: $white;
+    }
+
+      p.edit a:hover {
+      border-bottom: 1px solid $white;
+      }
+
+    p.back_to_index,
+    p.back_to_top {
+      box-sizing: border-box;
+      width: 70%;
+      height: auto;
+      margin: 0 auto;
+      padding-top: 30px;
+      text-align: center;
+      border-top: 1px solid $黒紅;
+    }
+
+    p.back_to_index {
+      padding: 50px 0 30px;
+      border: none;
+    }
+
+    p.back_to_index a {
+      font-size: $normal;
+    }
+
+    p.back_to_index a:hover,
+    p.back_to_top a:hover {
+      border-bottom: 1px solid $gray;
+    }
+
+  }
+
+}
+
+/* edit */
+div#wrapper_admin {
+
+  div.container_info {
+
+    input#user_family_name,
+    input#user_given_name,
+    input#user_family_name_kana,
+    input#user_given_name_kana,
+    input#user_zipcode,
+    input#user_address,
+    input#user_telephone
+    select#user_admin,
+    select#user_suspended {
+      box-sizing: border-box;
+      width: calc(100% / 10 * 3.5);
+      height: 35px;
+      margin-right: 10px;
+      padding-left: 10px;
+      border-color: $gray;
+      border-radius: 5px;
+    }
+
+    input#user_zipcode,
+    input#user_address,
+    input#user_telephone {
+      width: calc(100% / 10 * 7);
+      height: 35px;
+    }
+
+    div.wrap {
+      width: calc(100% / 10 * 7);
+      height: 35px;
+      margin-right: 10px;
+    }
+
+    select#user_admin,
+    select#user_suspended {
+      box-sizing: border-box;
+      width: 200px;
+      height: 100%;
+      padding-left: 10px;
+      text-align: left;
+      border-color: $gray;
+      border-radius: 5px;
+    }
+
+    div.submit {
+      width: 100px;
+      height: 40px;
+      margin: 30px auto 50px;
+      text-align: center;
+    }
+
+    div.submit input {
+      width: 100px;
+      height: 40px;
+      background-color: $蜜柑色;
+      color: $white;
+      font-size: $normal;
+      border: none;
+      border-radius: 10px;
+    }
+
+      div.submit input:hover {
+        background-color: $light-red;
+      }
+
+    p.back_to_prev {
+      box-sizing: border-box;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      padding-bottom: 30px;
+      text-align: center;
+    }
+
+      p.back_to_prev a:hover {
+        border-bottom: 1px solid $gray;
+      }
+
+  }
+
+/* index */
+  div.container_admin {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: $yellow;
+  }
+
+  div.container_admin {
+
+    h2 {
+      box-sizing: border-box;
+      width: 100%;
+      height: 70px;
+      margin: 0 auto;
+      padding-top: 20px;
+      background-color: $蜜柑色;
+      text-align: center;
+      color: $white;
+    }
+
+    div.container_table {
+      width: 100%;
+      height: 500px;
+      margin: 50px 0 0;
+      overflow-y: auto;
+    }
+
+    table.listing {
+      box-sizing: border-box;
+      width: 100%;
+      height: auto;
+      padding: 50px 20px 20px;
+      background-color: $桜色;
+    }
+
+    table.listing {
+
+      th {
+        height: 35px;
+        background-color: $藍鉄;
+        color: $white;
+        font-size: $small;
+        border: 1px solid $藍鉄;
+      }
+
+      td {
+        height: 50px;
+        font-size: $small;
+        border: 1px solid $藍鉄;
+      }
+
+      td.create,
+      td.update {
+        font-size: $tiny;
+      }
+
+      td.id,
+      td.zipcode,
+      td.admin_flag,
+      td.suspended,
+      td.action {
+        text-align: center;
+        }
+
+      a {
+        color: $黒紅;
+      }
+
+        a:hover {
+          border-bottom: 1px solid $黒紅;
+        }
+
+      td.action {
+        background-color: $light-red;
+      }
+
+      td.action a {
+        color: $white;
+        font-weight: bold;
+      }
+        td.action a:hover {
+          color: $yellow;
+          border: none;
+        }
+      
+      }
+
+      p.new {
+        box-sizing: border-box;
+        height: 40px;
+        padding-top: 10px;
+        padding-right: 50px;
+        background-color: $桜色;
+        text-align: right;
+      }
+
+      p.new img {
+        width: 30px;
+        height: 30px;
+      }
+
+      p.chara_new {
+        height: 50px;
+        padding-right: 35px;
+        background-color: $桜色;
+        text-align: right;
+      }
+
+      p.chara_new a {
+        font-size: $small;
+      }
+
+        p.chara_new a:hover {
+          color: $蜜柑色;
+        }
+
+      div.back_to_top {
+        width: 100%;
+        height: auto;
+      }
+
+      p.chara {
+        box-sizing: border-box;
+        width: 50%;
+        height: auto;
+        margin: 0 auto;
+        padding: 30px 0 50px;
+        text-align: center;
+      }
+
+      p.chara a {
+        color: $葡萄色;
+      }
+
+      p.chara a:hover {
+        border-bottom: 1px solid $葡萄色;
+      }
+
+  }
+
+}
+
+/* new */
+div#wrapper_admin {
+
+  h2.new_user {
+    box-sizing: border-box;
+    width: 50%;
+    height: 70px;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+    color: $藍鉄;
+    border-bottom: 1px solid $藍鉄;
+  }
+
+  p.basic_logininfo {
+    box-sizing: border-box;
+    position: relative;
+    width: 70%;
+    height: 50px;
+    margin: 60px auto 50px;
+    padding-top: 10px;
+    color: $黒紅;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid $黒紅;
+  }
+
+  div.email,
+  div.password {
+    box-sizing: border-box;
+    display: flex;
+    width: 65%;
+    height: auto;
+    margin: 20px auto;
+  }
+
+  p.chara {
+    box-sizing: border-box;
+    width: calc(100% / 10 * 3);
+    height: 35px;
+    margin: 0 auto 10px;
+    padding-top: 5px;
+    padding-left: 30px;
+    color: $gray;
+  }
+
+  input#user_email,
+  input#user_email_confirmation,
+  input#user_password,
+  input#user_password_confirmation {
+    box-sizing: border-box;
+    width: calc(100% / 10 * 5.5);
+    height: 35px;
+    padding-left: 10px;
+    border-color: $gray;
+    border-radius: 5px;
+  }
+
+  p.necessary {
+    box-sizing: border-box;
+    width: calc(100% / 10 * 1.5);
+    height: 35px;
+    padding-top: 5px;
+    text-align: center;
+    color: $light-red;
+    font-weight: bold;
+  }
+
+
+
+}
+

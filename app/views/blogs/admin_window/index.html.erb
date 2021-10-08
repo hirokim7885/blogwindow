@@ -1,12 +1,58 @@
-<p><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></p>
-<p>ブログユーザー</p>
+<div id="wrapper_admin_window">
+  <div class="style_admin_window">
+  </div>
 
-<ul>
-  <% @users.each do |user| %>
-  <li>
-    <%= link_to "#{user.family_name}さんのブログ", users_admin_top_path(user.id) %>
-  </li>
-  <% end %>
-</ul>
+  <div class="main_container">
 
-<p><%= link_to "Topに戻る", blogs_admin_content_index_path %></p>
+    <h2>Blog Users</h2>
+
+    <p class="members">Members</p>
+      <ul>
+        <% @users.each do |user| %>
+          <% if user == current_user %>
+          <% next %>
+          <% puts user %>
+          <% end %>
+        <li>
+          <div class="container_blogger">
+          
+            <div class="tag_portrait">
+              <p class="image">
+                <% if user.portrait.attached? %>
+                  <%= link_to image_tag(user.portrait.variant(resize_to_limit:[150,150])), users_admin_top_path(user.id) %>
+                <% else %>
+                  <%= "設定されていません" %>
+                <% end %>
+              </p>
+            </div>
+            <div class="tag_name">
+              <p class="name">
+                <%= link_to "#{user.family_name} #{user.given_name}さん", users_admin_top_path(user.id) %>
+              </p>
+              <p class="blog_name">
+                <% if user.blog_name? %>
+                  <%= link_to user.blog_name, users_admin_top_path(user.id) %>
+                <% else %>
+                  <%= "設定されていません" %>
+                <% end %>
+              </p>
+              <p class="time">
+                <%= link_to user.created_at.strftime("%Y/%m/%d %H:%m 登録"), users_admin_top_path(user.id) %>
+              </p>
+            </div>
+
+          </div>
+        </li>
+        <% end %>
+      </ul>
+
+      <div class="pagination">
+        <%= paginate @users %>
+      </div>
+
+      <div class="back_to_top"><%= link_to "Topに戻る", blogs_admin_content_index_path %></div>
+    </div>
+
+  </div>
+
+</div>

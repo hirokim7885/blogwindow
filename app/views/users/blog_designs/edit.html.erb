@@ -1,93 +1,95 @@
 <div id="wrapper_blog_designs">
-
-  <div id="custom">
-    <p id="title">デザインの設定</p>
-  </div>
-
-  <div id="blog_background">
-    <% if @user.background.attached? %>
-      <%= image_tag(@user.background.variant(resize_to_limit:[200,200])) %>
-    <% else %>
-      <%= "" %>
-    <% end %>
-  </div>
-
-  <div id="main_container">
-    <div id="setting_container">
-      <%= form_with model: @user, url: users_blog_design_path(@user) do |f| %>
-        <div id="shelter">
-          <p id="head">ブログの屋号</p>
-        </div>
-        <div id="container_blog_name">
-          <div id="chara">
-            <ul>
-              <li>自分らしいブログのタイトル（屋号）をつけましょう！。</li>
-              <li>20字以内。</li>
-              <li>屋号はホーム画面に表示されます。</li>
-            </ul>
-          </div>
-          <div class="dummy"><%= f.text_field :blog_name, placeholder: '屋号をつけましょう！（20字以内）' %></div>
-        </div>
-
-        <div id="shelter"><p>ブログの屋号（イメージ）</p></div>
-        <div id="container_title_image">
-          <div id="image">
-            <ul>
-              <li>屋号としてイメージを貼り付けることもできます。</li>
-              <li>ブログの記事画面のトップに表示されます。</li>
-              <li>選択しない場合は、元のイメージか、弊社で用意している背景色が表示されます。</li>
-            </ul>
-          </div>
-          <div class="dummy"><%= f.file_field :title_image, placeholder: 'お好みのイメージをどうぞ' %></div>
-        </div>
-
-        <div id="shelter"><p>背景</p></div>
-        <div id="container_background">
-          <div id="background">
-            <ul>
-              <li>お好みの写真やイメージをブログの背景に設定できます。</li>
-              <li>ブログの記事画面の背景に表示されます。</li>
-              <li>選択しない場合は、元のイメージか、弊社で用意している背景色が表示されます。</li>
-            </ul>
-          </div>
-          <div class="dummy"><%= f.file_field :background, placeholder: 'お好みのイメージをどうぞ' %></div>
-        </div>
-
-        <div id="shelter"><p>ブログの見出し（短め）</p></div>
-        <div id="container_blog_caption">
-          <div id="caption">
-            <ul>
-              <li>ホーム画面に載る、簡単なブログ紹介（見出し）を書きましょう！。</li>
-              <li>「なになに？」と、覗いてみたくなるような見出しを書くと良いかも知れません。</li>
-              <li>40字以内</li>
-              <li>見出しは、ホーム画面で確認できます。</li>
-            </ul>
-          </div>
-          <div class="dummy"><%= f.text_field :blog_caption, placeholder: '魅力的な見出しを書きましょう！（40字以内）'%></div>
-        </div>
-
-        <div id="shelter"><p>ブログの見出し（長め）</p></div>
-        <div id="container_self_introduction">
-          <div id="introduction">
-            <ul>
-              <li>ブログの記事画面のトップに載せる見出し文を書くことができます。</li>
-              <li>記事を見て下さる方々に、そのきっかけとして、または入り口として、簡単な自己紹介や、どんなブログを書きたいと思っているか、などを書くと良いのではないでしょうか。</li>
-              <li>100〜200字程度（目安）</li>
-            </ul>
-          </div>
-          <div class="dummy_introduction"><%= f.rich_text_area :self_introduction %></div>
-        </div>
-
-        <p id="submit">
-        <%= f.submit %>
-        </p>
-      <% end %>
-      
-      <p id="back_to_prev"><%= link_to '前に戻る', users_blog_design_path(@user) %></p>
+  <div class="main_container">
+    <p class="name">
+      <%= "#{@user.family_name} #{@user.given_name}さんのページ" %>
+    </p>
+    <div class="dummy">
     </div>
-  <div id="footer">
-    <%= render "blogs/shared/footer" %>
+
+    <div class="header_logout">
+      <p class="image"><%= link_to image_tag("logout_white_24dp.svg", class:"image_logout"), destroy_user_session_path, method: :delete %></p>
+      <p class="chara"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></p>
+    </div>  
   </div>
+
+  <div class="sub_container">
+    <div class="container_load">
+
+      <p class="title">デザインの設定</p>
+      <div class="setting_container">
+          <%= form_with model: @user, url: users_blog_design_path(@user) do |f| %>
+            <div class="shelter">
+              <p class="head">ブログの屋号</p>
+            </div>
+            <div class="container_blog_name">
+              <div class="chara">
+                <ul>
+                  <li>自分らしいブログのタイトル（屋号）をつけましょう！。</li>
+                  <li>20字以内。</li>
+                  <li>屋号はホーム画面に表示されます。</li>
+                </ul>
+              </div>
+              <div class="dummy"><%= f.text_field :blog_name, placeholder: '屋号をつけましょう！（20字以内）' %></div>
+            </div>
+
+            <div class="shelter"><p>ブログの屋号（イメージ）</p></div>
+            <div class="container_title_image">
+              <div class="image">
+                <ul>
+                  <li>屋号としてイメージを貼り付けることもできます。</li>
+                  <li>ブログの記事画面のトップに表示されます。</li>
+                  <li>選択しない場合は、元のイメージか、弊社で用意している背景色が表示されます。</li>
+                </ul>
+              </div>
+              <div class="dummy"><%= f.file_field :title_image, placeholder: 'お好みのイメージをどうぞ' %></div>
+            </div>
+
+            <div class="shelter"><p>背景</p></div>
+            <div class="container_background">
+              <div class="background">
+                <ul>
+                  <li>お好みの写真やイメージをブログの背景に設定できます。</li>
+                  <li>ブログの記事画面の背景に表示されます。</li>
+                  <li>選択しない場合は、元のイメージか、弊社で用意している背景色が表示されます。</li>
+                </ul>
+              </div>
+              <div class="dummy"><%= f.file_field :background, placeholder: 'お好みのイメージをどうぞ' %></div>
+            </div>
+
+            <div class="shelter"><p>ブログの見出し（短め）</p></div>
+            <div class="container_blog_caption">
+              <div class="caption">
+                <ul>
+                  <li>ホーム画面に載る、簡単なブログ紹介（見出し）を書きましょう！。</li>
+                  <li>「なになに？」と、覗いてみたくなるような見出しを書くと良いかも知れません。</li>
+                  <li>40字以内</li>
+                  <li>見出しは、ホーム画面で確認できます。</li>
+                </ul>
+              </div>
+              <div class="dummy"><%= f.text_field :blog_caption, placeholder: '魅力的な見出しを書きましょう！（40字以内）'%></div>
+            </div>
+
+            <div class="shelter"><p>ブログの見出し（長め）</p></div>
+            <div class="container_self_introduction">
+              <div class="introduction">
+                <ul>
+                  <li>ブログの記事画面のトップに載せる見出し文を書くことができます。</li>
+                  <li>記事を見て下さる方々に、そのきっかけとして、または入り口として、簡単な自己紹介や、どんなブログを書きたいと思っているか、などを書くと良いのではないでしょうか。</li>
+                  <li>100〜200字程度（目安）</li>
+                </ul>
+              </div>
+              <div class="dummy_introduction"><%= f.rich_text_area :self_introduction %></div>
+            </div>
+
+            <p class="submit">
+            <%= f.submit %>
+            </p>
+          <% end %>
+          
+          <p class="back_to_prev"><%= link_to '前に戻る', users_blog_design_path(@user) %></p>
+        </div>
+
+    </div>
   </div>
 
 </div>

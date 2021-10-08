@@ -226,6 +226,61 @@ div#updated_at {
         padding-top: 3px;
         font-size: $normal;
       }
+
+      div.pagination {
+        width: 100%;
+        height: auto;
+      }
+  
+      nav.pagination {
+        box-sizing: border-box;
+        width: 50%;
+        height: auto;
+        margin: 0 auto;
+        padding: 30px 0;
+        text-align: center;
+      }
+  
+      nav.pagination  {
+  
+        span.first,
+        span.prev,
+        span.page.current,
+        span.page.gap,
+        span.page,
+        span.next {
+        box-sizing: border-box;
+        width: 20px;
+        height: 20px;
+        padding: 0 5px;
+        border-right: 1px solid $gray;
+        color: $gray;
+        }
+  
+        span.last {
+        box-sizing: border-box;
+        width: 20px;
+        height: 20px;
+        padding: 0 5px;
+        color: $gray;
+        }
+  
+        span.page.current {
+          color: $黒紅;
+          font-weight: bold;
+          font-size: $huge;
+        }
+  
+        span.first a:hover,
+        span.prev a:hover,
+        span.page a:hover,
+        span.next a:hover,
+        span.last a:hover {
+        color: $蜜柑色;
+        }
+  
+      }
+
   }
 
   div#container_comment {

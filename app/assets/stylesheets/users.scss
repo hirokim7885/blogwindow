@@ -1,20 +1,6 @@
 @import "colors";
 @import "dimensions";
 
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-}
-
-a {
-  text-decoration: none;
-  color: gray;
-}
-
 div#wrapper_user {
   position: absolute;
   width: 100%;
@@ -23,19 +9,19 @@ div#wrapper_user {
   opacity: 0.9;
 }
 
-div.main_container_user {
-  position: fixed;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  background-color: $yellow;
-}
+div#wrapper_user {
 
-div.main_container_user {
+  div.main_container {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: $yellow;
+  }
 
-  p.name_user {
+  p.name {
     box-sizing: border-box;
-    width: calc(100% / 10 * 2);
+    width: calc(100% / 10 * 2.5);
     height: 70px;
     padding-top: 30px;
     background-color: $green;
@@ -44,132 +30,13 @@ div.main_container_user {
     text-align: center;
   }
 
-  div.dummy_user {
-    width: calc(100% / 10 * 7);
+  div.dummy {
+    width: calc(100% / 10 * 6);
     height: 100%;
   }
 
-}
-
-div.sub_container_user {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-div.container_info {
-  position: relative;
-  left: calc(100% / 10 * 2);
-  width: calc(100% / 10 * 7);
-  height: auto;
-  min-height: 100%;
-  padding-bottom: 50px;
-  background-color: $桜色;
-  opacity: 1;
-}
-
-div.container_info {
-
-  p.info {
-    box-sizing: border-box;
-    width: 70%;
-    height: 70px;
-    margin: 0 auto 80px;
-    padding-top: 20px;
-    background-color: $light-red;
-    color: $white;
-    font-size: $huge;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 0 0 20px 20px;
-  }
-
-  p.basic_user {
-    box-sizing: border-box;
-    position: relative;
-    width: 70%;
-    height: auto;
-    margin: 0 auto 30px;
-    background-color: $藍鉄;
-    color: $white;
-    font-size: $large;
-    text-align: center;
-    border-radius: 0 0 10px 10px;
-  }
-
-  div.name,
-  div.name_kana,
-  div.zipcode,
-  div.address,
-  div.telephone,
-  div.email,
-  div.password {
-    display: flex;
-    width: 65%;
-    height: auto;
-    margin: 5px auto;
-  }
-
-  p.chara {
-    box-sizing: border-box;
-    width: calc(100% / 10 * 3);
-    height: 35px;
-    margin: 0 auto 10px;
-    padding-top: 5px;
-    padding-left: 20px;
-    color: $gray;
-  }
-
-  p.content {
-    box-sizing: border-box;
-    width: calc(100% / 10 * 7);
-    height: 35px;
-    margin: 0 auto 10px;
-    padding-top: 5px;
-    font-weight: bold;
-  }
-
-  p.edit {
-    box-sizing: border-box;
-    width: 100px;
-    height: 40px;
-    margin: 30px auto 50px;
-    padding-top: 7px;
-    background-color: $green;
-    text-align: center;
-    border-radius: 10px;
-  }
-
-  p.edit a {
-    color: $white;
-  }
-
-    p.edit a:hover {
-    border-bottom: 1px solid $white;
-    }
-
-  p.back_to_top {
-    box-sizing: border-box;
-    width: 70%;
-    height: auto;
-    margin: 0 auto;
-    padding-top: 30px;
-    text-align: center;
-    border-top: 1px solid $黒紅;
-  }
-
-  p.back_to_top a:hover {
-    border-bottom: 1px solid $gray;
-  }
-
-}
-
-/* edit */
-
-div.main_container_user {
-
   div#header_logout {
-    width: calc(100% / 10);
+    width: calc(100% / 10 * 1.5);
     height: auto;
   }
   
@@ -178,10 +45,8 @@ div.main_container_user {
     p.image {
       box-sizing: border-box;
       position: absolute;
-      bottom: 30px;
-      width: calc(100% / 9);
+      width: calc(100% / 10 * 1.5);
       height: 40px;
-      padding-right: 10px;
       text-align: center;
       background-color: $葡萄色;
     }
@@ -195,10 +60,9 @@ div.main_container_user {
     p.chara {
       box-sizing: border-box;
       position: absolute;
-      bottom: 0;
-      width: calc(100% / 9);
+      top: 40px;
+      width: calc(100% / 10 * 1.5);
       height: 30px;
-      padding-right: 10px;
       text-align: center;
       background-color: $葡萄色;
     }
@@ -215,7 +79,121 @@ div.main_container_user {
   
   }
 
+  div.sub_container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  div.container_info {
+    position: relative;
+    left: calc(100% / 10 * 2.5);
+    width: calc(100% / 10 * 6);
+    height: auto;
+    min-height: 100%;
+    padding-bottom: 50px;
+    background-color: $桜色;
+    opacity: 1;
+  }
+
+  div.container_info {
+
+    p.info {
+      box-sizing: border-box;
+      width: 100%;
+      height: 70px;
+      margin: 0 auto 80px;
+      padding-top: 20px;
+      background-color: $light-red;
+      color: $white;
+      font-size: $huge;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    p.basic_user {
+      box-sizing: border-box;
+      position: relative;
+      width: 70%;
+      height: 50px;
+      margin: 60px auto 35px;
+      padding-top: 10px;
+      text-align: center;
+      color: $黒紅;
+      font-weight: bold;
+      border-bottom: 1px solid $黒紅;
+    }
+
+    div.name,
+    div.name_kana,
+    div.zipcode,
+    div.address,
+    div.telephone,
+    div.email,
+    div.password {
+      display: flex;
+      width: 65%;
+      height: auto;
+      margin: 5px auto;
+    }
+
+    p.chara {
+      box-sizing: border-box;
+      width: calc(100% / 10 * 3);
+      height: 35px;
+      margin: 0 auto 10px;
+      padding-top: 5px;
+      padding-left: 20px;
+      color: $gray;
+    }
+
+    p.content {
+      box-sizing: border-box;
+      width: calc(100% / 10 * 7);
+      height: 35px;
+      margin: 0 auto 10px;
+      padding-top: 5px;
+      font-weight: bold;
+    }
+
+    p.edit {
+      box-sizing: border-box;
+      width: 100px;
+      height: 40px;
+      margin: 30px auto 70px;
+      padding-top: 7px;
+      background-color: $green;
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    p.edit a {
+      color: $white;
+    }
+
+      p.edit a:hover {
+      border-bottom: 1px solid $white;
+      }
+
+    p.back_to_top {
+      box-sizing: border-box;
+      width: 70%;
+      height: auto;
+      margin: 0 auto;
+      padding-top: 30px;
+      text-align: center;
+      border-top: 1px solid $黒紅;
+    }
+
+    p.back_to_top a:hover {
+      border-bottom: 1px solid $gray;
+    }
+
 }
+
+}
+
+/* edit */
 
 div.container_info {
 

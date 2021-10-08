@@ -1,0 +1,59 @@
+<div id="wrapper_admin_basicinfo">
+
+  <div class="main_container">
+    <p class="name">
+      <%= "#{@user.family_name} #{@user.given_name}さんのページ" %>
+    </p>
+
+    <div class="dummy">
+    </div>
+
+    <div id="header_logout">
+      <p class="image"><%= link_to image_tag("logout_white_24dp.svg", class:"image_logout"), destroy_user_session_path, method: :delete %></p>
+      <p class="chara"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></p>
+    </div>
+  </div>
+
+  <div class="sub_container">
+    <div class="container_info">
+      <p class="info">ユーザー情報</p>
+        <p class="basic_user">基本情報</p>
+          <div class="name">
+            <p class="chara">氏名</p>
+            <p class="content"><%= "#{@user.family_name}" "　#{@user.given_name}" %></p>
+          </div>
+          <div class="name_kana">
+            <p class="chara">ふりがな</p>
+            <p class="content"><%= "#{@user.family_name_kana}" "　#{@user.given_name_kana}" %></p>
+          </div>
+          <div class="zipcode">
+            <p class="chara">郵便番号</p>
+            <p class="content"><%= @user.zipcode %></p>
+          </div>
+          <div class="address">
+            <p class="chara">住所</p>
+            <p class="content"><%= @user.address %></p>
+          </div>
+          <div class="telephone">
+            <p class="chara">電話番号</p>
+            <p class="content"><%= @user.telephone %></p>
+          </div>
+        <p class="edit"><%= link_to '編集', edit_users_admin_basicinfo_path(@user) %></p>
+
+        <p class="basic_user">ログイン情報</p>
+          <div class="email">
+            <p class="chara">メールアドレス</p>
+            <p class="content"><%= @user.email %></p> 
+          </div>
+          <div class="password">
+            <p class="chara">パスワード</p>
+            <p class="content"><%= @user.password %>非表示</p>
+          </div>
+
+        <p class="edit"><%= link_to '編集', edit_users_admin_logininfo_path(@user) %></p>
+
+      <p class="back_to_top"><%= link_to 'Topに戻る', blogs_admin_content_index_path %></p>
+    </div>
+  </div>
+
+</div>

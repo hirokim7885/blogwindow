@@ -1,6 +1,7 @@
 class Blogs::SupportController < Admin::BaseController
 
   def index
+    @user = current_user
     @blog = Blog.find(params[:admin_article_id])
     @reviews = @blog.reviews.page(params[:page]).order(created_at: :desc)
   end

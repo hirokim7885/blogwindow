@@ -7,30 +7,18 @@
         <p class="name"><%= "#{@user.family_name.to_s.humanize} #{@user.given_name.to_s.humanize}さんのページ" %></p>
       </div>
       <div class="account">
-        <p class="image"><%= link_to image_tag("account_circle_white_24dp.png", class:"image_account"), user_path(@user) %></p>
+        <p class="image_account"><%= link_to image_tag("manage_accounts_white_24dp.svg", class:"image_account"), user_path(@user) %></p>
         <p class="chara_account"><%= link_to "ユーザー情報", user_path(@user) %></p>
       </div>
 
       <div class="profile">
-        <p class="portrait">
-          <% if @user.portrait.attached? %>
-            <%= link_to image_tag(@user.portrait.variant(resize_to_limit:[200,200])), users_my_profile_path(@user) %>
-          <% else %>
-             <%= "" %>
-          <% end %>
-        </p>
+        <p class="image_profile"><%= link_to image_tag("face_white_24dp.svg", class:"image_profile"), users_my_profile_path(@user) %></p>
         <p class="chara_profile"><%= link_to "Profile", users_my_profile_path(@user) %></p>
       </div>
 
       <div class="blog_design">
-        <p class="design_image">
-          <% if @user.background.attached? %>
-            <%= link_to image_tag(@user.background.variant(resize_to_limit:[200,200])), users_blog_design_path(@user) %>
-          <% else %>
-            <%= "" %>
-          <% end %>
-        </p>
-        <p class="chara_design_image"><%= link_to "ブログのデザイン", users_blog_design_path(@user) %></p>
+        <p class="image_design"><%= link_to image_tag("settings_white_24dp.svg", class:"image_design"), users_blog_design_path(@user) %></p>
+        <p class="chara_design"><%= link_to "ブログのデザイン", users_blog_design_path(@user) %></p>
       </div>
 
     </div>
@@ -78,15 +66,15 @@
           <div class="container_content">
             <p class="title"><%= link_to blog.title, blogs_my_content_path(blog.id) %></p>
             <p class="content"><%= link_to truncate(strip_tags(blog.content.to_s), length: 60, omission: "…"), blogs_my_content_path(blog.id) %></p>
-          <div class="container_delete">
-            <p class="time">
-              <%= link_to blog.created_at.strftime("%Y/%m/%d %H:%m 更新"), blogs_my_content_path(blog.id) %>
-            </p>
-            <p class="messages_index"><%= link_to "メッセージ #{blog.good_count}件", blogs_my_content_message_index_path(blog.id) %></p>
-            <p class="delete">
-              <%= link_to image_tag("delete_outline_black_24dp.png", class:"image_trash"), blogs_my_content_path(blog.id), method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } %>
-            </p>
-          </div>
+            <div class="container_delete">
+              <p class="time">
+                <%= link_to blog.created_at.strftime("%Y/%m/%d %H:%m 更新"), blogs_my_content_path(blog.id) %>
+              </p>
+              <p class="messages_index"><%= link_to "メッセージ #{blog.good_count}件", blogs_my_content_message_index_path(blog.id) %></p>
+              <p class="delete">
+                <%= link_to image_tag("delete_outline_black_24dp.png", class:"image_trash"), blogs_my_content_path(blog.id), method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } %>
+              </p>
+            </div>
           </div>
         </li>
         <% end %>

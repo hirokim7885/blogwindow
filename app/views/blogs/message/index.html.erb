@@ -22,9 +22,10 @@
           <li class="subcontainer_review">
             <div class="tag_messages">
               <p class="name"><%= review.name %></p>
-            <div class="tag_comment">
-              <p class="comment"><%= review.comment %></p>
-              <p class="created_at"><%= review.created_at.strftime("%Y/%m/%d %H:%m 投稿") %></p>
+              <div class="tag_comment">
+                <p class="comment"><%= review.comment %></p>
+                <p class="created_at"><%= review.created_at.strftime("%Y/%m/%d %H:%m 投稿") %></p>
+              </div>
             </div>
           </li>
         <% end %>

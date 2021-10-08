@@ -1,3 +1,195 @@
-// Place all the styles related to the Blogs::AdminArticle controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+@import "colors";
+@import "dimensions";
+
+div#wrapper_admin_article {
+  width: 100%;
+  height: auto;
+}
+
+div#wrapper_admin_article {
+
+div.blog_background img {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+div.container_blog_load {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+div.blog_load {
+  box-sizing: border-box;
+  width: 60%;
+  height: auto;
+  min-height: 100%;
+  margin: 0 auto;
+  background-color: $桜色;
+}
+
+div.blog_load {
+
+  div.container_blog_name {
+    width: 100%;
+    height: auto;
+    padding: 80px 0 50px;
+    text-align: center;
+  }
+
+  div.back_to_index {
+    width: 70%;
+    height: auto;
+    margin: 30px auto 0;
+    padding: 30px 0;
+    text-align: center;
+  }
+
+  div.back_to_index a {
+    font-size: $normal;
+  }
+
+    div.back_to_index a:hover {
+      border-bottom: 1px solid $gray;
+    }
+
+  div.back_to_top {
+    width: 70%;
+    height: auto;
+    margin: 30px auto 0;
+    padding: 50px 0;
+    text-align: center;
+    border-top: 1px solid $黒紅;
+  }
+
+    div.back_to_top a:hover {
+      border-bottom: 1px solid $gray;
+    }
+  
+    p.messages {
+      box-sizing: border-box;
+      width: 150px;
+      height: 35px;
+      margin: 0 auto;
+      padding-top: 6px;
+      background-color: $蜜柑色;
+      font-size: $normal;
+      border-radius: 10px;
+    }
+  
+    p.messages a {
+      color: $white;
+    }
+  
+      p.messages a:hover {
+        border-bottom: 1px solid $white;
+      }
+
+    p.delete {
+      box-sizing: border-box;
+      width: 150px;
+      height: 35px;
+      margin: 0 auto 50px;
+      padding-top: 5px;
+      background-color: $light-red;
+      text-align: center;
+      border-radius: 5px;
+    }
+    
+    p.delete a {
+      color: $white;
+      font-size: $small;
+    }
+    
+      p.delete a:hover {
+        border-bottom: 1px solid $white;
+      }
+
+  div.back_to_prev {
+    width: 70%;
+    height: auto;
+    margin: 30px auto 50px;
+    padding-top: 30px;
+    text-align: center;
+  }
+  
+    div.back_to_prev a:hover {
+      border-bottom: 1px solid $gray;
+    }
+
+  }
+
+div.container_blog_name {
+
+  div.reviews_admin_content {
+    box-sizing: border-box;
+    width: 80%;
+    height: 120px;
+    margin: 0 auto;
+    padding-top: 50px;
+    border-bottom: 1px solid $黒紅;
+  }
+
+}
+
+  div.container_article {
+
+    h2.title {
+      width: 80%;
+      height: 100px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    div.content {
+      margin: 0 100px;
+    }
+
+    div.trix-content div {
+      box-sizing: border-box;
+      padding: 5px 0;
+    }
+
+    div.update {
+      width: 100%;
+      height: 30px;
+      margin-top: 30px;
+      text-align: center;
+      color: $gray;
+      font-size: $small;
+    }
+
+    div.create {
+      width: 100%;
+      height: 30px;
+      padding-bottom: 30px;
+      text-align: center;
+      color: $gray;
+      font-size: $small;
+    }
+
+    div.move {
+      box-sizing: border-box;
+      width: 80%;
+      height: auto;
+      margin: 0 auto;
+      padding-bottom: 30px;
+      text-align: center;
+    }
+
+    div.move a {
+      color: $黒紅;
+    }
+
+      div.move a:hover {
+        border-bottom: 1px solid $黒紅;
+      }
+
+  }
+
+}
+
+
+
+

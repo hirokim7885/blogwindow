@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   namespace :users do
     resources :admin
+    resources :admin_basicinfo, only: [:show, :edit, :update, :destroy]
     resources :profile, only: [:show]
     resources :my_profile, only: [:show, :edit, :update, :destroy]
     resources :admin_my_profile, only: [:show, :edit, :update, :destroy]
@@ -32,6 +33,10 @@ Rails.application.routes.draw do
     resources :admin_article, only: [:show, :destroy] do
       resources :support, only: [:index, :destroy]
     end
+  end
+
+  namespace :reviews do
+    resources :admin, only: [:index, :destroy]
   end
 
   resources :users, only: [:show, :edit, :update, :destroy]

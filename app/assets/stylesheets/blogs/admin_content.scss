@@ -1,3 +1,802 @@
-// Place all the styles related to the blogs::AdminContent controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+@import "colors";
+@import "dimensions";
+
+div#wrapper_admin_content {
+  width: 100%;
+  height: auto;
+}
+
+/* index */
+div#wrapper_admin_content {
+
+  div.main_container {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: $yellow;
+    opacity: 0.9;
+    z-index: 1;
+  }
+
+  div.container_setting {
+    width: calc(100% / 10 * 2.5);
+    height: auto;
+  }
+
+  div.container_setting {
+
+    div.owner {
+      width: 100%;
+      height: auto;
+    }
+
+    p.name {
+      box-sizing: border-box;
+      width: 100%;
+      height: 70px;
+      margin: 0 auto;
+      padding-top: 30px;
+      background-color: $green;
+      color: $white;
+      font-size: $large;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    p.user_type {
+      box-sizing: border-box;
+      width: 70%;
+      height: 30px;
+      margin: 0 auto;
+      padding-top: 5px;
+      text-align: center;
+      color: $黒紅;
+      font-size: $small;
+    }
+
+    div.account,
+    div.profile,
+    div.blog_design,
+    div.users_box,
+    div.blogs_box,
+    div.reviews_box {
+      box-sizing: border-box;
+      width: 100%;
+      height: auto;
+      margin: 15px auto;
+      padding-top: 15px;
+    }
+
+    p.image_account,
+    p.image_profile,
+    p.image_design,
+    p.image_users_box,
+    p.image_blogs_box,
+    p.image_reviews_box,
+    p.chara_account,
+    p.chara_profile,
+    p.chara_design,
+    p.chara_users_box,
+    p.chara_blogs_box,
+    p.chara_reviews_box {
+      width: 50%;
+      height: 40px;
+      margin: 0 auto;
+      text-align: center;
+      background-color: $藍鉄;
+    }
+
+    p.image_account,
+    p.image_profile,
+    p.image_design,
+    p.image_users_box,
+    p.image_blogs_box,
+    p.image_reviews_box {
+      border-radius: 10px 10px 0 0;
+    }
+
+    p.chara_account,
+    p.chara_profile,
+    p.chara_design,
+    p.chara_users_box,
+    p.chara_blogs_box,
+    p.chara_reviews_box {
+      border-radius: 0 0 10px 10px;
+    }
+
+    p.image_account,
+    p.chara_account {
+      background-color: $light-red;
+    }
+    
+    p.image_profile,
+    p.chara_profile {
+      background-color: $天色;
+    }
+
+    p.image_design,
+    p.chara_design {
+      background-color: $紅紫;
+    }
+
+    p.image_users_box,
+    p.chara_users_box {
+      background-color: $蜜柑色;
+    }
+
+    p.image_blogs_box,
+    p.chara_blogs_box {
+      background-color: $翡翠色;
+    }
+
+    p.image_reviews_box,
+    p.chara_reviews_box {
+      background-color: $鈍色;
+    }
+
+    p.image_account img,
+    p.image_profile img,
+    p.image_design img,
+    p.image_users_box img,
+    p.image_blogs_box img,
+    p.image_reviews_box img {
+      width: auto;
+      height: 30px;
+      margin-top: 15px;
+    }
+
+    p.chara_account,
+    p.chara_profile,
+    p.chara_design,
+    p.chara_users_box,
+    p.chara_blogs_box,
+    p.chara_reviews_box {
+      box-sizing: border-box;
+      padding-top: 7px;
+    }
+
+    p.chara_account a,
+    p.chara_profile a,
+    p.chara_design a,
+    p.chara_users_box a,
+    p.chara_blogs_box a,
+    p.chara_reviews_box a {
+      color: $white;
+    }
+
+      p.chara_account a:hover,
+      p.chara_profile a:hover,
+      p.chara_design a:hover,
+      p.chara_users_box a:hover,
+      p.chara_blogs_box a:hover,
+      p.chara_reviews_box a:hover {
+        border-bottom: 1px solid $white
+      }
+
+
+  }
+
+  div.dummy {
+    width: calc(100% / 10 * 6);
+    height: 100%;
+  }
+
+  div#header_logout {
+    width: calc(100% / 10 * 1.5);
+    height: auto;
+  }
+
+  div#header_logout {
+
+    p.image {
+      box-sizing: border-box;
+      position: absolute;
+      width: calc(100% / 10 * 1.5);
+      height: 40px;
+      padding-left: 10px;
+      text-align: center;
+      background-color: $葡萄色;
+    }
+
+    p.image img {
+      width: auto;
+      height: 20px;
+      margin-top: 15px;
+    }
+
+    p.chara {
+      box-sizing: border-box;
+      position: absolute;
+      top: 40px;
+      width: calc(100% / 10 * 1.5);
+      height: 30px;
+      padding-left: 10px;
+      text-align: center;
+      background-color: $葡萄色;
+    }
+
+    p.chara a {
+      color: $white;
+      font-size: $small;
+      font-weight: bold;
+    }
+
+      p.chara a:hover {
+        border-bottom: 1px solid $white;
+      }
+
+  }
+
+  div.container_blog_load_index {
+      position: absolute;
+      left: calc(100% / 10 * 2.5);
+      width: calc(100% / 10 * 6);
+      height: auto;
+      min-height: 100%;
+      background-color: $桜色;
+      z-index: 1;
+  }
+
+    div.container_blog_load_index {
+
+      div.blog_name {
+        box-sizing: border-box;
+        width: 100%;
+        height: auto;
+      }
+
+      p.name {
+        box-sizing: border-box;
+        width: 100%;
+        height: 70px;
+        margin: 0 auto;
+        padding-top: 20px;
+        text-align: center;
+        color: $white;
+        font-size: large;
+        font-weight: bold;
+        background-color: $藍鉄;
+      }
+
+      div.blog_container_title {
+        width: 100%;
+        height: auto;
+        margin: 30px 0 10px;
+      }
+
+      div.blog_container_title p {
+        width: 70%;
+        height: auto;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      div.blog_new {
+        width: 100%;
+        height: auto;
+      }
+
+      div.blog_new p {
+        box-sizing: border-box;
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+        padding-right: 20px;
+        padding-bottom: 5px;
+        text-align: right;
+        border-bottom: 1px solid $黒紅;
+      }
+
+      div.blog_new a {
+        color: $黒紅;
+        font-weight: bold;
+      }
+
+        div.blog_new a:hover {
+          color: $蜜柑色;
+        }
+
+      div.blogs {
+        width: 100%;
+        height: auto;
+        margin: o auto;
+      }
+
+      div.blogs {
+
+        ul {
+          width: 80%;
+          height: auto;
+          margin: 0 auto;
+        }
+
+        li {
+          display: flex;
+          width:  100%;
+          height: auto;
+          margin: 10px 0;
+          border-bottom: 1px solid $蜜柑色;
+        }
+
+      }
+
+    }
+
+    div.container_caption {
+      box-sizing: border-box;
+      width: calc(100% / 10 * 3);
+      height: auto;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    p.image img {
+      width: auto;
+      height: auto;
+    }
+
+      p.image img:hover {
+        opacity: 0.8;
+      }
+
+    div.container_content {
+      box-sizing: border-box;
+      width: calc(100% / 10 * 7);
+      height: 150;
+    }
+
+    div.container_delete {
+      box-sizing: border-box;
+      display: flex;
+      width: 100%;
+      height:auto;
+    }
+
+    p.image {
+      color: $gray;
+      font-size: $small;
+    }
+
+    p.title {
+      margin: 10px 0;
+    }
+
+    p.title a {
+      color: $黒紅;
+      font-size: $large;
+      font-weight: bold;
+    }
+
+      p.title a:hover {
+        border-bottom: 1px solid $黒紅;
+      }
+
+    p.content {
+      width: 95%;
+      height: auto;
+      min-height: 30px;
+      margin: 10px 0;
+    }
+
+    p.content a {
+      color: $黒紅;
+      font-size: $normal;
+    }
+
+      p.content a:hover {
+        border-bottom: 1px solid $黒紅;
+      }
+
+    p.time {
+      box-sizing: border-box;
+      width: calc(100% / 10 * 5);
+      padding-top: 10px;
+      text-align: left;
+      font-size: $small;
+    }
+
+      p.time a:hover {
+        border-bottom: 1px solid $gray;
+      }
+    
+    p.messages_index {
+      box-sizing: border-box;
+      width: calc(100% / 10 * 4);
+      padding-top: 10px;
+      text-align: center;
+      color: $gray;
+      font-size: $small;
+    }
+
+    p.delete {
+      margin: 10px 0;
+      text-align: right;
+    }
+
+    p.delete img {
+      width: 25px;
+      height: auto;
+    }
+
+    div.pagination {
+      width: 100%;
+      height: auto;
+    }
+
+    nav.pagination {
+      box-sizing: border-box;
+      width: 50%;
+      height: auto;
+      margin: 0 auto;
+      padding: 30px 0;
+      text-align: center;
+    }
+
+    nav.pagination  {
+
+      span.first,
+      span.prev,
+      span.page.current,
+      span.page.gap,
+      span.page,
+      span.next {
+      box-sizing: border-box;
+      width: 20px;
+      height: 20px;
+      padding: 0 5px;
+      border-right: 1px solid $gray;
+      color: $gray;
+      }
+
+      span.last {
+      box-sizing: border-box;
+      width: 20px;
+      height: 20px;
+      padding: 0 5px;
+      color: $gray;
+      }
+
+      span.page.current {
+        color: $黒紅;
+        font-weight: bold;
+        font-size: $huge;
+      }
+
+      span.first a:hover,
+      span.prev a:hover,
+      span.page a:hover,
+      span.next a:hover,
+      span.last a:hover {
+      color: $蜜柑色;
+      }
+
+    }
+
+}
+
+/* new, show, edit */
+div#wrapper_admin_content {
+
+div.blog_background img {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+div.container_blog_load {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+div.blog_load {
+  box-sizing: border-box;
+  width: 60%;
+  height: auto;
+  min-height: 100%;
+  margin: 0 auto;
+  background-color: $桜色;
+}
+
+div.blog_load {
+
+  div.container_blog_name {
+    width: 100%;
+    height: auto;
+    padding: 80px 0 50px;
+    text-align: center;
+  }
+
+  /* new, edit */
+  p.new_blog,
+  p.edit_blog {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: calc((100% - 25%) / 2);
+    width: 25%;
+    height: 70px;
+    margin: 0 auto;
+    padding-top: 20px;
+    color: $藍鉄;
+    text-align: center;
+    font-size: $large;
+    font-weight: bold;
+    border-bottom: 1px solid $藍鉄;
+  }
+  /* new, edit */
+
+
+  p.corp_name {
+    margin: 20px 0;
+    color: $黒紅;
+  }
+
+  div.title_image {
+    width: 100%;
+    height: auto;
+    margin: 50px 0;
+  }
+
+  div.title_image img {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    padding: 0 2px
+  }
+
+  /* new, edit */
+  div.container_blog_f form {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  div.container_blog_f form {
+
+    div.title_blog,
+    div.caption_blog {
+      display: flex;
+      width: 100%;
+      height: auto;
+      margin: 20px 0;
+    }
+
+    p.chara {
+      box-sizing: border-box;
+      width: calc(100% / 10 * 3);
+      height: 35px;
+      padding-top: 7px;
+      text-align: left;
+      color: $gray;
+      font-size: $normal;
+    }
+
+    input#blog_title {
+      box-sizing: border-box;
+      width: calc(100% / 10 * 7);
+      height: inherit;
+      padding-left: 10px;
+    }
+
+    input#blog_caption_image {
+      box-sizing: border-box;
+      width: calc(100% / 10 * 7);
+      height: inherit;
+      padding-top: 5px;
+    }
+
+    trix-editor {
+      height: 500px;
+      text-align: left;
+      overflow-y: auto;
+    }
+
+    div.submit {
+      width: 100%;
+      height: auto;
+      text-align: center;
+    }
+
+    div.submit input {
+      width: 100px;
+      height: 35px;
+      margin: 30px 0;
+      background-color: $藍鉄;
+      color: $white;
+      border: none;
+      border-radius: 5px;
+    }
+
+      div.submit input:hover {
+        background-color: $light-red;
+      }
+  
+    div.field_with_errors {
+      display: contents;
+    }
+
+    p.error {
+      margin-top: 10px;
+      color: $light-red;
+      font-weight: bold;
+    }
+
+  }
+  /* new */
+
+
+  div.back_to_top {
+    width: 70%;
+    height: auto;
+    margin: 30px auto 0;
+    padding: 50px 0;
+    text-align: center;
+    border-top: 1px solid $黒紅;
+  }
+
+    div.back_to_top a:hover {
+      border-bottom: 1px solid $gray;
+    }
+  
+    p.messages {
+      box-sizing: border-box;
+      width: 150px;
+      height: 35px;
+      margin: 0 auto;
+      padding-top: 6px;
+      background-color: $蜜柑色;
+      font-size: $normal;
+      border-radius: 10px;
+    }
+  
+    p.messages a {
+      color: $white;
+    }
+  
+      p.messages a:hover {
+        border-bottom: 1px solid $white;
+      }
+
+
+  /* show,edit */
+    p.delete {
+      box-sizing: border-box;
+      width: 100px;
+      height: 35px;
+      margin: 0 auto 30px;
+      padding-top: 5px;
+      background-color: $green;
+      text-align: center;
+      border-radius: 5px;
+    }
+    
+    p.delete {
+      background-color: $light-red;
+      margin-bottom: 50px;
+    }
+    
+    p.delete a {
+      color: $white;
+    }
+    
+      p.delete a:hover {
+        border-bottom: 1px solid $white;
+      }
+
+  div.back_to_prev {
+    width: 70%;
+    height: auto;
+    margin: 30px auto 50px;
+    padding-top: 30px;
+    text-align: center;
+  }
+  
+    div.back_to_prev a:hover {
+      border-bottom: 1px solid $gray;
+    }
+
+  }
+  /* show, edit */
+
+/* show */
+div.container_blog_name {
+
+  div.reviews_admin_content {
+    box-sizing: border-box;
+    width: 80%;
+    height: 120px;
+    margin: 0 auto;
+    padding-top: 50px;
+    border-bottom: 1px solid $黒紅;
+  }
+
+}
+
+div.container_article {
+
+  h2.title {
+    width: 80%;
+    height: 100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  div.content {
+    margin: 0 100px;
+  }
+
+  div.trix-content div {
+    box-sizing: border-box;
+    padding: 5px 0;
+  }
+
+  div.update {
+    width: 100%;
+    height: 30px;
+    margin-top: 30px;
+    text-align: center;
+    color: $gray;
+    font-size: $small;
+  }
+
+  div.create {
+    width: 100%;
+    height: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    color: $gray;
+    font-size: $small;
+  }
+
+  div.move {
+    box-sizing: border-box;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+
+  div.move a {
+    color: $黒紅;
+  }
+
+    div.move a:hover {
+      border-bottom: 1px solid $黒紅;
+    }
+
+  p.submit,
+  p.delete {
+    box-sizing: border-box;
+    width: 100px;
+    height: 35px;
+    margin: 0 auto 30px;
+    padding-top: 5px;
+    background-color: $green;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  p.delete {
+    background-color: $light-red;
+    margin-bottom: 50px;
+  }
+
+  p.submit a,
+  p.delete a {
+    color: $white;
+  }
+
+    p.submit a:hover,
+    p.delete a:hover {
+      border-bottom: 1px solid $white;
+    }
+
+}
+
+}
+/* show */
+
+
