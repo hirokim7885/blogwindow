@@ -1,19 +1,56 @@
-<p><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></p>
+<div id="wrapper_admin_top">
 
-<h2><%= "#{@user.family_name}さんのブログ" %></h2>
+  <div class="blog_background"> 
+    <% if @user.background.attached? %>
+    <%= image_tag(@user.background.variant(resize_to_limit:[200,200])) %>
+    <% end %>
+  </div>
 
-<p>
-<ul>
-  <% @blogs.each do |blog| %>
-  <li>
-    <%= link_to blog.title, blogs_admin_article_path(blog.id) %>
-    <%= link_to "削除", blogs_admin_article_path(blog.id), method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } %>
-  </li>
-  <% end %>
-</ul>
-</p>
+  <div class="container_blog_load">
+    <div class="blog_load">
 
-<p><%= paginate @blogs %></p>
+      <h2><%= @user.blog_name %></h2>
+      <p class="user_name"><%= "（#{@user.family_name} #{@user.given_name}さんのブログ）" %></p>
 
-<p><%= link_to "前に戻る", blogs_admin_window_index_path %></p>
-<p><%= link_to "Topに戻る", blogs_admin_content_index_path %></p>
+      <ul>
+        <% @blogs.each do |blog| %>
+        <li>
+          <div class="container_caption">
+            <p class="image">
+              <% if blog.caption_image.attached? %>
+                <%= link_to image_tag(blog.caption_image.variant(resize_to_limit:[150,150])), blogs_admin_article_path(blog.id) %>
+              <% else %>
+                <%= link_to image_tag(blog.user.background.variant(resize_to_limit:[150,150])), blogs_admin_article_path(blog.id) %>
+              <% end %>
+            </p>
+          </div>
+          <div class="container_content">
+            <p class="title"><%= link_to blog.title, blogs_admin_article_path(blog.id) %></p>
+            <p class="content"><%= link_to truncate(strip_tags(blog.content.to_s), length: 60, omission: "…"), blogs_admin_article_path(blog.id) %></p>
+            <div class="container_messages">
+              <p class="time">
+                <%= link_to blog.created_at.strftime("%Y/%m/%d %H:%m 更新"), blogs_admin_article_path(blog.id) %>
+              </p>
+              <p class="messages_index"><%= link_to "メッセージ #{blog.good_count}件", blogs_admin_article_support_index_path(blog.id) %></p>
+            </div>
+          </div>
+          <div class="style_delete">
+            <p class="delete">
+              <%= link_to "削除", blogs_admin_article_path(blog.id), method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } %>
+            </p>
+          </div>
+        </li>
+        <% end %>
+      </ul>
+
+      <div class="pagination">
+        <%= paginate @blogs %>
+      </div>
+
+      <div class="back_to_index"><%= link_to "ユーザー一覧に戻る", blogs_admin_window_index_path %></div>
+      <div class="back_to_top"><%= link_to "Topに戻る", blogs_admin_content_index_path %></div>
+
+    </div>
+  </div>
+
+</div>
